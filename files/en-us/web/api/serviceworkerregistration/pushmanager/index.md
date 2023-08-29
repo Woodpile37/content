@@ -1,5 +1,6 @@
 ---
-title: ServiceWorkerRegistration.pushManager
+title: "ServiceWorkerRegistration: pushManager property"
+short-title: pushManager
 slug: Web/API/ServiceWorkerRegistration/pushManager
 page-type: web-api-instance-property
 browser-compat: api.ServiceWorkerRegistration.pushManager
@@ -43,7 +44,7 @@ navigator.serviceWorker
         // also report information about errors back to the
         // application server.
         console.error(error);
-      }
+      },
     );
   });
 ```

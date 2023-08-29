@@ -1,5 +1,6 @@
 ---
 title: "ServiceWorkerGlobalScope: pushsubscriptionchange event"
+short-title: pushsubscriptionchange
 slug: Web/API/ServiceWorkerGlobalScope/pushsubscriptionchange_event
 page-type: web-api-event
 browser-compat: api.ServiceWorkerGlobalScope.pushsubscriptionchange_event
@@ -54,11 +55,11 @@ self.addEventListener(
           body: JSON.stringify({
             endpoint: subscription.endpoint,
           }),
-        })
+        }),
       );
     event.waitUntil(subscription);
   },
-  false
+  false,
 );
 ```
 
@@ -73,7 +74,7 @@ self.onpushsubscriptionchange = (event) => {
       .subscribe(event.oldSubscription.options)
       .then((subscription) => {
         /* ... */
-      })
+      }),
   );
 };
 ```

@@ -1,5 +1,6 @@
 ---
-title: performance.measure()
+title: "Performance: measure() method"
+short-title: measure()
 slug: Web/API/Performance/measure
 page-type: web-api-instance-method
 browser-compat: api.Performance.measure
@@ -123,7 +124,7 @@ Given two of your own markers `"login-started"` and `"login-finished"`, you can 
 const loginMeasure = performance.measure(
   "login-duration",
   "login-started",
-  "login-finished"
+  "login-finished",
 );
 console.log(loginMeasure.duration);
 ```

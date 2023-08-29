@@ -1,5 +1,6 @@
 ---
-title: VRDisplay.cancelAnimationFrame()
+title: "VRDisplay: cancelAnimationFrame() method"
+short-title: cancelAnimationFrame()
 slug: Web/API/VRDisplay/cancelAnimationFrame
 page-type: web-api-instance-method
 status:
@@ -60,7 +61,7 @@ if (navigator.getVRDisplays) {
               Math.max(leftEye.renderWidth, rightEye.renderWidth) * 2;
             canvas.height = Math.max(
               leftEye.renderHeight,
-              rightEye.renderHeight
+              rightEye.renderHeight,
             );
 
             // stop the normal presentation, and start the vr presentation

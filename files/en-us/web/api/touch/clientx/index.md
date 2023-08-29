@@ -1,5 +1,6 @@
 ---
-title: Touch.clientX
+title: "Touch: clientX property"
+short-title: clientX
 slug: Web/API/Touch/clientX
 page-type: web-api-instance-property
 browser-compat: api.Touch.clientX
@@ -44,7 +45,7 @@ src.addEventListener(
     clientX = e.touches[0].clientX;
     clientY = e.touches[0].clientY;
   },
-  false
+  false,
 );
 
 src.addEventListener(
@@ -61,7 +62,7 @@ src.addEventListener(
 
     // Process the data…
   },
-  false
+  false,
 );
 ```
 

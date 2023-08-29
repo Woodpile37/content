@@ -1,6 +1,7 @@
 ---
 title: Firefox 50 for developers
 slug: Mozilla/Firefox/Releases/50
+page-type: firefox-release-notes
 ---
 
 {{FirefoxSidebar}}
@@ -69,7 +70,7 @@ slug: Mozilla/Firefox/Releases/50
 - The `once` option for {{domxref("EventTarget.addEventListener()")}} is now supported ([Firefox bug 1287706](https://bugzil.la/1287706)).
 - The interface {{domxref("NodeList")}} are now iterable and the methods {{domxref("NodeList.forEach()", "forEach()")}}, {{domxref("NodeList.values()", "values()")}}, {{domxref("NodeList.entries()")}} and {{domxref("NodeList.keys()")}} are now available ([Firefox bug 1290636](https://bugzil.la/1290636)).
 - The interface {{domxref("DOMTokenList")}} are now iterable and the methods {{domxref("DOMTokenList.forEach()", "forEach()")}}, {{domxref("DOMTokenList.values()", "values()")}}, {{domxref("DOMTokenList.entries()")}} and {{domxref("DOMTokenList.keys()")}} are now available ([Firefox bug 1290636](https://bugzil.la/1290636)).
-- The methods {{domxref("Document.createElement()")}} and {{domxref("Document.createElementNS()")}} now have an optional `options` parameter for creating [custom elements](/en-US/docs/Web/Web_Components/Using_custom_elements) ([Firefox bug 1276579](https://bugzil.la/1276579)).
+- The methods {{domxref("Document.createElement()")}} and {{domxref("Document.createElementNS()")}} now have an optional `options` parameter for creating [custom elements](/en-US/docs/Web/API/Web_components/Using_custom_elements) ([Firefox bug 1276579](https://bugzil.la/1276579)).
 
 ### SVG
 
@@ -121,7 +122,7 @@ slug: Mozilla/Firefox/Releases/50
 
 ### Battery API
 
-- The {{domxref("navigator.battery")}} property, which has been deprecated since Firefox 43, is now obsolete and has been removed. Use the {{domxref("navigator.getBattery()")}} method instead to get a battery {{jsxref("Promise")}}, which will resolve when the {{domxref("BatteryManager")}} is available for use; the {{domxref("BatteryManager")}} is passed into the fulfillment handler for the promise ([Firefox bug 12593355](https://bugzil.la/12593355)).
+- The `Navigator.battery` property, which has been deprecated since Firefox 43, is now obsolete and has been removed. Use the {{domxref("navigator.getBattery()")}} method instead to get a battery {{jsxref("Promise")}}, which will resolve when the {{domxref("BatteryManager")}} is available for use; the {{domxref("BatteryManager")}} is passed into the fulfillment handler for the promise ([Firefox bug 12593355](https://bugzil.la/12593355)).
 
 ### Files and directories
 

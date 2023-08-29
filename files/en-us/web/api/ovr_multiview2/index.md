@@ -1,5 +1,6 @@
 ---
-title: OVR_multiview2
+title: OVR_multiview2 extension
+short-title: OVR_multiview2
 slug: Web/API/OVR_multiview2
 page-type: webgl-extension
 browser-compat: api.OVR_multiview2
@@ -64,7 +65,7 @@ ext.framebufferTextureMultiviewOVR(
   colorTex,
   0,
   0,
-  2
+  2,
 );
 
 const depthStencilTex = gl.createTexture();
@@ -77,7 +78,7 @@ ext.framebufferTextureMultiviewOVR(
   depthStencilTex,
   0,
   0,
-  2
+  2,
 );
 gl.drawElements(/* … */); // draw will be broadcasted to the layers of colorTex and depthStencilTex.
 ```

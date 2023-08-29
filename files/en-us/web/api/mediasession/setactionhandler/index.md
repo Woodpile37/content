@@ -1,5 +1,6 @@
 ---
-title: MediaSession.setActionHandler()
+title: "MediaSession: setActionHandler() method"
+short-title: setActionHandler()
 slug: Web/API/MediaSession/setActionHandler
 page-type: web-api-instance-method
 browser-compat: api.MediaSession.setActionHandler
@@ -231,7 +232,7 @@ function handleSeek(details) {
     case "seekforward":
       audio.currentTime = Math.min(
         audio.currentTime + skipTime,
-        audio.duration
+        audio.duration,
       );
       break;
     case "seekbackward":

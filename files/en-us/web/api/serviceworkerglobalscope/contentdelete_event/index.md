@@ -1,5 +1,6 @@
 ---
 title: "ServiceWorkerGlobalScope: contentdelete event"
+short-title: contentdelete
 slug: Web/API/ServiceWorkerGlobalScope/contentdelete_event
 page-type: web-api-event
 status:
@@ -48,7 +49,7 @@ self.addEventListener("contentdelete", (event) => {
       Promise.all([
         cache.delete(`/icon/${event.id}`),
         cache.delete(`/content/${event.id}`),
-      ])
+      ]),
     );
   event.waitUntil(deletion);
 });

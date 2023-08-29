@@ -1,5 +1,6 @@
 ---
-title: Worker.postMessage()
+title: "Worker: postMessage() method"
+short-title: postMessage()
 slug: Web/API/Worker/postMessage
 page-type: web-api-instance-method
 browser-compat: api.Worker.postMessage
@@ -30,7 +31,7 @@ postMessage(message, transfer)
 
 - `transfer` {{optional_inline}}
 
-  - : An optional [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects)to transfer ownership of. If the ownership of an object is transferred, it becomes unusable in the context it was sent from and becomes available only to the worker it was sent to.
+  - : An optional [array](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) of [transferable objects](/en-US/docs/Web/API/Web_Workers_API/Transferable_objects) to transfer ownership of. If the ownership of an object is transferred, it becomes unusable in the context it was sent from and becomes available only to the worker it was sent to.
 
     Transferable objects are instances of classes like {{jsxref("ArrayBuffer")}}, {{domxref("MessagePort")}} or {{domxref("ImageBitmap")}} objects that can be transferred. `null` is not an acceptable value for `transfer`.
 
@@ -78,7 +79,7 @@ myWorker.addEventListener("message", function handleMessageFromWorker(msg) {
 
   console.log(
     "buf.byteLength in main AFTER transfer back from worker:",
-    bufTransferredBackFromWorker.byteLength
+    bufTransferredBackFromWorker.byteLength,
   );
 });
 
@@ -87,7 +88,7 @@ const myBuf = new ArrayBuffer(8);
 
 console.log(
   "buf.byteLength in main BEFORE transfer to worker:",
-  myBuf.byteLength
+  myBuf.byteLength,
 );
 
 // send myBuf to myWorker and transfer the underlying ArrayBuffer
@@ -95,7 +96,7 @@ myWorker.postMessage(myBuf, [myBuf]);
 
 console.log(
   "buf.byteLength in main AFTER transfer to worker:",
-  myBuf.byteLength
+  myBuf.byteLength,
 );
 ```
 
@@ -110,7 +111,7 @@ self.onmessage = function handleMessageFromMain(msg) {
 
   console.log(
     "buf.byteLength in worker BEFORE transfer back to main:",
-    bufTransferredFromMain.byteLength
+    bufTransferredFromMain.byteLength,
   );
 
   // send buf back to main and transfer the underlying ArrayBuffer
@@ -118,7 +119,7 @@ self.onmessage = function handleMessageFromMain(msg) {
 
   console.log(
     "buf.byteLength in worker AFTER transfer back to main:",
-    bufTransferredFromMain.byteLength
+    bufTransferredFromMain.byteLength,
   );
 };
 ```

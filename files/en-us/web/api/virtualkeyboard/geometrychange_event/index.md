@@ -1,5 +1,6 @@
 ---
 title: "VirtualKeyboard: geometrychange event"
+short-title: geometrychange
 slug: Web/API/VirtualKeyboard/geometrychange_event
 page-type: web-api-event
 status:
@@ -34,7 +35,7 @@ The following code snippet uses the `geometrychange` event to detect when the vi
 
 ```js
 if ("virtualKeyboard" in navigator) {
-  navigator.overlaysContent = true;
+  navigator.virtualKeyboard.overlaysContent = true;
 
   navigator.virtualKeyboard.addEventListener("geometrychange", (event) => {
     const { x, y, width, height } = event.target.boundingRect;

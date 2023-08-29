@@ -1,5 +1,6 @@
 ---
-title: ShadowRoot.adoptedStyleSheets
+title: "ShadowRoot: adoptedStyleSheets property"
+short-title: adoptedStyleSheets
 slug: Web/API/ShadowRoot/adoptedStyleSheets
 page-type: web-api-instance-property
 browser-compat: api.ShadowRoot.adoptedStyleSheets
@@ -15,7 +16,7 @@ The same constructed stylesheet can be adopted by multiple {{domxref("ShadowRoot
 Changing an adopted stylesheet will affect all the adopting objects.
 
 Stylesheets in the `adoptedStyleSheets` property are considered along with the shadow DOM's other stylesheets.
-For the purpose of determining the final computed CSS of any element, they are considered to have been added _after_ the other stylesheets in the shadow DOM ([`ShadowRoot.styleSheets`](/en-US/docs/Web/API/Document/styleSheets)).
+For the purpose of determining the final computed CSS of any element, they are considered to have been added _after_ the other stylesheets in the shadow DOM ([`ShadowRoot.styleSheets`](/en-US/docs/Web/API/ShadowRoot/styleSheets)).
 
 Only stylesheets created using the [`CSSStyleSheet()` constructor](/en-US/docs/Web/API/CSSStyleSheet/CSSStyleSheet), and from within the same parent {{domxref("Document")}} as the shadow root, may be adopted.
 
@@ -82,7 +83,7 @@ shadow.adoptedStyleSheets = [...document.adoptedStyleSheets, extraSheet];
 ## See also
 
 - [Constructable Stylesheets](https://web.dev/constructable-stylesheets/) (web.dev)
-- [Using the Shadow DOM](/en-US/docs/Web/Web_Components/Using_shadow_DOM)
+- [Using the Shadow DOM](/en-US/docs/Web/API/Web_components/Using_shadow_DOM)
 - [`CSSStyleSheet()` constructor](/en-US/docs/Web/API/CSSStyleSheet/CSSStyleSheet)
 - {{domxref("CSSStyleSheet.replaceSync()")}}
 - {{domxref("CSSStyleSheet.replace()")}}

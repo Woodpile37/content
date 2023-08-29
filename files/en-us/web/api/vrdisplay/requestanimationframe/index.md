@@ -1,5 +1,6 @@
 ---
-title: VRDisplay.requestAnimationFrame()
+title: "VRDisplay: requestAnimationFrame() method"
+short-title: requestAnimationFrame()
 slug: Web/API/VRDisplay/requestAnimationFrame
 page-type: web-api-instance-method
 status:
@@ -71,7 +72,7 @@ function drawVRScene() {
 
   const projectionMatrixLocation = gl.getUniformLocation(
     shaderProgram,
-    "projMatrix"
+    "projMatrix",
   );
   const viewMatrixLocation = gl.getUniformLocation(shaderProgram, "viewMatrix");
 
@@ -80,7 +81,7 @@ function drawVRScene() {
   gl.uniformMatrix4fv(
     projectionMatrixLocation,
     false,
-    frameData.leftProjectionMatrix
+    frameData.leftProjectionMatrix,
   );
   gl.uniformMatrix4fv(viewMatrixLocation, false, frameData.leftViewMatrix);
   drawGeometry();
@@ -90,7 +91,7 @@ function drawVRScene() {
   gl.uniformMatrix4fv(
     projectionMatrixLocation,
     false,
-    frameData.rightProjectionMatrix
+    frameData.rightProjectionMatrix,
   );
   gl.uniformMatrix4fv(viewMatrixLocation, false, frameData.rightViewMatrix);
   drawGeometry();

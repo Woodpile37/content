@@ -1,5 +1,6 @@
 ---
-title: Window.pageYOffset
+title: "Window: pageYOffset property"
+short-title: pageYOffset
 slug: Web/API/Window/pageYOffset
 page-type: web-api-instance-property
 browser-compat: api.Window.pageYOffset
@@ -139,7 +140,10 @@ iframe {
 
 #info {
   margin-top: 20px;
-  font: 16px "Open Sans", "Helvetica", "Arial";
+  font:
+    16px "Open Sans",
+    "Helvetica",
+    "Arial";
 }
 ```
 

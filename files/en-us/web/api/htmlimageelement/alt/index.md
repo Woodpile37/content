@@ -1,5 +1,6 @@
 ---
-title: HTMLImageElement.alt
+title: "HTMLImageElement: alt property"
+short-title: alt
 slug: Web/API/HTMLImageElement/alt
 page-type: web-api-instance-property
 browser-compat: api.HTMLImageElement.alt
@@ -83,7 +84,10 @@ p {
 .container {
   width: 100vh;
   height: 95vh;
-  font: 16px Arial, Helvetica, sans-serif;
+  font:
+    16px Arial,
+    Helvetica,
+    sans-serif;
 }
 
 .left-margin {
@@ -223,7 +227,11 @@ The main feature of the CSS here is the use of {{cssxref("clip-path")}} and {{cs
 
 .contents {
   margin-top: 1em;
-  font: 16px Arial, Helvetica, Verdana, sans-serif;
+  font:
+    16px Arial,
+    Helvetica,
+    Verdana,
+    sans-serif;
 }
 ```
 

@@ -1,5 +1,6 @@
 ---
-title: NotificationEvent.notification
+title: "NotificationEvent: notification property"
+short-title: notification
 slug: Web/API/NotificationEvent/notification
 page-type: web-api-instance-property
 browser-compat: api.NotificationEvent.notification
@@ -37,7 +38,7 @@ self.addEventListener("notificationclick", (event) => {
           if (client.url === "/" && "focus" in client) return client.focus();
         }
         if (clients.openWindow) return clients.openWindow("/");
-      })
+      }),
   );
 });
 ```

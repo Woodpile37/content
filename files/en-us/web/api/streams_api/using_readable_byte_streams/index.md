@@ -4,7 +4,7 @@ slug: Web/API/Streams_API/Using_readable_byte_streams
 page-type: guide
 ---
 
-{{apiref("Streams")}}
+{{DefaultAPISidebar("Streams")}}
 
 Readable _byte streams_ are [readable streams](/en-US/docs/Web/API/Streams_API/Using_readable_streams) that have an underlying byte source of `type: "bytes"`, and which support efficient zero-copy transfer of data from the underlying source to a consumer (bypassing the stream's internal queues).
 They are intended for use cases where data might be supplied or requested in arbitrary sized and potentially very large chunks, and hence where avoiding making copies is likely to improve efficiency.
@@ -148,7 +148,7 @@ class MockHypotheticalSocket {
         ? remaining_data
         : this.getRandomIntInclusive(
             this.min_per_read,
-            Math.min(this.max_per_read, remaining_data)
+            Math.min(this.max_per_read, remaining_data),
           );
     return numberBytesReceived;
   }
@@ -565,7 +565,7 @@ function makeReadableByteFileStream(filename) {
       // For a file source open a file handle (here we just create the mocked object).
       fileHandle = new MockUnderlyingFileHandle();
       logSource(
-        `start(): ${controller.constructor.name}.byobRequest = ${controller.byobRequest}`
+        `start(): ${controller.constructor.name}.byobRequest = ${controller.byobRequest}`,
       );
     },
     async pull(controller) {
@@ -575,14 +575,14 @@ function makeReadableByteFileStream(filename) {
         theView.buffer,
         theView.offset,
         theView.length,
-        position
+        position,
       );
       if (bytesRead === 0) {
         await fileHandle.close();
         controller.close();
         controller.byobRequest.respond(0);
         logSource(
-          `pull() with byobRequest. Close controller (read bytes: ${bytesRead})`
+          `pull() with byobRequest. Close controller (read bytes: ${bytesRead})`,
         );
       } else {
         position += bytesRead;
@@ -803,7 +803,7 @@ function makeReadableByteFileStream(filename) {
       // For a file source open a file handle (here we just create the mocked object).
       fileHandle = new MockUnderlyingFileHandle();
       logSource(
-        `start(): ${controller.constructor.name}.byobRequest = ${controller.byobRequest}`
+        `start(): ${controller.constructor.name}.byobRequest = ${controller.byobRequest}`,
       );
     },
     async pull(controller) {
@@ -813,14 +813,14 @@ function makeReadableByteFileStream(filename) {
         theView.buffer,
         theView.offset,
         theView.length,
-        position
+        position,
       );
       if (bytesRead === 0) {
         await fileHandle.close();
         controller.close();
         controller.byobRequest.respond(0);
         logSource(
-          `pull() with byobRequest. Close controller (read bytes: ${bytesRead})`
+          `pull() with byobRequest. Close controller (read bytes: ${bytesRead})`,
         );
       } else {
         position += bytesRead;
@@ -1031,7 +1031,7 @@ function makeReadableByteFileStream(filename) {
       // For a file source open a file handle (here we just create the mocked object).
       fileHandle = new MockUnderlyingFileHandle();
       logSource(
-        `start(): ${controller.constructor.name}.byobRequest = ${controller.byobRequest}`
+        `start(): ${controller.constructor.name}.byobRequest = ${controller.byobRequest}`,
       );
     },
     async pull(controller) {
@@ -1042,14 +1042,14 @@ function makeReadableByteFileStream(filename) {
           theView.buffer,
           theView.offset,
           theView.length,
-          position
+          position,
         );
         if (bytesRead === 0) {
           await fileHandle.close();
           controller.close();
           controller.byobRequest.respond(0);
           logSource(
-            `pull() with byobRequest. Close controller (read bytes: ${bytesRead})`
+            `pull() with byobRequest. Close controller (read bytes: ${bytesRead})`,
           );
         } else {
           position += bytesRead;
@@ -1064,14 +1064,14 @@ function makeReadableByteFileStream(filename) {
           mynewBuffer.buffer,
           mynewBuffer.offset,
           mynewBuffer.length,
-          position
+          position,
         );
         if (bytesRead === 0) {
           await fileHandle.close();
           controller.close();
           controller.enqueue(mynewBuffer);
           logSource(
-            `pull() with no byobRequest. Close controller (read bytes: ${bytesRead})`
+            `pull() with no byobRequest. Close controller (read bytes: ${bytesRead})`,
           );
         } else {
           position += bytesRead;

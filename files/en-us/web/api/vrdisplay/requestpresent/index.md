@@ -1,5 +1,6 @@
 ---
-title: VRDisplay.requestPresent()
+title: "VRDisplay: requestPresent() method"
+short-title: requestPresent()
 slug: Web/API/VRDisplay/requestPresent
 page-type: web-api-instance-method
 status:
@@ -60,7 +61,7 @@ if (navigator.getVRDisplays) {
               Math.max(leftEye.renderWidth, rightEye.renderWidth) * 2;
             canvas.height = Math.max(
               leftEye.renderHeight,
-              rightEye.renderHeight
+              rightEye.renderHeight,
             );
 
             // stop the normal presentation, and start the vr presentation

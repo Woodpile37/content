@@ -1,6 +1,7 @@
 ---
 title: serviceworker
 slug: Web/Manifest/serviceworker
+page-type: web-manifest-member
 status:
   - experimental
   - non-standard
@@ -14,10 +15,6 @@ browser-compat: html.manifest.serviceworker
     <tr>
       <th scope="row">Type</th>
       <td><code>Object</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
     </tr>
   </tbody>
 </table>

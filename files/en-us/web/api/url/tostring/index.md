@@ -1,5 +1,6 @@
 ---
-title: URL.toString()
+title: "URL: toString() method"
+short-title: toString()
 slug: Web/API/URL/toString
 page-type: web-api-instance-method
 browser-compat: api.URL.toString
@@ -31,7 +32,7 @@ A string.
 
 ```js
 const url = new URL(
-  "https://developer.mozilla.org/en-US/docs/Web/API/URL/toString"
+  "https://developer.mozilla.org/en-US/docs/Web/API/URL/toString",
 );
 url.toString(); // should return the URL as a string
 ```

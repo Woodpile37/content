@@ -1,5 +1,6 @@
 ---
-title: RTCPeerConnection.addTrack()
+title: "RTCPeerConnection: addTrack() method"
+short-title: addTrack()
 slug: Web/API/RTCPeerConnection/addTrack
 page-type: web-api-instance-method
 browser-compat: api.RTCPeerConnection.addTrack
@@ -18,7 +19,7 @@ The {{domxref("RTCPeerConnection")}} method **`addTrack()`** adds a new media tr
 addTrack(track)
 addTrack(track, stream0)
 addTrack(track, stream0, stream1)
-addTrack(track, stream0, stream1, /* … ,*/ streamN)
+addTrack(track, stream0, stream1, /* …, */ streamN)
 ```
 
 ### Parameters

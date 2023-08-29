@@ -1,5 +1,6 @@
 ---
-title: HTMLImageElement.crossOrigin
+title: "HTMLImageElement: crossOrigin property"
+short-title: crossOrigin
 slug: Web/API/HTMLImageElement/crossOrigin
 page-type: web-api-instance-property
 browser-compat: api.HTMLImageElement.crossOrigin
@@ -84,7 +85,10 @@ loadImage(imageUrl);
 
 ```css
 body {
-  font: 1.125rem/1.5, Helvetica, sans-serif;
+  font:
+    1.125rem/1.5,
+    Helvetica,
+    sans-serif;
 }
 
 .container {

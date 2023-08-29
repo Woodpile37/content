@@ -7,7 +7,7 @@ browser-compat: api.HTMLSlotElement
 
 {{APIRef('Web Components')}}
 
-The **`HTMLSlotElement`** interface of the [Shadow DOM API](/en-US/docs/Web/Web_Components/Using_shadow_DOM) enables access to the name and assigned nodes of an HTML {{HTMLElement("slot")}} element.
+The **`HTMLSlotElement`** interface of the [Shadow DOM API](/en-US/docs/Web/API/Web_components/Using_shadow_DOM) enables access to the name and assigned nodes of an HTML {{HTMLElement("slot")}} element.
 
 {{InheritanceDiagram}}
 
@@ -39,7 +39,7 @@ let slots = this.shadowRoot.querySelectorAll("slot");
 slots[1].addEventListener("slotchange", (e) => {
   let nodes = slots[1].assignedNodes();
   console.log(
-    `Element in Slot "${slots[1].name}" changed to "${nodes[0].outerHTML}".`
+    `Element in Slot "${slots[1].name}" changed to "${nodes[0].outerHTML}".`,
   );
 });
 ```

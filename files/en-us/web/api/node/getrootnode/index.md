@@ -1,5 +1,6 @@
 ---
-title: Node.getRootNode()
+title: "Node: getRootNode() method"
+short-title: getRootNode()
 slug: Web/API/Node/getRootNode
 page-type: web-api-instance-method
 browser-compat: api.Node.getRootNode
@@ -34,7 +35,7 @@ An object inheriting from {{domxref('Node')}}. This will differ in exact form de
 on where you called `getRootNode()`; for example:
 
 - Calling it on an element inside a standard web page will return an
-  {{domxref("HTMLDocument")}} object representing the entire page.
+  {{domxref("HTMLDocument")}} object representing the entire page (or {{HTMLElement("iframe")}}).
 - Calling it on an element inside a shadow DOM will return the associated
   {{domxref("ShadowRoot")}}.
 

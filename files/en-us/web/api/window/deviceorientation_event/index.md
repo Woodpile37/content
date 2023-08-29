@@ -1,5 +1,6 @@
 ---
 title: "Window: deviceorientation event"
+short-title: deviceorientation
 slug: Web/API/Window/deviceorientation_event
 page-type: web-api-event
 browser-compat: api.Window.deviceorientation_event
@@ -57,7 +58,7 @@ if (window.DeviceOrientationEvent) {
 
       handleOrientationEvent(frontToBack, leftToRight, rotateDegrees);
     },
-    true
+    true,
   );
 }
 

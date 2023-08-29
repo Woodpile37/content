@@ -1,11 +1,12 @@
 ---
 title: "Window: popstate event"
+short-title: popstate
 slug: Web/API/Window/popstate_event
 page-type: web-api-event
 browser-compat: api.Window.popstate_event
 ---
 
-{{APIRef}}
+{{APIRef("History API")}}
 
 The **`popstate`** event of the {{domxref("Window")}} interface is fired when the active history entry changes while the user navigates the session history. It changes the current history entry to that of the last page the user visited or, if {{domxref("history.pushState()")}} has been used to add a history entry to the history stack, that history entry is used instead.
 
@@ -83,7 +84,7 @@ A page at `http://example.com/example.html` running the following code will gene
 ```js
 window.addEventListener("popstate", (event) => {
   console.log(
-    `location: ${document.location}, state: ${JSON.stringify(event.state)}`
+    `location: ${document.location}, state: ${JSON.stringify(event.state)}`,
   );
 });
 history.pushState({ page: 1 }, "title 1", "?page=1");
@@ -99,7 +100,7 @@ The same example using the `onpopstate` event handler property:
 ```js
 window.onpopstate = (event) => {
   console.log(
-    `location: ${document.location}, state: ${JSON.stringify(event.state)}`
+    `location: ${document.location}, state: ${JSON.stringify(event.state)}`,
   );
 };
 history.pushState({ page: 1 }, "title 1", "?page=1");

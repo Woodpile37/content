@@ -1,5 +1,6 @@
 ---
 title: "HTMLElement: drag event"
+short-title: drag
 slug: Web/API/HTMLElement/drag_event
 page-type: web-api-event
 browser-compat: api.HTMLElement.drag_event
@@ -106,7 +107,7 @@ target.addEventListener(
     // prevent default to allow drop
     event.preventDefault();
   },
-  false
+  false,
 );
 
 target.addEventListener("dragenter", (event) => {

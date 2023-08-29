@@ -1,5 +1,6 @@
 ---
 title: "PaymentRequest: paymentmethodchange event"
+short-title: paymentmethodchange
 slug: Web/API/PaymentRequest/paymentmethodchange_event
 page-type: web-api-event
 browser-compat: api.PaymentRequest.paymentmethodchange_event
@@ -52,13 +53,13 @@ const options = {
 const paymentRequest = new PaymentRequest(
   paymentMethods,
   detailsForShipping("ground"),
-  options
+  options,
 );
 
 paymentRequest.addEventListener(
   "paymentmethodchange",
   handlePaymentChange,
-  false
+  false,
 );
 
 paymentRequest

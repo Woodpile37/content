@@ -1,5 +1,6 @@
 ---
-title: HTMLImageElement.loading
+title: "HTMLImageElement: loading property"
+short-title: loading
 slug: Web/API/HTMLImageElement/loading
 page-type: web-api-instance-property
 browser-compat: api.HTMLImageElement.loading
@@ -31,6 +32,8 @@ schedule the loading of the image to optimize page performance. The possible val
     before it will appear in the window's {{Glossary("visual viewport")}}.
 
 ## Usage notes
+
+> **Note:** In Firefox, the `loading` attribute must be defined before the `src` attribute, otherwise it has no effect ([Firefox bug 1647077](https://bugzil.la/1647077)).
 
 ### Timing of the load event
 

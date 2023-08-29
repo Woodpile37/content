@@ -1,5 +1,6 @@
 ---
-title: Touch.pageX
+title: "Touch: pageX property"
+short-title: pageX
 slug: Web/API/Touch/pageX
 page-type: web-api-instance-property
 browser-compat: api.Touch.pageX
@@ -44,7 +45,7 @@ src.addEventListener(
       console.log(`touchpoint[${i}].pageY = ${e.changedTouches[i].pageY}`);
     }
   },
-  false
+  false,
 );
 ```
 

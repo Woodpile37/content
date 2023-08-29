@@ -1,5 +1,6 @@
 ---
-title: VRDisplay.submitFrame()
+title: "VRDisplay: submitFrame() method"
+short-title: submitFrame()
 slug: Web/API/VRDisplay/submitFrame
 page-type: web-api-instance-method
 status:
@@ -69,7 +70,7 @@ function drawVRScene() {
 
   const projectionMatrixLocation = gl.getUniformLocation(
     shaderProgram,
-    "projMatrix"
+    "projMatrix",
   );
   const viewMatrixLocation = gl.getUniformLocation(shaderProgram, "viewMatrix");
 
@@ -78,7 +79,7 @@ function drawVRScene() {
   gl.uniformMatrix4fv(
     projectionMatrixLocation,
     false,
-    frameData.leftProjectionMatrix
+    frameData.leftProjectionMatrix,
   );
   gl.uniformMatrix4fv(viewMatrixLocation, false, frameData.leftViewMatrix);
   drawGeometry();
@@ -88,7 +89,7 @@ function drawVRScene() {
   gl.uniformMatrix4fv(
     projectionMatrixLocation,
     false,
-    frameData.rightProjectionMatrix
+    frameData.rightProjectionMatrix,
   );
   gl.uniformMatrix4fv(viewMatrixLocation, false, frameData.rightViewMatrix);
   drawGeometry();

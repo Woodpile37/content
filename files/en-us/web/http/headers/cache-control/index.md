@@ -1,6 +1,7 @@
 ---
 title: Cache-Control
 slug: Web/HTTP/Headers/Cache-Control
+page-type: http-header
 browser-compat: http.headers.Cache-Control
 ---
 
@@ -275,8 +276,6 @@ The `no-store` request directive allows a client to request that caches refrain 
 ```http
 Cache-Control: no-store
 ```
-
-Note that the major browsers do not support requests with `no-store`.
 
 #### `max-age`
 

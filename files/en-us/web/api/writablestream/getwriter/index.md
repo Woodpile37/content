@@ -1,5 +1,6 @@
 ---
-title: WritableStream.getWriter()
+title: "WritableStream: getWriter() method"
+short-title: getWriter()
 slug: Web/API/WritableStream/getWriter
 page-type: web-api-instance-method
 browser-compat: api.WritableStream.getWriter
@@ -101,7 +102,7 @@ const writableStream = new WritableStream(
       console.log("Sink error:", err);
     },
   },
-  queuingStrategy
+  queuingStrategy,
 );
 
 sendMessage("Hello, world.", writableStream);

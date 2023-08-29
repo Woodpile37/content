@@ -1,5 +1,6 @@
 ---
-title: Navigator.getUserMedia()
+title: "Navigator: getUserMedia() method"
+short-title: getUserMedia()
 slug: Web/API/Navigator/getUserMedia
 page-type: web-api-instance-method
 status:
@@ -87,7 +88,7 @@ if (navigator.getUserMedia) {
     },
     (err) => {
       console.error(`The following error occurred: ${err.name}`);
-    }
+    },
   );
 } else {
   console.log("getUserMedia not supported");
@@ -126,5 +127,5 @@ See [permission: audio-capture](/en-US/docs/Web/Apps/Developing/App_permissions#
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API) - the introductory page to the API
 - [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API) - the API for the
   media stream objects
-- [Taking webcam photos](/en-US/docs/Web/API/WebRTC_API/Taking_still_photos) - a
+- [Taking webcam photos](/en-US/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos) - a
   tutorial on using `getUserMedia() for taking photos rather than video.`

@@ -1,18 +1,13 @@
 ---
-title: KeyboardLayoutMap.size
+title: "KeyboardLayoutMap: size property"
+short-title: size
 slug: Web/API/KeyboardLayoutMap/size
-tags:
-  - API
-  - Experimental
-  - Keyboard API
-  - Keyboard Map
-  - KeyboardLayoutMap
-  - Property
-  - Reference
-  - keyboard
-  - size
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.KeyboardLayoutMap.size
 ---
+
 {{SeeCompatTable}}{{APIRef("Keyboard API")}}
 
 The **`size`** read-only property of

@@ -1,19 +1,12 @@
 ---
 title: Codecs used by WebRTC
 slug: Web/Media/Formats/WebRTC_codecs
-tags:
-  - Audio
-  - Codecs
-  - Guide
-  - Intermediate
-  - Media
-  - Video
-  - WebRTC
-  - WebRTC API
+page-type: guide
 ---
+
 {{QuickLinksWithSubpages("/en-US/docs/Web/Media")}}
 
-The [WebRTC API](/en-US/docs/Web/API/WebRTC_API) makes it possible to construct web sites and apps that let users communicate in real time, using audio and/or video as well as optional data and other information. To communicate, the two devices need to be able to agree upon a mutually-understood codec for each track so they can successfully communicate and present the shared media. This guide reviews the codecs that browsers are required to implement as well as other codecs that some or all browsers support for WebRTC.
+The [WebRTC API](/en-US/docs/Web/API/WebRTC_API) makes it possible to construct websites and apps that let users communicate in real time, using audio and/or video as well as optional data and other information. To communicate, the two devices need to be able to agree upon a mutually-understood codec for each track so they can successfully communicate and present the shared media. This guide reviews the codecs that browsers are required to implement as well as other codecs that some or all browsers support for WebRTC.
 
 ## Containerless media
 
@@ -242,11 +235,11 @@ In addition to the mandatory audio codecs, some browsers support additional code
   </tbody>
 </table>
 
-**{{interwiki("wikipedia", "Internet Low Bitrate Codec")}}** (**iLBC**) is an open-source narrow-band codec developed by Global IP Solutions and now Google, designed specifically for streaming voice audio. Google and some other browser developers have adopted it for WebRTC.
+**[Internet Low Bitrate Codec](https://en.wikipedia.org/wiki/Internet_Low_Bitrate_Codec)** (**iLBC**) is an open-source narrow-band codec developed by Global IP Solutions and now Google, designed specifically for streaming voice audio. Google and some other browser developers have adopted it for WebRTC.
 
-The **{{interwiki("wikipedia", "Internet Speech Audio Codec")}}** (**iSAC**) is another codec developed by Global IP Solutions and now owned by Google, which has open-sourced it. It's used by Google Talk, QQ, and other instant messaging clients and is specifically designed for voice transmissions which are encapsulated within an RTP stream.
+The **[Internet Speech Audio Codec](https://en.wikipedia.org/wiki/Internet_Speech_Audio_Codec)** (**iSAC**) is another codec developed by Global IP Solutions and now owned by Google, which has open-sourced it. It's used by Google Talk, QQ, and other instant messaging clients and is specifically designed for voice transmissions which are encapsulated within an RTP stream.
 
-**{{interwiki("wikipedia", "Comfort noise")}}** (**CN**) is a form of artificial background noise which is used to fill gaps in a transmission instead of using pure silence. This helps to avoid a jarring effect that can occur when voice activation and similar features cause a stream to stop sending data temporarily—a capability known as Discontinuous Transmission (DTX). In {{RFC(3389)}}, a method for providing an appropriate filler to use during silences.
+**[Comfort noise](https://en.wikipedia.org/wiki/Comfort_noise)** (**CN**) is a form of artificial background noise which is used to fill gaps in a transmission instead of using pure silence. This helps to avoid a jarring effect that can occur when voice activation and similar features cause a stream to stop sending data temporarily—a capability known as Discontinuous Transmission (DTX). In {{RFC(3389)}}, a method for providing an appropriate filler to use during silences.
 
 Comfort Noise is used with G.711, and may potentially be used with other codecs that don't have a built-in CN feature. Opus, for example, has its own CN capability; as such, using RFC 3389 CN with the Opus codec is not recommended.
 
@@ -276,7 +269,7 @@ The bit rate may be adjusted at any time. In order to avoid network congestion, 
 
 ### G.711
 
-G.711 defines the format for **Pulse Code Modulation** (**PCM**) audio as a series of 8-bit integer samples taken at a sample rate of 8,000 Hz, yielding a bit rate of 64 kbps. Both {{interwiki("wikipedia", "M-law", "µ-law")}} and {{interwiki("wikipedia", "A-law")}} encodings are allowed.
+G.711 defines the format for **Pulse Code Modulation** (**PCM**) audio as a series of 8-bit integer samples taken at a sample rate of 8,000 Hz, yielding a bit rate of 64 kbps. Both [µ-law](https://en.wikipedia.org/wiki/M-law) and [A-law](https://en.wikipedia.org/wiki/A-law) encodings are allowed.
 
 G.711 is [defined by the ITU](https://www.itu.int/rec/T-REC-G.711-198811-I/en) and its payload format is defined in {{RFC(3551, "", "4.5.14")}}.
 
@@ -290,13 +283,14 @@ Due to its low sample rate and sample size, G.711 audio quality is generally con
 
 Because a given browser and platform may have different availability among the potential codecs—and may have multiple profiles or levels supported for a given codec—the first step when configuring codecs for an {{domxref("RTCPeerConnection")}} is to get the list of available codecs. To do this, you first have to establish a connection on which to get the list.
 
-There are a couple of ways you can do this. The most efficient way is to use the static method {{domxref("RTCRtpSender.getCapabilities()")}} (or the equivalent {{domxref("RTCRtpReceiver.getCapabilities()")}} for a receiver), specifying the type of media as the input parameter. For example, to determine the supported codecs for video, you can do this:
+There are a couple of ways you can do this. The most efficient way is to use the static method {{domxref("RTCRtpSender/getCapabilities_static", "RTCRtpSender.getCapabilities()")}} (or the equivalent {{domxref("RTCRtpReceiver/getCapabilities_static", "RTCRtpReceiver.getCapabilities()")}} for a receiver), specifying the type of media as the input parameter. For example, to determine the supported codecs for video, you can do this:
 
 ```js
 codecList = RTCRtpSender.getCapabilities("video").codecs;
 ```
 
-Now `codecList` is an array of {{domxref("RTCRtpCodecCapability")}} objects, each describing one codec configuration. Also present in the list will be entries for retransmission (RTX), redundant coding (RED), and forward error correction (FEC).
+Now `codecList` is an array [`codec`](/en-US/docs/Web/API/RTCRtpSender/getCapabilities_static#codecs) objects, each describing one codec configuration.
+Also present in the list will be entries for [retransmission](/en-US/docs/Web/API/RTCRtpSender/getCapabilities_static#rtx_retransmission) (RTX), [redundant coding](/en-US/docs/Web/API/RTCRtpSender/getCapabilities_static#red_redundant_audio_data) (RED), and [forward error correction](/en-US/docs/Web/API/RTCRtpSender/getCapabilities_static#fec_forward_error_correction) (FEC).
 
 If the connection is in the process of starting up, you can use the {{domxref("RTCPeerConnection.icegatheringstatechange_event", "icegatheringstatechange")}} event to watch for the completion of {{Glossary("ICE")}} candidate gathering, then fetch the list.
 
@@ -321,7 +315,8 @@ peerConnection.addEventListener("icegatheringstatechange", (event) => {
 
 The event handler for `icegatheringstatechange` is established; in it, we look to see if the ICE gathering state is `complete`, indicating that no further candidates will be collected. The method {{domxref("RTCPeerConnection.getSenders()")}} is called to get a list of all the {{domxref("RTCRtpSender")}} objects used by the connection.
 
-With that in hand, we walk through the list of senders, looking for the first one whose {{domxref("MediaStreamTrack")}} indicates that it's {{domxref("MediaStreamTrack.track", "track")}}'s {{domxref("MediaStreamTrack.kind", "kind")}} is `video`, indicating that the track's data is video media. We then call that sender's {{domxref("RTCRtpSender.getParameters", "getParameters()")}} method and, from the returned {{domxref("RTCRtpSendParameters")}} object, we set `codecList` to the {{domxref("RTCRtpParameters.codecs", "codecs")}} property and return to the caller.
+With that in hand, we walk through the list of senders, looking for the first one whose {{domxref("MediaStreamTrack")}} indicates that it's {{domxref("MediaStreamTrack.kind", "kind")}} is `video`, indicating that the track's data is video media.
+We then call that sender's {{domxref("RTCRtpSender.getParameters", "getParameters()")}} method and set `codecList` to the `codecs` property in the returned object, and then return to the caller.
 
 If no video track is found, we set `codecList` to `null`.
 
@@ -337,7 +332,7 @@ Once you have a list of the available codecs, you can alter it and then send the
 function changeVideoCodec(mimeType) {
   const transceivers = peerConnection.getTransceivers();
 
-  transceivers.forEach(transceiver => {
+  transceivers.forEach((transceiver) => {
     const kind = transceiver.sender.track.kind;
     let sendCodecs = RTCRtpSender.getCapabilities(kind).codecs;
     let recvCodecs = RTCRtpReceiver.getCapabilities(kind).codecs;
@@ -371,7 +366,7 @@ function preferCodec(codecs, mimeType) {
   let sortedCodecs = [];
   let count = codecs.length;
 
-  codecs.forEach(codec => {
+  codecs.forEach((codec) => {
     if (codec.mimeType === mimeType) {
       sortedCodecs.push(codec);
     } else {
@@ -445,7 +440,7 @@ There are a number of factors that come into play when deciding upon a video cod
 
 #### Licensing terms
 
-Before choosing a video codec, make sure you're aware of any licensing requirements around the codec you select; you can find information about possible licensing concerns in our main [guide to video codecs used on the web](/en-US/docs/Web/Media/Formats/Video_codecs). Of the two mandatory codecs for video—VP8 and AVC/H.264—only VP8 is completely free of licensing requirements. If you select AVC, make sure you're; aware of any potential fees you may need to pay; that said, the patent holders have generally said that most typical web site developers shouldn't need to worry about paying the license fees, which are typically focused more on the developers of the encoding and decoding software.
+Before choosing a video codec, make sure you're aware of any licensing requirements around the codec you select; you can find information about possible licensing concerns in our main [guide to video codecs used on the web](/en-US/docs/Web/Media/Formats/Video_codecs). Of the two mandatory codecs for video—VP8 and AVC/H.264—only VP8 is completely free of licensing requirements. If you select AVC, make sure you're; aware of any potential fees you may need to pay; that said, the patent holders have generally said that most typical website developers shouldn't need to worry about paying the license fees, which are typically focused more on the developers of the encoding and decoding software.
 
 > **Warning:** The information here does _not_ constitute legal advice! Be sure to confirm your exposure to liability before making any final decisions where potential exists for licensing issues.
 

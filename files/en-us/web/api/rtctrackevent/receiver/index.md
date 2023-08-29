@@ -1,22 +1,11 @@
 ---
-title: RTCTrackEvent.receiver
+title: "RTCTrackEvent: receiver property"
+short-title: receiver
 slug: Web/API/RTCTrackEvent/receiver
-tags:
-  - API
-  - Media
-  - Property
-  - RTCRtpReceiver
-  - RTCTrackEvent
-  - RTP
-  - Read-only
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - events
-  - receiver
-  - track
+page-type: web-api-instance-property
 browser-compat: api.RTCTrackEvent.receiver
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only **`receiver`** property

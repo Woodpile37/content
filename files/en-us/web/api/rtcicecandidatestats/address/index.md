@@ -1,24 +1,11 @@
 ---
-title: RTCIceCandidateStats.address
+title: "RTCIceCandidateStats: address property"
+short-title: address
 slug: Web/API/RTCIceCandidateStats/address
-tags:
-  - API
-  - Address
-  - Domain
-  - Domain Name
-  - FQDN
-  - IP
-  - IPv4
-  - IPv6
-  - Property
-  - RTCIceCandidateStats
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
+page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidateStats.address
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`address`** property of the

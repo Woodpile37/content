@@ -1,14 +1,11 @@
 ---
-title: WebGLRenderingContext.shaderSource()
+title: "WebGLRenderingContext: shaderSource() method"
+short-title: shaderSource()
 slug: Web/API/WebGLRenderingContext/shaderSource
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
+page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.shaderSource
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.shaderSource()`** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) sets the source code of a
@@ -16,15 +13,15 @@ The **`WebGLRenderingContext.shaderSource()`** method of the [WebGL API](/en-US/
 
 ## Syntax
 
-```js
+```js-nolint
 shaderSource(shader, source)
 ```
 
 ### Parameters
 
-- shader
+- `shader`
   - : A {{domxref("WebGLShader")}} object in which to set the source code.
-- source
+- `source`
   - : A string containing the GLSL source code to set.
 
 ### Return value
@@ -34,10 +31,10 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var shader = gl.createShader(gl.VERTEX_SHADER);
+const shader = gl.createShader(gl.VERTEX_SHADER);
 gl.shaderSource(shader, originalSource);
 
-var source = gl.getShaderSource(shader);
+const source = gl.getShaderSource(shader);
 ```
 
 ## Specifications

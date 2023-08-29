@@ -1,25 +1,21 @@
 ---
 title: HmacImportParams
 slug: Web/API/HmacImportParams
-tags:
-  - API
-  - Dictionary
-  - HmacImportParams
-  - Reference
-  - Web Crypto API
+page-type: web-api-interface
 spec-urls: https://w3c.github.io/webcrypto/#dfn-HmacImportParams
 ---
+
 {{ APIRef("Web Crypto API") }}
 
 The **`HmacImportParams`** dictionary of the [Web Crypto API](/en-US/docs/Web/API/Web_Crypto_API) represents the object that should be passed as the `algorithm` parameter into {{domxref("SubtleCrypto.importKey()")}} or {{domxref("SubtleCrypto.unwrapKey()")}}, when generating a key for the [HMAC](/en-US/docs/Web/API/SubtleCrypto/sign#hmac) algorithm.
 
-## Properties
+## Instance properties
 
 - `name`
   - : A string. This should be set to `HMAC`.
 - `hash`
 
-  - : A string representing the name of the [digest function](/en-US/docs//Web/API/SubtleCrypto/digest#supported_algorithms) to use. The can take a value of `SHA-256`, `SHA-384`, or `SHA-512`.
+  - : A string representing the name of the [digest function](/en-US/docs/Web/API/SubtleCrypto/digest#supported_algorithms) to use. The can take a value of `SHA-256`, `SHA-384`, or `SHA-512`.
 
     > **Warning:** Although you can technically pass `SHA-1` here, this is strongly discouraged as it is considered vulnerable.
 

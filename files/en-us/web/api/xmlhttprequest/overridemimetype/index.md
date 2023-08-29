@@ -1,18 +1,11 @@
 ---
-title: XMLHttpRequest.overrideMimeType()
+title: "XMLHttpRequest: overrideMimeType() method"
+short-title: overrideMimeType()
 slug: Web/API/XMLHttpRequest/overrideMimeType
-tags:
-  - API
-  - File Type
-  - MIME Type
-  - Method
-  - Reference
-  - XHR
-  - XHR MIME Type
-  - XMLHttpRequest
-  - overrideMimeType
+page-type: web-api-instance-method
 browser-compat: api.XMLHttpRequest.overrideMimeType
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 The {{domxref("XMLHttpRequest")}} method
@@ -27,7 +20,7 @@ as such. This method must be called before calling {{domxref("XMLHttpRequest.sen
 
 ## Syntax
 
-```js
+```js-nolint
 overrideMimeType(mimeType)
 ```
 
@@ -74,6 +67,5 @@ req.send();
 
 ## See also
 
-- [Using
-  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
 - {{domxref("XMLHttpRequest.responseType")}}

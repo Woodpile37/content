@@ -1,21 +1,11 @@
 ---
-title: AudioScheduledSourceNode.start()
+title: "AudioScheduledSourceNode: start() method"
+short-title: start()
 slug: Web/API/AudioScheduledSourceNode/start
-tags:
-  - API
-  - Audio
-  - AudioScheduledSourceNode
-  - Media
-  - Method
-  - NeedsExample
-  - Node
-  - Reference
-  - Web Audio API
-  - play
-  - sound
-  - start
+page-type: web-api-instance-method
 browser-compat: api.AudioScheduledSourceNode.start
 ---
+
 {{APIRef("Web Audio API")}}
 
 The `start()` method on
@@ -25,7 +15,7 @@ immediately.
 
 ## Syntax
 
-```js
+```js-nolint
 start()
 start(when)
 ```

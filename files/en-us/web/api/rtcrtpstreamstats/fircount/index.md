@@ -1,24 +1,11 @@
 ---
-title: RTCRtpStreamStats.firCount
+title: "RTCRtpStreamStats: firCount property"
+short-title: firCount
 slug: Web/API/RTCRtpStreamStats/firCount
-tags:
-  - API
-  - Dropped Frames
-  - Frames
-  - Media
-  - Property
-  - RTCRtpStreamStats
-  - RTP
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - firCount
-  - rtc
-  - stream
+page-type: web-api-instance-property
 browser-compat: api.RTCRtpStreamStats.firCount
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`firCount`** property of the

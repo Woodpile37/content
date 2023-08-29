@@ -1,17 +1,13 @@
 ---
-title: NetworkInformation.rtt
+title: "NetworkInformation: rtt property"
+short-title: rtt
 slug: Web/API/NetworkInformation/rtt
-tags:
-  - API
-  - Experimental
-  - Network Information API
-  - NetworkInformation
-  - Property
-  - Read-only
-  - Reference
-  - rtt
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.NetworkInformation.rtt
 ---
+
 {{apiref("Network Information API")}}{{SeeCompatTable}}
 
 The **`NetworkInformation.rtt`** read-only property returns the

@@ -1,15 +1,11 @@
 ---
-title: HTMLTableElement.createTFoot()
+title: "HTMLTableElement: createTFoot() method"
+short-title: createTFoot()
 slug: Web/API/HTMLTableElement/createTFoot
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - Method
-  - NeedsSpecTable
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.HTMLTableElement.createTFoot
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`createTFoot()`** method of
@@ -24,7 +20,7 @@ method creates it, and then returns it.
 
 ## Syntax
 
-```js
+```js-nolint
 createTFoot()
 ```
 
@@ -40,7 +36,7 @@ None.
 
 ```js
 let myfoot = mytable.createTFoot();
-// Now this should be true: myfoot == mytable.tFoot
+// Now this should be true: myfoot === mytable.tFoot
 ```
 
 ## Specifications

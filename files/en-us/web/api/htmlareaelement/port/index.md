@@ -1,13 +1,11 @@
 ---
-title: HTMLAreaElement.port
+title: "HTMLAreaElement: port property"
+short-title: port
 slug: Web/API/HTMLAreaElement/port
-tags:
-  - API
-  - HTMLAreaElement
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.HTMLAreaElement.port
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAreaElement.port`** property is a

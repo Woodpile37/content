@@ -1,24 +1,11 @@
 ---
-title: RTCRtpStreamStats.codecId
+title: "RTCRtpStreamStats: codecId property"
+short-title: codecId
 slug: Web/API/RTCRtpStreamStats/codecId
-tags:
-  - API
-  - Codec
-  - Dictionary
-  - Interface
-  - Property
-  - RTCRtpStreamStats
-  - RTP
-  - Reference
-  - Statistics
-  - WebRTC
-  - WebRTC API
-  - WebRTC Statistics
-  - codecId
-  - id
-  - rtc
+page-type: web-api-instance-property
 browser-compat: api.RTCRtpStreamStats.codecId
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRtpStreamStats")}} dictionary's

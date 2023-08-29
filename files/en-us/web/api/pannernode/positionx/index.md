@@ -1,15 +1,11 @@
 ---
-title: PannerNode.positionX
+title: "PannerNode: positionX property"
+short-title: positionX
 slug: Web/API/PannerNode/positionX
-tags:
-  - API
-  - PannerNode
-  - Property
-  - Reference
-  - Web Audio API
-  - positionX
+page-type: web-api-instance-property
 browser-compat: api.PannerNode.positionX
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The **`positionX`** property of the {{ domxref("PannerNode")
@@ -56,8 +52,7 @@ panner.positionX.setValueAtTime(-1, context.currentTime + 1);
 panner.positionX.setValueAtTime(1, context.currentTime + 2);
 panner.positionX.setValueAtTime(0, context.currentTime + 3);
 
-osc.connect(panner)
-   .connect(context.destination);
+osc.connect(panner).connect(context.destination);
 
 osc.start(0);
 ```
@@ -73,6 +68,5 @@ osc.start(0);
 ## See also
 
 - [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [Web
-  Audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
+- [Web Audio spatialization basics](/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
 - {{domxref("PannerNode")}}

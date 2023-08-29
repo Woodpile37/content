@@ -1,14 +1,11 @@
 ---
-title: Element.getElementsByTagNameNS()
+title: "Element: getElementsByTagNameNS() method"
+short-title: getElementsByTagNameNS()
 slug: Web/API/Element/getElementsByTagNameNS
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.Element.getElementsByTagNameNS
 ---
+
 {{APIRef("DOM")}}
 
 The **`Element.getElementsByTagNameNS()`** method returns a
@@ -18,7 +15,7 @@ that its search is restricted to descendants of the specified element.
 
 ## Syntax
 
-```js
+```js-nolint
 getElementsByTagNameNS(namespaceURI, localName)
 ```
 
@@ -39,15 +36,18 @@ A live {{domxref("HTMLCollection")}} of found elements in the order they appear 
 ## Examples
 
 ```js
-// check the alignment on a number of cells in a table in an XHTML document.
-var table = document.getElementById("forecast-table");
-var cells = table.getElementsByTagNameNS("http://www.w3.org/1999/xhtml", "td");
+// Check the alignment on a number of cells in a table in an XHTML document.
+const table = document.getElementById("forecast-table");
+const cells = table.getElementsByTagNameNS(
+  "http://www.w3.org/1999/xhtml",
+  "td",
+);
 
-for (var i = 0; i < cells.length; i++) {
-    var axis = cells[i].getAttribute("axis");
-    if (axis == "year") {
-        // grab the data
-    }
+for (const cell of cells) {
+  const axis = cell.getAttribute("axis");
+  if (axis === "year") {
+    // Grab the data
+  }
 }
 ```
 

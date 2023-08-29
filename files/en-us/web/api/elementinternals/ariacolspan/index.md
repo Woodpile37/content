@@ -1,17 +1,12 @@
 ---
-title: ElementInternals.ariaColSpan
+title: "ElementInternals: ariaColSpan property"
+short-title: ariaColSpan
 slug: Web/API/ElementInternals/ariaColSpan
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaColSpan
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
+page-type: web-api-instance-property
 browser-compat: api.ElementInternals.ariaColSpan
 ---
-{{DefaultAPISidebar("DOM")}}
+
+{{APIRef("DOM")}}
 
 The **`ariaColSpan`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-colspan`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colspan) attribute, which defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid.
 
@@ -39,4 +34,4 @@ this.internals_.ariaColspan = "2";
 
 ## See also
 
-- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role)
+- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)

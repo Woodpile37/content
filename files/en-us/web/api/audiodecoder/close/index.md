@@ -1,21 +1,20 @@
 ---
-title: AudioDecoder.close()
+title: "AudioDecoder: close() method"
+short-title: close()
 slug: Web/API/AudioDecoder/close
-tags:
-  - API
-  - Method
-  - Reference
-  - close
-  - AudioDecoder
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.AudioDecoder.close
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`close()`** method of the {{domxref("AudioDecoder")}} interface ends all pending work and releases system resources.
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

@@ -1,18 +1,12 @@
 ---
-title: CSSNumericValue.to()
+title: "CSSNumericValue: to() method"
+short-title: to()
 slug: Web/API/CSSNumericValue/to
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSNumericValue
-  - Experimental
-  - Houdini
-  - Method
-  - Reference
-  - to()
+page-type: web-api-instance-method
 browser-compat: api.CSSNumericValue.to
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+
+{{APIRef("CSS Typed OM")}}
 
 The **`to()`** method of the
 {{domxref("CSSNumericValue")}} interface converts a numeric value from one unit to
@@ -20,13 +14,13 @@ another.
 
 ## Syntax
 
-```js
+```js-nolint
 to(unit)
 ```
 
 ### Parameters
 
-- unit
+- `unit`
   - : The unit to which you want to convert.
 
 ### Return value

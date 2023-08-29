@@ -1,18 +1,14 @@
 ---
-title: USBConfiguration.interfaces
+title: "USBConfiguration: interfaces property"
+short-title: interfaces
 slug: Web/API/USBConfiguration/interfaces
-tags:
-  - API
-  - Interfaces
-  - Property
-  - Reference
-  - USB
-  - USBConfiguration
-  - WebUSB
-  - WebUSB API
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.USBConfiguration.interfaces
 ---
-{{securecontext_header}}{{DefaultAPISidebar("")}}
+
+{{securecontext_header}}{{APIRef("WebUSB API")}}{{SeeCompatTable}}
 
 The **`interfaces`** read-only property of the
 {{domxref("USBConfiguration")}} interface returns an array containing instances of the

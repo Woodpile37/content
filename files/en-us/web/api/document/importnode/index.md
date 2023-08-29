@@ -1,17 +1,11 @@
 ---
-title: Document.importNode()
+title: "Document: importNode() method"
+short-title: importNode()
 slug: Web/API/Document/importNode
-tags:
-  - API
-  - DOM
-  - Document
-  - Method
-  - Node
-  - Reference
-  - copy
-  - importNode
+page-type: web-api-instance-method
 browser-compat: api.Document.importNode
 ---
+
 {{APIRef("DOM")}}
 
 The {{domxref("Document")}} object's **`importNode()`** method creates a copy of a
@@ -28,7 +22,7 @@ original document. The imported node is a clone of the original.
 
 ## Syntax
 
-```js
+```js-nolint
 importNode(externalNode)
 importNode(externalNode, deep)
 ```
@@ -58,7 +52,7 @@ The copied `importedNode` in the scope of the importing document.
 ## Examples
 
 ```js
-const iframe  = document.querySelector("iframe");
+const iframe = document.querySelector("iframe");
 const oldNode = iframe.contentWindow.document.getElementById("myNode");
 const newNode = document.importNode(oldNode, true);
 document.getElementById("container").appendChild(newNode);

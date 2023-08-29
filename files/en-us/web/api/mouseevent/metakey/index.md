@@ -1,16 +1,11 @@
 ---
-title: MouseEvent.metaKey
+title: "MouseEvent: metaKey property"
+short-title: metaKey
 slug: Web/API/MouseEvent/metaKey
-tags:
-  - API
-  - DOM
-  - DOM Events
-  - MouseEvent
-  - Property
-  - Read-only
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.MouseEvent.metaKey
 ---
+
 {{APIRef("UI Events")}}
 
 The **`MouseEvent.metaKey`** read-only property is a boolean value that indicates whether the <kbd>meta</kbd> key was pressed or not when a given mouse event occurs.
@@ -27,7 +22,7 @@ A boolean value, where `true` indicates that the key is pressed, and `false` ind
 
 ## Examples
 
-This example logs the `metaKey` property when you trigger a {{Event("click")}} event.
+This example logs the `metaKey` property when you trigger a {{domxref("Element/click_event", "click")}} event.
 
 ### HTML
 
@@ -39,8 +34,8 @@ This example logs the `metaKey` property when you trigger a {{Event("click")}} e
 ### JavaScript
 
 ```js
-let log = document.querySelector('#log');
-document.addEventListener('click', logKey);
+let log = document.querySelector("#log");
+document.addEventListener("click", logKey);
 
 function logKey(e) {
   log.textContent = `The meta key is pressed: ${e.metaKey}`;
@@ -49,7 +44,7 @@ function logKey(e) {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ## Specifications
 

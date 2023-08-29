@@ -1,14 +1,11 @@
 ---
-title: WebSocket()
+title: "WebSocket: WebSocket() constructor"
+short-title: WebSocket()
 slug: Web/API/WebSocket/WebSocket
-tags:
-  - API
-  - Constructor
-  - Reference
-  - Web API
-  - WebSocket
+page-type: web-api-constructor
 browser-compat: api.WebSocket.WebSocket
 ---
+
 {{APIRef("Web Sockets API")}}
 
 The **`WebSocket()`** constructor returns a new
@@ -16,7 +13,7 @@ The **`WebSocket()`** constructor returns a new
 
 ## Syntax
 
-```js
+```js-nolint
 new WebSocket(url)
 new WebSocket(url, protocols)
 ```

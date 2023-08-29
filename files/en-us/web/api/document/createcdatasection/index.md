@@ -1,13 +1,11 @@
 ---
-title: Document.createCDATASection()
+title: "Document: createCDATASection() method"
+short-title: createCDATASection()
 slug: Web/API/Document/createCDATASection
-tags:
-  - API
-  - DOM
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.Document.createCDATASection
 ---
+
 {{APIRef("DOM")}}
 
 **`createCDATASection()`** creates a new CDATA section node,
@@ -15,13 +13,13 @@ and returns it.
 
 ## Syntax
 
-```js
+```js-nolint
 createCDATASection(data)
 ```
 
 ### Parameters
 
-- _data_
+- `data`
   - : A string containing the data to be added to the CDATA Section.
 
 ### Return value
@@ -31,13 +29,10 @@ A [CDATA Section](/en-US/docs/Web/API/CDATASection) node.
 ## Examples
 
 ```js
-var docu = new DOMParser().parseFromString('<xml></xml>', 'application/xml')
-
-var cdata = docu.createCDATASection('Some <CDATA> data & then some');
-
-docu.getElementsByTagName('xml')[0].appendChild(cdata);
-
-alert(new XMLSerializer().serializeToString(docu));
+const docu = new DOMParser().parseFromString("<xml></xml>", "application/xml");
+const cdata = docu.createCDATASection("Some <CDATA> data & then some");
+docu.querySelector("xml").appendChild(cdata);
+console.log(new XMLSerializer().serializeToString(docu));
 // Displays: <xml><![CDATA[Some <CDATA> data & then some]]></xml>
 ```
 

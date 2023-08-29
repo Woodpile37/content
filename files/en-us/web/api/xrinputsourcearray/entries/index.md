@@ -1,24 +1,14 @@
 ---
-title: XRInputSourceArray.entries()
+title: "XRInputSourceArray: entries() method"
+short-title: entries()
 slug: Web/API/XRInputSourceArray/entries
-tags:
-  - API
-  - AR
-  - Entries
-  - Input Sources
-  - Inputs
-  - Iterator
-  - Method
-  - Reference
-  - VR
-  - WebXR
-  - WebXR API
-  - WebXR Device API
-  - XR
-  - XRInputSourceArray
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.XRInputSourceArray.entries
 ---
-{{APIRef("WebXR Device API")}}
+
+{{APIRef("WebXR Device API")}}{{SeeCompatTable}}
 
 The {{domxref("XRInputSourceArray")}} interface's
 **`entries()`** method returns a JavaScript
@@ -31,7 +21,7 @@ Most frequently, you will use this in tandem with statements such as
 
 ## Syntax
 
-```js
+```js-nolint
 entries()
 ```
 
@@ -53,17 +43,17 @@ type of input device it supports using.
 ```js
 let sources = xrSession.inputSources;
 
-for (let input of sources.entries()) {
+for (const input of sources.entries()) {
   if (input.gamepad) {
     checkGamepad(input.gamepad);
+  } else if (
+    input.targetRayMode === "tracked-pointer" &&
+    input.handedness === player.handedness
+  ) {
+    /* Handle main hand controller */
+    handleMainHandInput(input);
   } else {
-    if (input.targetRayMode === "tracked-pointer" &&
-        input.handedness === player.handedness) {
-      /* Handle main hand controller */
-      handleMainHandInput(input);
-    } else {
-      /* Handle other inputs */
-    }
+    /* Handle other inputs */
   }
 }
 ```

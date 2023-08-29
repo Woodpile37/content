@@ -1,12 +1,11 @@
 ---
 title: Define terms with HTML
 slug: Learn/HTML/Howto/Define_terms_with_HTML
-tags:
-  - Beginner
-  - Guide
-  - HTML
-  - Learn
+page-type: learn-faq
 ---
+
+{{QuickLinksWithSubpages("/en-US/docs/Learn/HTML/Howto")}}
+
 HTML provides several ways to convey description semantics, whether inline or as structured glossaries. In this article, we'll cover how to properly mark up keywords when you're defining them.
 
 <table class="standard-table">
@@ -60,7 +59,7 @@ It's best to [mark abbreviations specially](/en-US/docs/Learn/HTML/Introduction_
 ```html
 <p>
   <dfn><abbr>HTML</abbr> (hypertext markup language)</dfn>
-   is a description language used to structure documents on the web.
+  is a description language used to structure documents on the web.
 </p>
 ```
 
@@ -68,7 +67,7 @@ It's best to [mark abbreviations specially](/en-US/docs/Learn/HTML/Introduction_
 
 ### Improve accessibility
 
-{{HTMLElement('dfn')}} marks the keyword defined, and indicates that the current paragraph defines the keyword. In other words, there's an implicit relationship between the `<dfn>` element and its container. If you want a more formal relationship, or your definition consists of only one sentence rather than the whole paragraph, you can use the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute) attribute to associate a term more formally with its definition:
+{{HTMLElement('dfn')}} marks the keyword defined, and indicates that the current paragraph defines the keyword. In other words, there's an implicit relationship between the `<dfn>` element and its container. If you want a more formal relationship, or your definition consists of only one sentence rather than the whole paragraph, you can use the [`aria-describedby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) attribute to associate a term more formally with its definition:
 
 ```html
 <p>
@@ -80,7 +79,7 @@ It's best to [mark abbreviations specially](/en-US/docs/Learn/HTML/Introduction_
 </p>
 ```
 
-Assistive technology can often use this attribute to find a text alternative to a given term. You can use `aria-describedby` on any tag enclosing a keyword to be defined (not just the `<dfn>` element). `aria-describedby` references the {{htmlattrxref('id')}} of the element containing the description.
+Assistive technology can often use this attribute to find a text alternative to a given term. You can use `aria-describedby` on any tag enclosing a keyword to be defined (not just the `<dfn>` element). `aria-describedby` references the [`id`](/en-US/docs/Web/HTML/Global_attributes#id) of the element containing the description.
 
 ## How to build a description list
 
@@ -97,21 +96,18 @@ Here's a simple example describing kinds of food and drink:
 ```html
 <dl>
   <dt>jambalaya</dt>
-    <dd>
-      rice-based entree typically containing chicken,
-      sausage, seafood, and spices
-    </dd>
+  <dd>
+    rice-based entree typically containing chicken, sausage, seafood, and spices
+  </dd>
 
   <dt>sukiyaki</dt>
-    <dd>
-      Japanese specialty consisting of thinly sliced meat,
-      vegetables, and noodles, cooked in sake and soy sauce
-    </dd>
+  <dd>
+    Japanese specialty consisting of thinly sliced meat, vegetables, and
+    noodles, cooked in sake and soy sauce
+  </dd>
 
   <dt>chianti</dt>
-    <dd>
-      dry Italian red wine originating in Tuscany
-    </dd>
+  <dd>dry Italian red wine originating in Tuscany</dd>
 </dl>
 ```
 
@@ -141,4 +137,4 @@ This produces the slightly more readable result below:
 - {{htmlelement("dl")}}
 - {{htmlelement("dt")}}
 - {{htmlelement("dd")}}
-- [How to use the aria-describedby attribute](/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute)
+- [How to use the aria-describedby attribute](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)

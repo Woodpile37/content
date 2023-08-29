@@ -1,17 +1,11 @@
 ---
-title: MediaDeviceInfo.groupId
+title: "MediaDeviceInfo: groupId property"
+short-title: groupId
 slug: Web/API/MediaDeviceInfo/groupId
-tags:
-  - API
-  - Device
-  - Input
-  - Media
-  - MediaDevicesInfo
-  - Property
-  - groupId
-  - output
+page-type: web-api-instance-property
 browser-compat: api.MediaDeviceInfo.groupId
 ---
+
 {{APIRef("Media Capture")}}
 
 The **`groupId`** readonly property of
@@ -39,12 +33,11 @@ devices together for presentation purposes, or to make it easy for the user to c
 use the built-in camera and microphone on the same display at the same time.
 
 ```js
-const getDeviceGroup = mainDevInfo => {
+const getDeviceGroup = (mainDevInfo) => {
   let devList = [];
 
-  navigator.mediaDevices.enumerateDevices()
-  .then(devices => {
-    devices.forEach(device => {
+  navigator.mediaDevices.enumerateDevices().then((devices) => {
+    devices.forEach((device) => {
       if (device.groupId === mainDevInfo.groupId) {
         devList.push(device);
       }
@@ -79,14 +72,15 @@ This version of the example puts the passed-in device at the top of the result l
 then adds any other members of the group that are found:
 
 ```js
-const getDeviceGroup = mainDevInfo => {
+const getDeviceGroup = (mainDevInfo) => {
   let devList = [mainDevInfo];
 
-  navigator.mediaDevices.enumerateDevices()
-  .then(devices => {
-    devices.forEach(device => {
-      if ((device.groupId === mainDevInfo.groupId) &&
-          (device.deviceId !== mainDevInfo.deviceId)) {
+  navigator.mediaDevices.enumerateDevices().then((devices) => {
+    devices.forEach((device) => {
+      if (
+        device.groupId === mainDevInfo.groupId &&
+        device.deviceId !== mainDevInfo.deviceId
+      ) {
         devList.push(device);
       }
     });

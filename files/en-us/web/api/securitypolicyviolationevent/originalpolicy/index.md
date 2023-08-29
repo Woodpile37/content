@@ -1,17 +1,11 @@
 ---
-title: SecurityPolicyViolationEvent.originalPolicy
+title: "SecurityPolicyViolationEvent: originalPolicy property"
+short-title: originalPolicy
 slug: Web/API/SecurityPolicyViolationEvent/originalPolicy
-tags:
-  - API
-  - CSP
-  - HTTP
-  - Property
-  - Reference
-  - Security
-  - SecurityPolicyViolationEvent
-  - originalPolicy
+page-type: web-api-instance-property
 browser-compat: api.SecurityPolicyViolationEvent.originalPolicy
 ---
+
 {{HTTPSidebar}}
 
 The **`originalPolicy`** read-only property of the

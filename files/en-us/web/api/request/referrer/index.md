@@ -1,16 +1,12 @@
 ---
-title: Request.referrer
+title: "Request: referrer property"
+short-title: referrer
 slug: Web/API/Request/referrer
-tags:
-  - API
-  - Fetch
-  - Property
-  - Reference
-  - referrer
-  - request
+page-type: web-api-instance-property
 browser-compat: api.Request.referrer
 ---
-{{APIRef("Fetch")}}
+
+{{APIRef("Fetch API")}}
 
 The **`referrer`** read-only property of the
 {{domxref("Request")}} interface is set by the user agent to be the referrer of the
@@ -30,8 +26,8 @@ In the following snippet, we create a new request using the
 the script), then save the request referrer in a variable:
 
 ```js
-var myRequest = new Request('flowers.jpg');
-var myReferrer = myRequest.referrer; // returns "about:client" by default
+const myRequest = new Request("flowers.jpg");
+const myReferrer = myRequest.referrer; // returns "about:client" by default
 ```
 
 ## Specifications

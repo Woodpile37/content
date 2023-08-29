@@ -1,21 +1,14 @@
 ---
-title: MerchantValidationEvent.complete()
+title: "MerchantValidationEvent: complete() method"
+short-title: complete()
 slug: Web/API/MerchantValidationEvent/complete
-tags:
-  - API
-  - Commerce
-  - Merchant
-  - Merchant Validation
-  - MerchantValidationEvent
-  - Method
-  - Payment Request
-  - Payment Request API
-  - Payments
-  - Reference
-  - complete
+page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.MerchantValidationEvent.complete
 ---
-{{deprecated_header}}{{non-standard_header}}{{securecontext_header}}
+
+{{APIRef("Payment Request API")}}{{Deprecated_Header}}{{SecureContext_Header}}
 
 The {{domxref("MerchantValidationEvent")}} method **`complete()`** takes merchant-specific information previously received from the {{domxref("MerchantValidationEvent.validationURL", "validationURL")}} and uses it to validate the merchant.
 
@@ -23,7 +16,7 @@ All you have to do is call `complete()` from your handler for the {{domxref("Pay
 
 ## Syntax
 
-```js
+```js-nolint
 complete(validationData)
 complete(merchantSessionPromise)
 ```
@@ -49,13 +42,14 @@ This exception may be passed into the rejection handler for the promise:
 In this example, we see the client-side code needed to support merchant validation for a payment request called `payRequest`:
 
 ```js
-payRequest.onmerchantvalidation = event => {
+payRequest.onmerchantvalidation = (event) => {
   const validationDataPromise = getValidationData(event.validationURL);
   event.complete(validationDataPromise);
-}
+};
 
 function getValidationData(url) {
-  /* ...retrieve the validation data from the URL... */
+  // Retrieve the validation data from the URL
+  // …
 }
 ```
 

@@ -1,19 +1,11 @@
 ---
-title: Element.tagName
+title: "Element: tagName property"
+short-title: tagName
 slug: Web/API/Element/tagName
-tags:
-  - API
-  - DOM
-  - DOM Reference
-  - Element
-  - Gecko
-  - NeedsBrowserCompatibility
-  - Property
-  - Read-only
-  - Reference
-  - tagName
+page-type: web-api-instance-property
 browser-compat: api.Element.tagName
 ---
+
 {{ApiRef("DOM")}}
 
 The **`tagName`** read-only property
@@ -46,13 +38,13 @@ inherits from {{domxref("Node")}}.
 ### HTML
 
 ```html
-<span id="born">When I was born...</span>
+<span id="born">When I was born…</span>
 ```
 
 ### JavaScript
 
 ```js
-var span = document.getElementById("born");
+const span = document.getElementById("born");
 console.log(span.tagName);
 ```
 

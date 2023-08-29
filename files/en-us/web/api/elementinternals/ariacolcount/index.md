@@ -1,17 +1,12 @@
 ---
-title: ElementInternals.ariaColCount
+title: "ElementInternals: ariaColCount property"
+short-title: ariaColCount
 slug: Web/API/ElementInternals/ariaColCount
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaColCount
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
+page-type: web-api-instance-property
 browser-compat: api.ElementInternals.ariaColCount
 ---
-{{DefaultAPISidebar("DOM")}}
+
+{{APIRef("DOM")}}
 
 The **`ariaColCount`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-colcount`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-colcount) attribute, which defines the number of columns in a table, grid, or treegrid.
 
@@ -37,4 +32,4 @@ this.internals_.ariaColCount = "3";
 
 {{Compat}}
 
-- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/Table_Role)
+- [ARIA: table role](/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)

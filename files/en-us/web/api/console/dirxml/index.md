@@ -1,15 +1,11 @@
 ---
-title: console.dirxml()
+title: "console: dirxml() method"
+short-title: dirxml()
 slug: Web/API/console/dirxml
-tags:
-  - API
-  - DOM
-  - Debugging
-  - Method
-  - Web Development
-  - web console
+page-type: web-api-instance-method
 browser-compat: api.console.dirxml
 ---
+
 {{APIRef("Console API")}}
 
 The **`console.dirxml()`** method displays an interactive tree of the descendant elements of the specified XML/HTML
@@ -19,7 +15,7 @@ that let you see the contents of child nodes.
 
 ## Syntax
 
-```js
+```js-nolint
 dirxml(object)
 ```
 

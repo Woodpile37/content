@@ -1,15 +1,11 @@
 ---
-title: XPathResult.booleanValue
+title: "XPathResult: booleanValue property"
+short-title: booleanValue
 slug: Web/API/XPathResult/booleanValue
-tags:
-  - API
-  - DOM XPath API
-  - Property
-  - Reference
-  - XPath
-  - XPathResult
+page-type: web-api-instance-property
 browser-compat: api.XPathResult.booleanValue
 ---
+
 {{APIRef("DOM XPath")}}
 
 The read-only **`booleanValue`** property of the
@@ -44,14 +40,20 @@ The following example shows the use of the `booleanValue` property.
 ### JavaScript
 
 ```js
-var xpath = "//div/text() = 'XPath example'";
-var result = document.evaluate(xpath, document, null, XPathResult.BOOLEAN_TYPE, null);
+const xpath = "//div/text() = 'XPath example'";
+const result = document.evaluate(
+  xpath,
+  document,
+  null,
+  XPathResult.BOOLEAN_TYPE,
+  null,
+);
 document.querySelector("output").textContent = result.booleanValue;
 ```
 
 ### Result
 
-{{EmbedLiveSample('Example', 400, 70)}}
+{{EmbedLiveSample('Examples', 400, 70)}}
 
 ## Specifications
 

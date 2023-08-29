@@ -1,15 +1,11 @@
 ---
-title: GeolocationPosition.coords
+title: "GeolocationPosition: coords property"
+short-title: coords
 slug: Web/API/GeolocationPosition/coords
-tags:
-  - API
-  - Geolocation API
-  - GeolocationPosition
-  - Property
-  - Secure context
-  - coords
+page-type: web-api-instance-property
 browser-compat: api.GeolocationPosition.coords
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 The **`GeolocationPosition.coords`** read-only property returns

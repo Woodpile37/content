@@ -1,20 +1,11 @@
 ---
-title: DOMPointReadOnly.x
+title: "DOMPointReadOnly: x property"
+short-title: x
 slug: Web/API/DOMPointReadOnly/x
-tags:
-  - API
-  - Coordinates
-  - DOM
-  - DOMPointReadOnly
-  - Geometry
-  - Geometry Interfaces
-  - Point
-  - Property
-  - Read-only
-  - Reference
-  - x
+page-type: web-api-instance-property
 browser-compat: api.DOMPointReadOnly.x
 ---
+
 {{APIRef("DOM")}}
 
 The **`DOMPointReadOnly`** interface's

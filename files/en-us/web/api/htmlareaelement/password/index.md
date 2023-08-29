@@ -1,12 +1,11 @@
 ---
-title: HTMLAreaElement.password
+title: "HTMLAreaElement: password property"
+short-title: password
 slug: Web/API/HTMLAreaElement/password
-tags:
-  - API
-  - HTMLAreaElement
-  - Property
+page-type: web-api-instance-property
 browser-compat: api.HTMLAreaElement.password
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAreaElement.password`** property is a

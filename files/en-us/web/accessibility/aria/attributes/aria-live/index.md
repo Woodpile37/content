@@ -1,13 +1,8 @@
 ---
-title: 'aria-live'
+title: aria-live
 slug: Web/Accessibility/ARIA/Attributes/aria-live
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-live
-  - Reference
+page-type: aria-attribute
+spec-urls: https://w3c.github.io/aria/#aria-live
 ---
 
 The global `aria-live` attribute indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
@@ -82,9 +77,7 @@ Used in **ALL** roles.
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-live","ARIA: aria-live Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

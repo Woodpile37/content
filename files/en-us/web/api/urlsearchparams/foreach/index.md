@@ -1,14 +1,11 @@
 ---
-title: URLSearchParams.forEach()
+title: "URLSearchParams: forEach() method"
+short-title: forEach()
 slug: Web/API/URLSearchParams/forEach
-tags:
-  - API
-  - Method
-  - Reference
-  - URLSearchParams
-  - forEach
+page-type: web-api-instance-method
 browser-compat: api.URLSearchParams.forEach
 ---
+
 {{APIRef("URL API")}}
 
 The **`forEach()`** method of the
@@ -19,8 +16,9 @@ in this object via a callback function.
 
 ## Syntax
 
-```js
+```js-nolint
 forEach(callback)
+forEach(callback, thisArg)
 ```
 
 ### Parameters
@@ -41,23 +39,23 @@ forEach(callback)
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 
 ```js
 // Create a test URLSearchParams object
-var searchParams = new URLSearchParams("key1=value1&key2=value2");
+const searchParams = new URLSearchParams("key1=value1&key2=value2");
 
 // Log the values
-searchParams.forEach(function(value, key) {
+searchParams.forEach((value, key) => {
   console.log(value, key);
 });
 ```
 
 The result is:
 
-```
+```plain
 value1 key1
 value2 key2
 ```

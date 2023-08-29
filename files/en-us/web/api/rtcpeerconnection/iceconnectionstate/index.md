@@ -1,21 +1,8 @@
 ---
-title: RTCPeerConnection.iceConnectionState
+title: "RTCPeerConnection: iceConnectionState property"
+short-title: iceConnectionState
 slug: Web/API/RTCPeerConnection/iceConnectionState
-tags:
-  - API
-  - Audio
-  - Connection
-  - ICE
-  - Media
-  - Property
-  - RTCPeerConnection
-  - Read-only
-  - Reference
-  - Video
-  - WebRTC
-  - WebRTC API
-  - iceConnectionState
-  - state
+page-type: web-api-instance-property
 browser-compat: api.RTCPeerConnection.iceConnectionState
 ---
 
@@ -79,8 +66,8 @@ The current state of the ICE agent and its connection. The value is one of the f
 ## Examples
 
 ```js
-var pc = new RTCPeerConnection();
-var state = pc.iceConnectionState;
+const pc = new RTCPeerConnection();
+const state = pc.iceConnectionState;
 ```
 
 ## Specifications

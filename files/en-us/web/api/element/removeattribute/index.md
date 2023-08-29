@@ -1,16 +1,11 @@
 ---
-title: Element.removeAttribute()
+title: "Element: removeAttribute() method"
+short-title: removeAttribute()
 slug: Web/API/Element/removeAttribute
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - Reference
-  - remove
-  - removeAttribute
+page-type: web-api-instance-method
 browser-compat: api.Element.removeAttribute
 ---
+
 {{ APIRef("DOM") }}
 
 The {{domxref("Element")}} method
@@ -19,7 +14,7 @@ specified name from the element.
 
 ## Syntax
 
-```js
+```js-nolint
 removeAttribute(attrName)
 ```
 

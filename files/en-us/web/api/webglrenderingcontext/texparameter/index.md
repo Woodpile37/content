@@ -1,15 +1,13 @@
 ---
-title: WebGLRenderingContext.texParameter[fi]()
+title: "WebGLRenderingContext: texParameter[fi]() method"
+short-title: texParameter[fi]()
 slug: Web/API/WebGLRenderingContext/texParameter
-tags:
-  - API
-  - Method
-  - Reference
-  - Textures
-  - WebGL
-  - WebGLRenderingContext
-browser-compat: api.WebGLRenderingContext.texParameterf
+page-type: web-api-instance-method
+browser-compat:
+  - api.WebGLRenderingContext.texParameterf
+  - api.WebGLRenderingContext.texParameteri
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.texParameter[fi]()`** methods of
@@ -17,32 +15,33 @@ the [WebGL API](/en-US/docs/Web/API/WebGL_API) set texture parameters.
 
 ## Syntax
 
-```js
-texParameterf(target, GLenum pname, GLfloat param)
-texParameteri(target, GLenum pname, GLint param)
+```js-nolint
+texParameterf(target, pname, param)
+texParameteri(target, pname, param)
 ```
 
 ### Parameters
 
-- target
+- `target`
 
   - : A {{domxref("WebGL_API/Types", "GLenum")}} specifying the binding point (target). Possible values:
 
     - `gl.TEXTURE_2D`: A two-dimensional texture.
     - `gl.TEXTURE_CUBE_MAP`: A cube-mapped texture.
-    - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},
-      the following values are available additionally:
 
-      - `gl.TEXTURE_3D`: A three-dimensional texture.
-      - `gl.TEXTURE_2D_ARRAY`: A two-dimensional array texture.
+    When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the following values are available additionally:
 
-- param
+    - `gl.TEXTURE_3D`: A three-dimensional texture.
+    - `gl.TEXTURE_2D_ARRAY`: A two-dimensional array texture.
+
+- `param`
+
   - : The `param` parameter is a {{domxref("WebGL_API/Types", "GLfloat")}} or
     {{domxref("WebGL_API/Types", "GLint")}} specifying the value for the specified parameter
 
-- pname
+- `pname`
   - : The `pname` parameter is a {{domxref("WebGL_API/Types", "GLenum")}} specifying the texture
-  parameter to set.
+    parameter to set.
 
 <table class="standard-table">
   <thead>
@@ -158,7 +157,11 @@ None ({{jsxref("undefined")}}).
 
 ```js
 gl.texParameterf(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
-gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_NEAREST);
+gl.texParameteri(
+  gl.TEXTURE_2D,
+  gl.TEXTURE_MIN_FILTER,
+  gl.LINEAR_MIPMAP_NEAREST,
+);
 ```
 
 ## Specifications
@@ -167,13 +170,7 @@ gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_NEAREST)
 
 ## Browser compatibility
 
-### `WebGLRenderingContext.texParameterf()`
-
 {{Compat}}
-
-### `WebGLRenderingContext.texParameteri()`
-
-{{Compat("api.WebGLRenderingContext.texParameteri")}}
 
 ## See also
 

@@ -1,14 +1,11 @@
 ---
-title: Blob.arrayBuffer()
+title: "Blob: arrayBuffer() method"
+short-title: arrayBuffer()
 slug: Web/API/Blob/arrayBuffer
-tags:
-  - API
-  - Blob
-  - File API
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.Blob.arrayBuffer
 ---
+
 {{APIRef("File API")}}
 
 The **`arrayBuffer()`** method in the {{domxref("Blob")}}
@@ -17,7 +14,7 @@ binary data contained in an {{jsxref("ArrayBuffer")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 arrayBuffer()
 ```
 

@@ -1,13 +1,8 @@
 ---
-title: 'aria-relevant'
+title: aria-relevant
 slug: Web/Accessibility/ARIA/Attributes/aria-relevant
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-relevant
-  - Reference
+page-type: aria-attribute
+spec-urls: https://w3c.github.io/aria/#aria-relevant
 ---
 
 Used in ARIA live regions, the global `aria-relevant` attribute indicates what notifications the user agent will trigger when the [accessibility tree](/en-US/docs/Glossary/Accessibility_tree) within a live region is modified.
@@ -52,9 +47,7 @@ Used in **ALL** roles.
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-relevant","ARIA: aria-relevant Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

@@ -1,21 +1,11 @@
 ---
-title: XMLHttpRequest.getResponseHeader()
+title: "XMLHttpRequest: getResponseHeader() method"
+short-title: getResponseHeader()
 slug: Web/API/XMLHttpRequest/getResponseHeader
-tags:
-  - API
-  - Examine Header
-  - Get Header
-  - HTTP
-  - HTTP Header
-  - Headers
-  - Method
-  - Reference
-  - XHR
-  - XHR Header
-  - XMLHttpRequest
-  - getResponseHeader
+page-type: web-api-instance-method
 browser-compat: api.XMLHttpRequest.getResponseHeader
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 The {{DOMxRef("XMLHttpRequest")}} method
@@ -35,13 +25,13 @@ which returns the entire raw header string.
 
 ## Syntax
 
-```js
+```js-nolint
 getResponseHeader(headerName)
 ```
 
 ### Parameters
 
-- _headerName_
+- `headerName`
   - : A string indicating the name of the header you want to return the
     text value of.
 
@@ -61,18 +51,18 @@ the value of the {{httpheader("Content-Type")}} header is fetched. If the
 canceled by calling {{DOMxRef("XMLHttpRequest.abort", "abort()")}}.
 
 ```js
-var client = new XMLHttpRequest();
-client.open("GET", "unicorns-are-teh-awesome.txt", true);
+const client = new XMLHttpRequest();
+client.open("GET", "unicorns-are-awesome.txt", true);
 client.send();
 
-client.onreadystatechange = function() {
-  if(this.readyState == this.HEADERS_RECEIVED) {
-    var contentType = client.getResponseHeader("Content-Type");
-    if (contentType != my_expected_type) {
+client.onreadystatechange = () => {
+  if (client.readyState === client.HEADERS_RECEIVED) {
+    const contentType = client.getResponseHeader("Content-Type");
+    if (contentType !== my_expected_type) {
       client.abort();
     }
   }
-}
+};
 ```
 
 ## Specifications
@@ -85,8 +75,7 @@ client.onreadystatechange = function() {
 
 ## See also
 
-- [Using
-  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
 - [HTTP headers](/en-US/docs/Web/HTTP/Headers)
 - {{DOMxRef("XMLHttpRequest.getAllResponseHeaders", "getAllResponseHeaders()")}}
 - {{DOMxRef("XMLHttpRequest.response", "response")}}

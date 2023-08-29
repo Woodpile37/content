@@ -1,19 +1,15 @@
 ---
-title: VRDisplay.exitPresent()
+title: "VRDisplay: exitPresent() method"
+short-title: exitPresent()
 slug: Web/API/VRDisplay/exitPresent
-tags:
-  - API
-  - Deprecated
-  - Method
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - exitPresent()
+page-type: web-api-instance-method
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplay.exitPresent
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`exitPresent()`** method of the {{domxref("VRDisplay")}} interface stops the `VRDisplay` presenting a scene.
 
@@ -21,7 +17,7 @@ The **`exitPresent()`** method of the {{domxref("VRDisplay")}} interface stops t
 
 ## Syntax
 
-```js
+```js-nolint
 exitPresent()
 ```
 
@@ -36,39 +32,43 @@ A promise that resolves once the presentation has ended. If the `VRDisplay` is n
 ## Examples
 
 ```js
-if(navigator.getVRDisplays) {
-  console.log('WebVR 1.1 supported');
+if (navigator.getVRDisplays) {
+  console.log("WebVR 1.1 supported");
   // Then get the displays attached to the computer
-  navigator.getVRDisplays().then(function(displays) {
+  navigator.getVRDisplays().then((displays) => {
     // If a display is available, use it to present the scene
-    if(displays.length > 0) {
+    if (displays.length > 0) {
       vrDisplay = displays[0];
-      console.log('Display found');
+      console.log("Display found");
       // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
-      btn.addEventListener('click', function() {
-        if(btn.textContent === 'Start VR display') {
-          vrDisplay.requestPresent([{ source: canvas }]).then(function() {
-            console.log('Presenting to WebVR display');
+      btn.addEventListener("click", () => {
+        if (btn.textContent === "Start VR display") {
+          vrDisplay.requestPresent([{ source: canvas }]).then(() => {
+            console.log("Presenting to WebVR display");
 
             // Set the canvas size to the size of the vrDisplay viewport
 
-            var leftEye = vrDisplay.getEyeParameters('left');
-            var rightEye = vrDisplay.getEyeParameters('right');
+            const leftEye = vrDisplay.getEyeParameters("left");
+            const rightEye = vrDisplay.getEyeParameters("right");
 
-            canvas.width = Math.max(leftEye.renderWidth, rightEye.renderWidth) * 2;
-            canvas.height = Math.max(leftEye.renderHeight, rightEye.renderHeight);
+            canvas.width =
+              Math.max(leftEye.renderWidth, rightEye.renderWidth) * 2;
+            canvas.height = Math.max(
+              leftEye.renderHeight,
+              rightEye.renderHeight,
+            );
 
             // stop the normal presentation, and start the vr presentation
             window.cancelAnimationFrame(normalSceneFrame);
             drawVRScene();
 
-            btn.textContent = 'Exit VR display';
+            btn.textContent = "Exit VR display";
           });
         } else {
           vrDisplay.exitPresent();
-          console.log('Stopped presenting to WebVR display');
+          console.log("Stopped presenting to WebVR display");
 
-          btn.textContent = 'Start VR display';
+          btn.textContent = "Start VR display";
 
           // Stop the VR presentation, and start the normal presentation
           vrDisplay.cancelAnimationFrame(vrSceneFrame);
@@ -80,7 +80,7 @@ if(navigator.getVRDisplays) {
 }
 ```
 
-> **Note:** You can see this complete code at [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js).
+> **Note:** You can see this complete code at [raw-webgl-example](https://github.com/mdn/webvr-tests/blob/main/webvr/raw-webgl-example/webgl-demo.js).
 
 ## Specifications
 

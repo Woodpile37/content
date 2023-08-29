@@ -1,21 +1,18 @@
 ---
-title: FontFaceSet.has()
+title: "FontFaceSet: has() method"
+short-title: has()
 slug: Web/API/FontFaceSet/has
-tags:
-  - API
-  - Method
-  - Reference
-  - has
-  - FontFaceSet
+page-type: web-api-instance-method
 browser-compat: api.FontFaceSet.has
 ---
+
 {{APIRef("CSS Font Loading API")}}
 
 The **`has()`** method of the {{domxref("FontFaceSet")}} interface returns a {{jsxref("Boolean")}} asserting whether an element is present with the given value.
 
 ## Syntax
 
-```js
+```js-nolint
 has(value)
 ```
 

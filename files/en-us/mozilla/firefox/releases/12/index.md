@@ -1,12 +1,9 @@
 ---
 title: Firefox 12 for developers
 slug: Mozilla/Firefox/Releases/12
-tags:
-  - Firefox
-  - Firefox 12
-  - Gecko 12
-  - Web Development
+page-type: firefox-release-notes
 ---
+
 {{FirefoxSidebar}}
 
 Firefox 12 was shipped on April 24, 2012. This page summarizes the changes in Firefox 12 that affect developers. This article provides information about the new features and key bugs fixed in this release, as well as links to more detailed documentation for both web developers and add-on developers.
@@ -32,14 +29,14 @@ Firefox 12 was shipped on April 24, 2012. This page summarizes the changes in Fi
 
 - {{domxref("DOMParser")}} now supports parsing of HTML document fragments.
 - {{domxref("XMLHttpRequest")}} now supports timeouts using the `timeout` property and "timeout" event, as well as the `ontimeout` event handler on the {{domxref("XMLHttpRequestEventTarget")}} interface.
-- {{domxref("XMLHttpRequest")}} can now load from [`data:` URIs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs).
+- {{domxref("XMLHttpRequest")}} can now load from [`data:` URLs](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs).
 - When downloading large amounts of data, {{domxref("XMLHttpRequest")}} progress event handlers are now called periodically with the `responseType` set to "moz-blob" and the response being a {{domxref("Blob")}} containing all of the data received so far. This lets progress handlers begin processing data without having to wait for it all to arrive.
 - Gecko now supports [multi-touch](/en-US/docs/Web/API/Touch_events) (instead of just single touches at a time) on Android.
 - While editing text using an IME, the `input` event is now sent whenever the contents of the element being edited have been changed; this happens after the `compositionupdate` event has been sent to indicate that the IME's text has been changed. You can use the `input` event handler, therefore, to monitor changes to the actual content of the element.
 - {{domxref("DOMError")}} as defined in the DOM 4 specification has been implemented.
 - The {{domxref("Document.createNodeIterator()")}} method has been updated to match the DOM4 specification. This makes the `whatToShow` and `filter` parameters optional and removes the non-standard fourth parameter, `entityReferenceExpansion`.
 - The {{domxref("Blob")}} interface's `slice()` method was affected by a bug that prevented it from properly accepting `start` and `end` values outside the range of a signed 64-bit integer; this has been fixed.
-- The {{domxref("element.getBoundingClientRect()")}} method now considers effect of [CSS transforms](/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms) when computing the element's bounding rectangle.
+- The {{domxref("element.getBoundingClientRect()")}} method now considers effect of [CSS transforms](/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) when computing the element's bounding rectangle.
 - The `crossOrigin` property is now supported by {{domxref("HTMLMediaElement")}}.
 
 #### New WebAPIs
@@ -51,8 +48,8 @@ Firefox 12 was shipped on April 24, 2012. This page summarizes the changes in Fi
 
 ### SVG
 
-- Firefox now implements the `SVGTests` DOM API, see {{bug("607854")}}
-- The {{domxref("SVGStringList")}} DOM interface support the non-standard `length` property see {{bug("711958")}}
+- Firefox now implements the `SVGTests` DOM API, see [Firefox bug 607854](https://bugzil.la/607854)
+- The {{domxref("SVGStringList")}} DOM interface support the non-standard `length` property see [Firefox bug 711958](https://bugzil.la/711958)
 
 ### MathML
 
@@ -83,7 +80,7 @@ Mozilla has been working on integrating its own Web developer tools that complem
 #### source-editor.jsm
 
 - The [`resetUndo()`](/en-US/docs/JavaScript_code_modules/source-editor.jsm#resetUndo%28%29) method was added; this lets you clear the undo stack.
-- The source editor now offers methods for providing search capability: [`find()`](</en-US/docs/JavaScript_code_modules/source-editor.jsm#find()>), [`findNext()`](</en-US/docs/JavaScript_code_modules/source-editor.jsm#findNext()>), and [`findPrevious()`](</en-US/docs/JavaScript_code_modules/source-editor.jsm#findPrevious()>).
+- The source editor now offers methods for providing search capability: `find()`, `findNext()`, and `findPrevious()`.
 
 ### XUL
 
@@ -121,7 +118,7 @@ Mozilla has been working on integrating its own Web developer tools that complem
 
 ### Other changes
 
-- The editor component (known as [Midas](/en-US/docs/Midas)) now [only accepts events](/en-US/docs/Using_the_Editor_from_XUL#Editor_event_handling) from privileged code.
+- The editor component (known as [Midas](/en-US/docs/Midas)) now [only accepts events](/en-US/docs/Using_the_Editor_from_XUL#editor_event_handling) from privileged code.
 
 ## See also
 

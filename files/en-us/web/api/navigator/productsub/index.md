@@ -1,15 +1,13 @@
 ---
-title: Navigator.productSub
+title: "Navigator: productSub property"
+short-title: productSub
 slug: Web/API/Navigator/productSub
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - Navigator
-  - Property
-  - Read-only
+page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.Navigator.productSub
 ---
+
 {{ ApiRef("HTML DOM") }} {{Deprecated_Header}}
 
 The **`Navigator.productSub`** read-only property returns the
@@ -22,16 +20,10 @@ A string.
 ## Examples
 
 ```js
-<script>
-function prodsub() {
-  var dt = document.getElementById("d").childNodes[0];
-  dt.data = navigator.productSub;
-}
-</script>
-
-<button onclick="prodsub();">productSub</button>
-// returns: 20010725
+document.body.textContent = `productSub: ${navigator.productSub}`;
 ```
+
+{{ EmbedLiveSample("Examples") }}
 
 ## Notes
 

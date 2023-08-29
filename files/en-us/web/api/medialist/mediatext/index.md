@@ -1,15 +1,11 @@
 ---
-title: MediaList.mediaText
+title: "MediaList: mediaText property"
+short-title: mediaText
 slug: Web/API/MediaList/mediaText
-tags:
-  - API
-  - CSSOM
-  - MediaList
-  - Property
-  - Reference
-  - mediaText
+page-type: web-api-instance-property
 browser-compat: api.MediaList.mediaText
 ---
+
 {{APIRef("CSSOM")}}
 
 The **`mediaText`** property of the {{domxref("MediaList")}}
@@ -38,7 +34,7 @@ string, i.e. the value will be set to
 The following would log to the console a textual representation of the
 `MediaList` of the first stylesheet applied to the current document.
 
-```css
+```js
 const stylesheets = document.styleSheets;
 let stylesheet = stylesheets[0];
 console.log(stylesheet.media.mediaText);

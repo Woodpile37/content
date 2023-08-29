@@ -1,20 +1,11 @@
 ---
-title: RTCIceCandidate.priority
+title: "RTCIceCandidate: priority property"
+short-title: priority
 slug: Web/API/RTCIceCandidate/priority
-tags:
-  - API
-  - Candidate
-  - ICE
-  - Property
-  - RTCIceCandidate
-  - Read-only
-  - Reference
-  - SDP
-  - WebRTC
-  - WebRTC API
-  - priority
+page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidate.priority
 ---
+
 {{APIRef("WebRTC")}}
 
 The **{{domxref("RTCIceCandidate")}}** interface's read-only **`priority`** property specifies the candidate's priority according to the remote peer; the higher this value is, the better the remote peer considers the candidate to be.
@@ -38,8 +29,8 @@ The larger this value is, the more preferable the remote peer considers this can
 
 Consider this {{Glossary("SDP")}} attribute line (a-line) which describes an ICE candidate:
 
-```
-a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+```plain
+a=candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host
 ```
 
 The priority is the number after the protocol, so it's the fourth field in the candidate string.
@@ -51,15 +42,15 @@ This candidate examines the `priority` of the candidate and, if it's greater
 than the priority of a previously-seen candidate, remembers the candidate for later use.
 
 ```js
-var bestCandidate = {
+let bestCandidate = {
   candidate: "",
   sdpMid: null,
   sdpMLineIndex: null,
-  priority: 0
+  priority: 0,
 };
 
 function handleCandidate(candidateString) {
-  var candidate = new RTCIceCandidate(candidateString);
+  const candidate = new RTCIceCandidate(candidateString);
 
   if (candidate.priority > bestCandidate.priority) {
     bestCandidate = candidate;

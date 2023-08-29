@@ -1,16 +1,12 @@
 ---
-title: Request.bodyUsed
+title: "Request: bodyUsed property"
+short-title: bodyUsed
 slug: Web/API/Request/bodyUsed
-tags:
-  - API
-  - Fetch
-  - Property
-  - Reference
-  - bodyUsed
-  - Request
+page-type: web-api-instance-property
 browser-compat: api.Request.bodyUsed
 ---
-{{APIRef("Fetch")}}
+
+{{APIRef("Fetch API")}}
 
 The read-only **`bodyUsed`** property of the
 {{domxref("Request")}} interface is a boolean value that indicates
@@ -23,14 +19,14 @@ A boolean value.
 ## Examples
 
 ```js
-const request = new Request('/myEndpoint', {
-  method: 'POST',
-  body: 'Hello world'
+const request = new Request("/myEndpoint", {
+  method: "POST",
+  body: "Hello world",
 });
 
 request.bodyUsed; // false
 
-request.text().then(function(bodyAsText) {
+request.text().then((bodyAsText) => {
   console.log(request.bodyUsed); // true
 });
 ```

@@ -1,20 +1,11 @@
 ---
-title: RTCIceCandidate. toJSON()
+title: "RTCIceCandidate: toJSON() method"
+short-title: toJSON()
 slug: Web/API/RTCIceCandidate/toJSON
-tags:
-  - API
-  - Candidate
-  - ICE
-  - JSON
-  - Method
-  - RTCIceCandidate
-  - Reference
-  - SDP
-  - WebRTC
-  - WebRTC API
-  - toJSON
+page-type: web-api-instance-method
 browser-compat: api.RTCIceCandidate.toJSON
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidate")}} method **`toJSON()`** converts the `RTCIceCandidate` on which it's called into JSON.
@@ -23,7 +14,7 @@ A stringified version of the object can then be obtained by calling {{jsxref("JS
 
 ## Syntax
 
-```js
+```js-nolint
 toJSON()
 ```
 

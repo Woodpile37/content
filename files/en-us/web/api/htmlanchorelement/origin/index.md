@@ -1,14 +1,11 @@
 ---
-title: HTMLAnchorElement.origin
+title: "HTMLAnchorElement: origin property"
+short-title: origin
 slug: Web/API/HTMLAnchorElement/origin
-tags:
-  - API
-  - HTMLAnchorElement
-  - Property
-  - Read-only
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.HTMLAnchorElement.origin
 ---
+
 {{APIRef("HTML DOM")}}
 
 The

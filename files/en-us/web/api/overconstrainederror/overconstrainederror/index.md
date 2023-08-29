@@ -1,19 +1,12 @@
 ---
-title: OverconstrainedError()
+title: "OverconstrainedError: OverconstrainedError() constructor"
+short-title: OverconstrainedError()
 slug: Web/API/OverconstrainedError/OverconstrainedError
-tags:
-  - API
-  - Audio
-  - Constructor
-  - Media
-  - Media Capture and Streams API
-  - Media Streams API
-  - OverconstrainedError
-  - Reference
-  - Video
+page-type: web-api-constructor
 browser-compat: api.OverconstrainedError.OverconstrainedError
 ---
-{{securecontext_header}}{{APIRef("Media Capture and Streams")}}{{SeeCompatTable}}
+
+{{securecontext_header}}{{APIRef("Media Capture and Streams")}}
 
 The **`OverconstrainedError`** constructor
 creates a new {{domxref("OverconstrainedError")}} object which indicates that the set of
@@ -24,7 +17,7 @@ applied.
 
 ## Syntax
 
-```js
+```js-nolint
 new OverconstrainedError()
 ```
 

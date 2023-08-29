@@ -1,17 +1,12 @@
 ---
-title: ElementInternals.ariaRoleDescription
+title: "ElementInternals: ariaRoleDescription property"
+short-title: ariaRoleDescription
 slug: Web/API/ElementInternals/ariaRoleDescription
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaRoleDescription
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
+page-type: web-api-instance-property
 browser-compat: api.ElementInternals.ariaRoleDescription
 ---
-{{DefaultAPISidebar("DOM")}}
+
+{{APIRef("DOM")}}
 
 The **`ariaRoleDescription`** property of the {{domxref("Element")}} interface reflects the value of the [`aria-roledescription`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription) attribute, which defines a human-readable, author-localized description for the role of an element.
 
@@ -37,4 +32,4 @@ this.internals_.ariaRoleDescription = "My custom widget";
 
 {{Compat}}
 
-- [ARIA: application role](/en-US/docs/Web/Accessibility/ARIA/Roles/Application_Role)
+- [ARIA: application role](/en-US/docs/Web/Accessibility/ARIA/Roles/application_role)

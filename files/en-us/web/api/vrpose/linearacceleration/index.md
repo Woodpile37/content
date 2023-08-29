@@ -1,21 +1,17 @@
 ---
-title: VRPose.linearAcceleration
+title: "VRPose: linearAcceleration property"
+short-title: linearAcceleration
 slug: Web/API/VRPose/linearAcceleration
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRPose
-  - Virtual Reality
-  - WebVR
-  - linearAcceleration
+page-type: web-api-instance-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRPose.linearAcceleration
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
 
-The **`linearAcceleration`** read-only property of the {{domxref("VRPose")}} interface returns an array representing the linear acceleration vector of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in meters per second per second.
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+
+The **`linearAcceleration`** read-only property of the {{domxref("VRPose")}} interface returns an array representing the linear acceleration vector of the {{domxref("VRDisplay")}} at the current timestamp, in meters per second per second.
 
 > **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
@@ -38,14 +34,14 @@ function drawVRScene() {
 
   // Retrieve the linear acceleration values for use in rendering
   // curFramePose is a VRPose object
-  var curFramePose = frameData.pose;
-  var linAcc = curFramePose.linearAcceleration;
-  var lax = linAcc[0];
-  var lay = linAcc[1];
-  var laz = linAcc[2];
+  const curFramePose = frameData.pose;
+  const linAcc = curFramePose.linearAcceleration;
+  const lax = linAcc[0];
+  const lay = linAcc[1];
+  const laz = linAcc[2];
 
   // render the scene
-  ...
+  // …
 
   // WebVR: submit the rendered frame to the VR display
   vrDisplay.submitFrame();

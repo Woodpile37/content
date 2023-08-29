@@ -1,18 +1,12 @@
 ---
-title: WritableStreamDefaultWriter.ready
+title: "WritableStreamDefaultWriter: ready property"
+short-title: ready
 slug: Web/API/WritableStreamDefaultWriter/ready
-tags:
-  - API
-  - Property
-  - Ready
-  - Reference
-  - Streams
-  - Streams API
-  - WritableStream
-  - WritableStreamDefaultWriter
+page-type: web-api-instance-property
 browser-compat: api.WritableStreamDefaultWriter.ready
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
+
+{{APIRef("Streams")}}
 
 The **`ready`** read-only property of the
 {{domxref("WritableStreamDefaultWriter")}} interface returns a {{jsxref("Promise")}}
@@ -34,34 +28,30 @@ must be finished before the writer can be closed.
 ```js
 function sendMessage(message, writableStream) {
   // defaultWriter is of type WritableStreamDefaultWriter
-  var defaultWriter = writableStream.getWriter();
-  var encoder = new TextEncoder();
-  var encoded = encoder.encode(message, {stream: true});
-  encoded.forEach(function(chunk) {
+  const defaultWriter = writableStream.getWriter();
+  const encoder = new TextEncoder();
+  const encoded = encoder.encode(message, { stream: true });
+  encoded.forEach((chunk) => {
     // Make sure the stream and its writer are able to
     //   receive data.
     defaultWriter.ready
-    .then(function() {
-      defaultWriter.write(chunk)
-      .then(function() {
-        console.log("Chunk written to sink.);
+      .then(() => defaultWriter.write(chunk))
+      .then(() => {
+        console.log("Chunk written to sink.");
       })
-      .catch(function(err) {
-        console.log("Chunk error: " + err);
+      .catch((err) => {
+        console.error(`Chunk error: ${err}`);
       });
-    });
     // Call ready again to ensure that all chunks are written
     //   before closing the writer.
     defaultWriter.ready
-    .then(function() {
-      defaultWriter.close()
-      .then(function() {
+      .then(() => defaultWriter.close())
+      .then(() => {
         console.log("All chunks written");
       })
-      .catch(function(err) {
-        console.log("Stream error: " + err);
+      .catch((err) => {
+        console.error(`Stream error: ${err}`);
       });
-    });
   });
 }
 ```

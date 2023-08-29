@@ -1,21 +1,20 @@
 ---
-title: PresentationConnectionAvailableEvent
+title: "PresentationConnectionAvailableEvent: PresentationConnectionAvailableEvent() constructor"
+short-title: PresentationConnectionAvailableEvent()
 slug: Web/API/PresentationConnectionAvailableEvent/PresentationConnectionAvailableEvent
-tags:
-  - API
-  - Constructor
-  - Experimental
-  - Presentation API
-  - PresentationConnectionAvailableEvent
-  - Reference
+page-type: web-api-constructor
+status:
+  - experimental
 browser-compat: api.PresentationConnectionAvailableEvent.PresentationConnectionAvailableEvent
 ---
+
 {{APIRef("Presentation API")}}{{SeeCompatTable}}
+
 The **`PresentationConnectionAvailableEvent()`** constructor creates a new {{domxref("PresentationConnectionAvailableEvent")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new PresentationConnectionAvailableInit(type, options)
 ```
 

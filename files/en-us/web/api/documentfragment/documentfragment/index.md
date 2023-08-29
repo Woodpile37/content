@@ -1,22 +1,19 @@
 ---
-title: DocumentFragment()
+title: "DocumentFragment: DocumentFragment() constructor"
+short-title: DocumentFragment()
 slug: Web/API/DocumentFragment/DocumentFragment
-tags:
-  - API
-  - Constructor
-  - DOM
-  - DocumentFragment
-  - Experimental
+page-type: web-api-constructor
 browser-compat: api.DocumentFragment.DocumentFragment
 ---
-{{ApiRef("DOM")}}{{SeeCompatTable}}
+
+{{ApiRef("DOM")}}
 
 The **`DocumentFragment()`** constructor returns a new, empty
-{{domxref("DocumentFragment")}} object .
+{{domxref("DocumentFragment")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new DocumentFragment()
 ```
 
@@ -24,11 +21,9 @@ new DocumentFragment()
 
 None.
 
-## Examples
+### Return value
 
-```js
-let fragment = new DocumentFragment();
-```
+A new {{domxref("DocumentFragment")}} object.
 
 ## Specifications
 
@@ -37,7 +32,3 @@ let fragment = new DocumentFragment();
 ## Browser compatibility
 
 {{Compat}}
-
-## See also
-
-- [The DOM interfaces index](/en-US/docs/Web/API/Document_Object_Model)

@@ -1,15 +1,11 @@
 ---
-title: GeolocationCoordinates.heading
+title: "GeolocationCoordinates: heading property"
+short-title: heading
 slug: Web/API/GeolocationCoordinates/heading
-tags:
-  - API
-  - Geolocation API
-  - GeolocationCoordinates
-  - Property
-  - Secure context
-  - heading
+page-type: web-api-instance-property
 browser-compat: api.GeolocationCoordinates.heading
 ---
+
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
 The **`GeolocationCoordinates.heading`** read-only property is

@@ -1,19 +1,15 @@
 ---
 title: Date.prototype.setYear()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setYear
-tags:
-  - Date
-  - Deprecated
-  - JavaScript
-  - Method
-  - Prototype
-  - Reference
-  - Polyfill
+page-type: javascript-instance-method
+status:
+  - deprecated
 browser-compat: javascript.builtins.Date.setYear
 ---
+
 {{JSRef}} {{deprecated_header}}
 
-The legacy **`setYear()`** method sets the year for a specified date according to local time.
+The **`setYear()`** method of {{jsxref("Date")}} instances sets the year for a specified date according to local time.
 
 However, the way the legacy `setYear()` method sets year values is different from how the preferred {{jsxref("Date.prototype.setFullYear()", "setFullYear()")}} method sets year values — and in some cases, also different from how `new Date()` and {{jsxref("Date.parse()")}} set year values. Specifically, given two-digit numbers, such as `22` and `61`:
 
@@ -25,7 +21,7 @@ Because of those differences in behavior, you should no longer use the legacy `s
 
 ## Syntax
 
-```js
+```js-nolint
 setYear(yearValue)
 ```
 
@@ -36,7 +32,7 @@ setYear(yearValue)
 
 ### Return value
 
-The number of milliseconds between 1 January 1970 00:00:00 UTC and the updated date.
+Changes the {{jsxref("Date")}} object in place, and returns its new [timestamp](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date). If `yearValue` is `NaN` (or other values that get [coerced](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion) to `NaN`, such as `undefined`), the date is set to [Invalid Date](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date) and `NaN` is returned.
 
 ## Description
 
@@ -51,7 +47,7 @@ If `yearValue` is a number between 0 and 99 (inclusive), then the year for
 The first two lines set the year to 1996. The third sets the year to 2000.
 
 ```js
-var theBigDay = new Date();
+const theBigDay = new Date();
 
 theBigDay.setYear(96);
 theBigDay.setYear(1996);

@@ -1,15 +1,11 @@
 ---
-title: Window.resizeBy()
+title: "Window: resizeBy() method"
+short-title: resizeBy()
 slug: Web/API/Window/resizeBy
-tags:
-  - API
-  - CSSOM View
-  - Method
-  - NeedsMarkupWork
-  - Reference
-  - Window
+page-type: web-api-instance-method
 browser-compat: api.Window.resizeBy
 ---
+
 {{APIRef}}
 
 The **`Window.resizeBy()`** method resizes the current window
@@ -17,7 +13,7 @@ by a specified amount.
 
 ## Syntax
 
-```js
+```js-nolint
 resizeBy(xDelta, yDelta)
 ```
 
@@ -55,7 +51,11 @@ default.** To make the window resizable, you must open it with the
 
 ```js
 // Create resizable window
-myExternalWindow = window.open("http://myurl.domain", "myWindowName", "resizable");
+myExternalWindow = window.open(
+  "https://example.com",
+  "myWindowName",
+  "resizable",
+);
 
 // Resize window to 500x500
 myExternalWindow.resizeTo(500, 500);

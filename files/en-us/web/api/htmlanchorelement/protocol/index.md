@@ -1,12 +1,11 @@
 ---
-title: HTMLAnchorElement.protocol
+title: "HTMLAnchorElement: protocol property"
+short-title: protocol
 slug: Web/API/HTMLAnchorElement/protocol
-tags:
-  - API
-  - HTMLAnchorElement
-  - Property
+page-type: web-api-instance-property
 browser-compat: api.HTMLAnchorElement.protocol
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The

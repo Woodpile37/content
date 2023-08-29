@@ -1,16 +1,13 @@
 ---
-title: CSSValue.cssValueType
+title: "CSSValue: cssValueType property"
+short-title: cssValueType
 slug: Web/API/CSSValue/cssValueType
-tags:
-  - API
-  - CSSValue
-  - Property
-  - Read-only
-  - Reference
-  - cssValueType
-  - Deprecated
+page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.CSSValue.cssValueType
 ---
+
 {{APIRef("CSSOM")}}{{Deprecated_header}}
 
 The **`cssValueType`** read-only property of the
@@ -73,8 +70,8 @@ Possible values are:
 ## Examples
 
 ```js
-var styleDeclaration = document.styleSheets[0].cssRules[0].style;
-var cssValue = styleDeclaration.getPropertyCSSValue("color");
+const styleDeclaration = document.styleSheets[0].cssRules[0].style;
+const cssValue = styleDeclaration.getPropertyCSSValue("color");
 console.log(cssValue.cssValueType);
 ```
 

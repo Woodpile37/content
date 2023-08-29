@@ -1,19 +1,14 @@
 ---
-title: BluetoothCharacteristicProperties.writableAuxiliaries
+title: "BluetoothCharacteristicProperties: writableAuxiliaries property"
+short-title: writableAuxiliaries
 slug: Web/API/BluetoothCharacteristicProperties/writableAuxiliaries
-tags:
-  - API
-  - Bluetooth
-  - BluetoothCharacteristicProperties
-  - Experimental
-  - NeedsExample
-  - Property
-  - Reference
-  - Web Bluetooth API
-  - writableAuxiliaries
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.BluetoothCharacteristicProperties.writableAuxiliaries
 ---
-{{securecontext_header}}{{APIRef("Bluetooth API")}}
+
+{{securecontext_header}}{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`writableAuxiliaries`** read-only
 property of the {{domxref("BluetoothCharacteristicProperties")}} interface returns a

@@ -1,21 +1,11 @@
 ---
-title: DOMPointReadOnly.y
+title: "DOMPointReadOnly: y property"
+short-title: "y"
 slug: Web/API/DOMPointReadOnly/y
-tags:
-  - API
-  - Coordinates
-  - DOM
-  - DOMPointReadOnly
-  - Geometry
-  - Geometry Interfaces
-  - Point
-  - Property
-  - Read-only
-  - Reference
-  - Vertical
-  - 'y'
+page-type: web-api-instance-property
 browser-compat: api.DOMPointReadOnly.y
 ---
+
 {{APIRef("DOM")}}
 
 The **`DOMPointReadOnly`** interface's

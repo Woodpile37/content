@@ -1,17 +1,10 @@
 ---
 title: scripting.insertCSS()
 slug: Mozilla/Add-ons/WebExtensions/API/scripting/insertCSS
-tags:
-  - API
-  - Add-ons
-  - Extensions
-  - Method
-  - Reference
-  - WebExtensions
-  - insertCSS
-  - scripting
+page-type: webextension-api-function
 browser-compat: webextensions.api.scripting.insertCSS
 ---
+
 {{AddonSidebar()}}
 
 Injects CSS into a page.
@@ -30,7 +23,7 @@ This is an asynchronous function that returns a [`Promise`](/en-US/docs/Web/Java
 
 ## Syntax
 
-```js
+```js-nolint
 await browser.scripting.insertCSS(
   details     // object
 )
@@ -42,14 +35,14 @@ await browser.scripting.insertCSS(
 
   - : An object describing the CSS to insert and where to insert it. It contains the following properties:
 
-    - `css`{{optional_inline}} 
-      - : `string`. A string containing the CSS to inject. Either `css` or `files` must be specified. 
-    - `files`{{optional_inline}}
-      - : `array` of `string`. The path of a CSS files to inject, relative to the extension's root directory. Either `files` or `css` must be specified. 
-    - `origin`{{optional_inline}} 
-      - : `string`. The style origin for the injection, either `USER` or `AUTHOR`. Defaults to `AUTHOR`. 
-    - `target` 
-      - : {{WebExtAPIRef("scripting.InjectionTarget")}}. Details specifying the target to inject the CSS into. 
+    - `css` {{optional_inline}}
+      - : `string`. A string containing the CSS to inject. Either `css` or `files` must be specified.
+    - `files` {{optional_inline}}
+      - : `array` of `string`. The path of a CSS files to inject, relative to the extension's root directory. Either `files` or `css` must be specified.
+    - `origin` {{optional_inline}}
+      - : `string`. The style origin for the injection, either `USER` or `AUTHOR`. Defaults to `AUTHOR`.
+    - `target`
+      - : {{WebExtAPIRef("scripting.InjectionTarget")}}. Details specifying the target to inject the CSS into.
 
 ### Return value
 
@@ -60,7 +53,7 @@ A [`Promise`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) that 
 This example inserts CSS taken from a string into the active tab.
 
 ```js
-browser.action.onClicked.addListener(async tab => {
+browser.action.onClicked.addListener(async (tab) => {
   try {
     await browser.scripting.insertCSS({
       target: {
@@ -77,7 +70,7 @@ browser.action.onClicked.addListener(async tab => {
 This example inserts CSS loaded from a file (packaged with the extension) called `"content-style.css"`:
 
 ```js
-browser.action.onClicked.addListener(async tab => {
+browser.action.onClicked.addListener(async (tab) => {
   try {
     await browser.scripting.insertCSS({
       target: {
@@ -98,5 +91,3 @@ browser.action.onClicked.addListener(async tab => {
 {{Compat}}
 
 > **Note:** This API is based on Chromium's [`chrome.scripting`](https://developer.chrome.com/docs/extensions/reference/scripting/#method-insertCSS) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.

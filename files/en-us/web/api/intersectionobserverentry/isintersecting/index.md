@@ -1,16 +1,11 @@
 ---
-title: IntersectionObserverEntry.isIntersecting
+title: "IntersectionObserverEntry: isIntersecting property"
+short-title: isIntersecting
 slug: Web/API/IntersectionObserverEntry/isIntersecting
-tags:
-  - API
-  - Intersection Observer
-  - Intersection Observer API
-  - IntersectionObserverEntry
-  - Property
-  - Reference
-  - isIntersecting
+page-type: web-api-instance-property
 browser-compat: api.IntersectionObserverEntry.isIntersecting
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserverEntry")}} interface's
@@ -36,7 +31,7 @@ many targeted elements are currently intersecting with the
 
 ```js
 function intersectionCallback(entries) {
-  entries.forEach(function(entry) {
+  entries.forEach((entry) => {
     if (entry.isIntersecting) {
       intersectingCount += 1;
     } else {
@@ -47,8 +42,7 @@ function intersectionCallback(entries) {
 ```
 
 To see a more concrete example, take a look at
-{{SectionOnPage("/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility",
-  "Handling intersection changes")}}.
+[Handling intersection changes](/en-US/docs/Web/API/Intersection_Observer_API/Timing_element_visibility#handling_intersection_changes).
 
 ## Specifications
 

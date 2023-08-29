@@ -1,16 +1,11 @@
 ---
-title: HTMLObjectElement.validity
+title: "HTMLObjectElement: validity property"
+short-title: validity
 slug: Web/API/HTMLObjectElement/validity
-tags:
-  - API
-  - HTML DOM
-  - HTMLObjectElement
-  - NeedsExample
-  - Property
-  - Reference
-  - validity
+page-type: web-api-instance-property
 browser-compat: api.HTMLObjectElement.validity
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`validity`** read-only property of the

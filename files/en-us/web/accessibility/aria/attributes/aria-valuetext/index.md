@@ -1,16 +1,11 @@
 ---
-title: 'aria-valuetext'
+title: aria-valuetext
 slug: Web/Accessibility/ARIA/Attributes/aria-valuetext
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-valuetext
-  - Reference
+page-type: aria-attribute
+spec-urls: https://w3c.github.io/aria/#aria-valuetext
 ---
 
-The `aria-valuetext` attribute defines the human readable text alternative of `aria-valuenow` for a range widget.
+The `aria-valuetext` attribute defines the human-readable text alternative of `aria-valuenow` for a range widget.
 
 ## Description
 
@@ -27,7 +22,7 @@ When both the `aria-valuetext` and `aria-valuenow` are included, the `aria-value
 ## Values
 
 - `<string>`
-  - : A human readable text alternative of the `aria-valuenow` value.
+  - : A human-readable text alternative of the `aria-valuenow` value.
 
 ## ARIAMixin API
 
@@ -54,9 +49,7 @@ Inherited into roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-valuetext","ARIA: aria-valuetext Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

@@ -1,16 +1,12 @@
 ---
-title: Response.type
+title: "Response: type property"
+short-title: type
 slug: Web/API/Response/type
-tags:
-  - API
-  - Fetch
-  - Property
-  - Reference
-  - Response
-  - Type
+page-type: web-api-instance-property
 browser-compat: api.Response.type
 ---
-{{APIRef("Fetch")}}
+
+{{APIRef("Fetch API")}}
 
 The **`type`** read-only property of the {{domxref("Response")}} interface contains the type of the response.
 It can be one of the following:
@@ -34,20 +30,20 @@ A `ResponseType` string indicating the type of the response.
 
 ## Examples
 
-In our [Fetch Response example](https://github.com/mdn/fetch-examples/tree/gh-pages/fetch-response) (see [Fetch Response live](https://mdn.github.io/fetch-examples/fetch-response/)) we create a new {{domxref("Request")}} object using the {{domxref("Request.Request","Request()")}} constructor, passing it a JPG path.
-We then fetch this request using {{domxref("fetch()")}}, extract a blob from the response using {{domxref("Response.blob")}}, create an object URL out of it using {{domxref("URL.createObjectURL")}}, and display this in an {{htmlelement("img")}}.
+In our [Fetch Response example](https://github.com/mdn/dom-examples/tree/main/fetch/fetch-response) (see [Fetch Response live](https://mdn.github.io/dom-examples/fetch/fetch-response/)) we create a new {{domxref("Request")}} object using the {{domxref("Request.Request","Request()")}} constructor, passing it a JPG path.
+We then fetch this request using {{domxref("fetch()")}}, extract a blob from the response using {{domxref("Response.blob")}}, create an object URL out of it using {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}, and display this in an {{htmlelement("img")}}.
 
 Note that at the top of the `fetch()` block we log the response `type` to the console.
 
 ```js
-var myImage = document.querySelector('img');
+const myImage = document.querySelector("img");
 
-var myRequest = new Request('flowers.jpg');
+const myRequest = new Request("flowers.jpg");
 
-fetch(myRequest).then(function(response) {
+fetch(myRequest).then((response) => {
   console.log(response.type); // returns basic by default
-  response.blob().then(function(myBlob) {
-    var objectURL = URL.createObjectURL(myBlob);
+  response.blob().then((myBlob) => {
+    const objectURL = URL.createObjectURL(myBlob);
     myImage.src = objectURL;
   });
 });

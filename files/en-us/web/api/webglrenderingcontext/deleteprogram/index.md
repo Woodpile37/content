@@ -1,14 +1,11 @@
 ---
-title: WebGLRenderingContext.deleteProgram()
+title: "WebGLRenderingContext: deleteProgram() method"
+short-title: deleteProgram()
 slug: Web/API/WebGLRenderingContext/deleteProgram
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
+page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.deleteProgram
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.deleteProgram()`** method of the
@@ -18,7 +15,7 @@ been deleted.
 
 ## Syntax
 
-```js
+```js-nolint
 deleteProgram(program)
 ```
 
@@ -36,11 +33,11 @@ None ({{jsxref("undefined")}}).
 ### Deleting a program
 
 ```js
-var canvas = document.getElementById('canvas');
-var gl = canvas.getContext('webgl');
-var program = gl.createProgram();
+const canvas = document.getElementById("canvas");
+const gl = canvas.getContext("webgl");
+const program = gl.createProgram();
 
-// ...
+// …
 
 gl.deleteProgram(program);
 ```

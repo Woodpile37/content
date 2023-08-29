@@ -1,21 +1,18 @@
 ---
-title: FontFaceSet.values()
+title: "FontFaceSet: values() method"
+short-title: values()
 slug: Web/API/FontFaceSet/values
-tags:
-  - API
-  - Method
-  - Reference
-  - values
-  - FontFaceSet
+page-type: web-api-instance-method
 browser-compat: api.FontFaceSet.values
 ---
+
 {{DefaultAPISidebar("")}}
 
 The **`values()`** method of the {{domxref("FontFaceSet")}} interface returns a new iterator object that yields the values for each element in the `FontFaceSet` object in insertion order.
 
 ## Syntax
 
-```js
+```js-nolint
 values()
 ```
 

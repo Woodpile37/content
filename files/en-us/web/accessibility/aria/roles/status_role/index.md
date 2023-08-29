@@ -1,14 +1,8 @@
 ---
-title: 'ARIA: status role'
+title: "ARIA: status role"
 slug: Web/Accessibility/ARIA/Roles/status_role
-tags:
-  - Accessibility
-  - ARIA
-  - roles
-  - Reference
-  - ARIA roles
-  - ARIA status
-  - status role
+page-type: aria-role
+spec-urls: https://w3c.github.io/aria/#status
 ---
 
 The `status` role defines a [live region](/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) containing advisory information for the user that is not important enough to be an [`alert`](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role).
@@ -31,19 +25,16 @@ Elements with the role status have an implicit [`aria-live`](/en-US/docs/Web/Acc
 
   - : Defines when assistive technology should inform the user of updates to content. Elements with the role `status` have an implicit [aria-live](https://www.w3.org/TR/wai-aria-1.1/#aria-live) value of `polite`, meaning screen readers will announce changes inside the log when the user is idle.
 
-- [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
+- [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label) or [`aria-labelledby`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
 
-  - : Some screen readers announce the name of a status element before announcing the content of the status element. Including an `aria-label` provides a method for prefacing the visible content of a status element with text that is not displayed when a screen reader reads the content.
+  - : Some screen readers announce the name of a status element before announcing its contents. If a name is visible, reference it using `aria-labelledby`. Including an `aria-label` provides a method for prefacing the visible content of a status element with text that is not displayed when a screen reader reads the content. Naming a status is not required so if nothing is appropriate both these attributes can be omitted.
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#status","ARIA: status role")}}                                             | {{Spec2('ARIA')}}                         |
+{{Specifications}}
 
 ## See Also
 
-- [ARIA: using the `status` role](/en-US/docs/Web/Accessibility/ARIA/aria_techniques/using_the_status_role)
 - [ARIA: `alert` role](/en-US/docs/Web/Accessibility/ARIA/Roles/alert_role)
 - [ARIA: `log` role](/en-US/docs/Web/Accessibility/ARIA/Roles/log_role)
 - [ARIA: `marquee` role](/en-US/docs/Web/Accessibility/ARIA/Roles/marquee_role)
@@ -54,6 +45,6 @@ Elements with the role status have an implicit [`aria-live`](/en-US/docs/Web/Acc
 
 1. [**WAI-ARIA roles**](/en-US/docs/Web/Accessibility/ARIA/Roles)
 
-    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
+   {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Roles")}}
 
 </section>

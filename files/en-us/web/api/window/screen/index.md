@@ -1,14 +1,11 @@
 ---
-title: Window.screen
+title: "Window: screen property"
+short-title: screen
 slug: Web/API/Window/screen
-tags:
-  - API
-  - CSSOM View
-  - HTML DOM
-  - Property
-  - Window
+page-type: web-api-instance-property
 browser-compat: api.Window.screen
 ---
+
 {{APIRef("CSSOM")}}
 
 The {{DOMxRef("Window")}} property **`screen`** returns a

@@ -1,18 +1,14 @@
 ---
-title: Window.mozInnerScreenX
+title: "Window: mozInnerScreenX property"
+short-title: mozInnerScreenX
 slug: Web/API/Window/mozInnerScreenX
-tags:
-  - API
-  - HTML DOM
-  - NeedsExample
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Property
-  - Reference
-  - Window
+page-type: web-api-instance-property
+status:
+  - non-standard
 browser-compat: api.Window.mozInnerScreenX
 ---
-{{APIRef}}
+
+{{APIRef}}{{Non-standard_Header}}
 
 ## Summary
 
@@ -23,9 +19,7 @@ coordinates.
 
 ## Value
 
-- _screenX_ stores the `window.mozInnerScreenX` property value.
-- The `window.mozInnerScreenX` property is a floating point, read-only
-  value; it has no default value.
+The `window.mozInnerScreenX` property is a floating point, read-only value; it has no default value.
 
 ## Specifications
 

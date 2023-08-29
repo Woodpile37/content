@@ -1,21 +1,11 @@
 ---
-title: RTCIceCandidate.port
+title: "RTCIceCandidate: port property"
+short-title: port
 slug: Web/API/RTCIceCandidate/port
-tags:
-  - API
-  - Candidate
-  - ICE
-  - Networking
-  - Property
-  - RTCIceCandidate
-  - Read-only
-  - Reference
-  - SDP
-  - WebRTC
-  - WebRTC API
-  - port
+page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidate.port
 ---
+
 {{APIRef("WebRTC")}}
 
 The **{{domxref("RTCIceCandidate")}}** interface's read-only **`port`** property contains the port
@@ -40,8 +30,8 @@ A 16-bit number indicating the port number on the device at the address indicate
 Consider this {{Glossary("SDP")}} attribute line (a-line) which describes an ICE
 candidate:
 
-```
-a=candidate:4234997325 1 udp 2043278322 192.168.0.56 44323 typ host
+```plain
+a=candidate:4234997325 1 udp 2043278322 192.0.2.172 44323 typ host
 ```
 
 The port number is found in the sixth field, which is `"44323"`. In this case, the value of `port` will be 44323.
@@ -52,10 +42,10 @@ This code snippet fetches the IP address and port number of the candidate, stori
 into an object for future use.
 
 ```js
-var candidateLoc = {
+const candidateLoc = {
   address: candidate.ip,
-  port: candidate.port
-}
+  port: candidate.port,
+};
 ```
 
 ## Specifications

@@ -1,15 +1,11 @@
 ---
-title: DocumentFragment.prepend()
+title: "DocumentFragment: prepend() method"
+short-title: prepend()
 slug: Web/API/DocumentFragment/prepend
-tags:
-  - API
-  - DOM
-  - Method
-  - Node
-  - DocumentFragment
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.DocumentFragment.prepend
 ---
+
 {{APIRef("DOM")}}
 
 The **`DocumentFragment.prepend()`** method
@@ -21,10 +17,10 @@ This method prepends a child to a `DocumentFragment`. To prepend to an arbitrary
 
 ## Syntax
 
-```js
+```js-nolint
 prepend(param1)
 prepend(param1, param2)
-prepend(param1, param2, /* ... ,*/ paramN)
+prepend(param1, param2, /* …, */ paramN)
 ```
 
 ### Parameters

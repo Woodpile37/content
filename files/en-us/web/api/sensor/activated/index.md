@@ -1,17 +1,11 @@
 ---
-title: Sensor.activated
+title: "Sensor: activated property"
+short-title: activated
 slug: Web/API/Sensor/activated
-tags:
-  - API
-  - Generic Sensor API
-  - Property
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-  - activated
+page-type: web-api-instance-property
 browser-compat: api.Sensor.activated
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`activated`** read-only property

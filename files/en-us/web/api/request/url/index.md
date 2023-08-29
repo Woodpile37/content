@@ -1,16 +1,12 @@
 ---
-title: Request.url
+title: "Request: url property"
+short-title: url
 slug: Web/API/Request/url
-tags:
-  - API
-  - Fetch
-  - Property
-  - Reference
-  - URL
-  - request
+page-type: web-api-instance-property
 browser-compat: api.Request.url
 ---
-{{APIRef("Fetch")}}
+
+{{APIRef("Fetch API")}}
 
 The **`url`** read-only property of the {{domxref("Request")}}
 interface contains the URL of the request.
@@ -26,8 +22,8 @@ In the following snippet, we create a new request using the
 the script), then save the URL of the request in a variable:
 
 ```js
-var myRequest = new Request('flowers.jpg');
-var myURL = myRequest.url; // "https://mdn.github.io/fetch-examples/fetch-request/flowers.jpg"
+const myRequest = new Request("flowers.jpg");
+const myURL = myRequest.url; // "https://github.com/mdn/dom-examples/tree/main/fetch/fetch-request/flowers.jpg"
 ```
 
 ## Specifications

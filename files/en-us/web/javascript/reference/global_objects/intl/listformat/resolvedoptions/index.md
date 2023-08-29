@@ -1,32 +1,27 @@
 ---
 title: Intl.ListFormat.prototype.resolvedOptions()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/ListFormat/resolvedOptions
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - ListFormat
-  - Method
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.ListFormat.resolvedOptions
 ---
+
 {{JSRef}}
 
-The **`Intl.ListFormat.prototype.resolvedOptions()`** method
+The **`resolvedOptions()`** method of {{jsxref("Intl.ListFormat")}} instances
 returns a new object with properties reflecting the locale and style formatting
-options computed during the construction of the current {{jsxref("Intl.ListFormat")}}
-object.
+options computed during the construction of this `Intl.ListFormat` object.
 
 {{EmbedInteractiveExample("pages/js/intl-listformat-prototype-resolvedoptions.html")}}
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
-
 ## Syntax
 
-```js
-listFormat.resolvedOptions()
+```js-nolint
+resolvedOptions()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
@@ -44,12 +39,12 @@ The object returned by `resolvedOptions()` has the following properties:
     included in `locale`.
 - `style`
   - : The value provided for this property in the `options` argument of the
-    constructor or the default value ("`long`"). Its value is either
-    "`long`", "`short`", or "`narrow`".
+    constructor or the default value (`"long"`). Its value is either
+    `"long"`, `"short"`, or `"narrow"`.
 - `type`
   - : The value provided for this property in the `options` argument of the
-    constructor or the default value ("`conjunction`"). Its value is either
-    "`conjunction`", "`disjunction`", or "`unit`".
+    constructor or the default value (`"conjunction"`). Its value is either
+    `"conjunction"`, `"disjunction"`, or `"unit"`.
 
 ## Examples
 
@@ -60,8 +55,8 @@ const deListFormatter = new Intl.ListFormat("de-DE", { style: "short" });
 
 const usedOptions = de.resolvedOptions();
 console.log(usedOptions.locale); // "de-DE"
-console.log(usedOptions.style);  // "short"
-console.log(usedOptions.type);   // "conjunction" (the default value)
+console.log(usedOptions.style); // "short"
+console.log(usedOptions.type); // "conjunction" (the default value)
 ```
 
 ## Specifications

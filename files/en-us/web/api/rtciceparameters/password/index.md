@@ -1,20 +1,11 @@
 ---
-title: RTCIceParameters.password
+title: "RTCIceParameters: password property"
+short-title: password
 slug: Web/API/RTCIceParameters/password
-tags:
-  - API
-  - Candidates
-  - Connectivity
-  - ICE
-  - Negotiation
-  - Property
-  - RTCIceParameters
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - password
+page-type: web-api-instance-property
 browser-compat: api.RTCIceParameters.password
 ---
+
 {{APIRef("WebRTC")}}
 
 The **{{domxref("RTCIceParameters")}}**

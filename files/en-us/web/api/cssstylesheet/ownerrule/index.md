@@ -1,23 +1,11 @@
 ---
-title: CSSStyleSheet.ownerRule
+title: "CSSStyleSheet: ownerRule property"
+short-title: ownerRule
 slug: Web/API/CSSStyleSheet/ownerRule
-tags:
-  - '@import'
-  - API
-  - CSS
-  - CSSOM
-  - CSSOM API
-  - CSSStyleSheet
-  - Layout
-  - Object Model
-  - Property
-  - Read-only
-  - Reference
-  - StyleSheet
-  - import
-  - ownerRule
+page-type: web-api-instance-property
 browser-compat: api.CSSStyleSheet.ownerRule
 ---
+
 {{APIRef("CSSOM")}}
 
 The read-only {{domxref("CSSStyleSheet")}} property
@@ -38,22 +26,22 @@ This snippet of code looks for rules which were not imported into the document u
 `@import` at-rule.
 
 ```js
-let ruleList = document.styleSheets[0].cssRules;
+const ruleList = document.styleSheets[0].cssRules;
 
-for (let rule of ruleList) {
+for (const rule of ruleList) {
   if (!rule.ownerRule) {
     /* rule is not imported */
   }
 }
 ```
 
-This snipped obtains a reference to the stylesheet associated with the
+This snippet obtains a reference to the stylesheet associated with the
 `@import` and processes it in some manner:
 
 ```js
-let ruleList = document.styleSheets[0].cssRules;
+const ruleList = document.styleSheets[0].cssRules;
 
-for (let rule of ruleList) {
+for (const rule of ruleList) {
   if (rule.ownerRule) {
     checkStylesheet(rule.ownerRule.styleSheet);
   }
@@ -71,5 +59,4 @@ for (let rule of ruleList) {
 ## See also
 
 - [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model)
-- [Using
-  dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
+- [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)

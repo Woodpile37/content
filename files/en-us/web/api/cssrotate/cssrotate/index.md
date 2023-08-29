@@ -1,26 +1,20 @@
 ---
-title: CSSRotate()
+title: "CSSRotate: CSSRotate() constructor"
+short-title: CSSRotate()
 slug: Web/API/CSSRotate/CSSRotate
-tags:
-  - API
-  - CSS Types Object Model API
-  - CSSRotate
-  - CSSTransformComponent
-  - CSSTransformValue
-  - Constructor
-  - Experimental
-  - Houdini
+page-type: web-api-constructor
 browser-compat: api.CSSRotate.CSSRotate
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+
+{{APIRef("CSS Typed OM")}}
 
 The **`CSSRotate()`** constructor creates a new
-{{domxref("CSSRotate")}} object representing the [rotate()](</en-US/docs/Web/CSS/transform-function/rotate()>) value of the
+{{domxref("CSSRotate")}} object representing the [rotate()](/en-US/docs/Web/CSS/transform-function/rotate) value of the
 individual {{CSSXref('transform')}} property in CSS.
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSRotate(x, y, z, angle)
 ```
 

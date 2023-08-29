@@ -1,16 +1,11 @@
 ---
-title: AudioParam.maxValue
+title: "AudioParam: maxValue property"
+short-title: maxValue
 slug: Web/API/AudioParam/maxValue
-tags:
-  - API
-  - Audio
-  - AudioParam
-  - Property
-  - Reference
-  - Web Audio API
-  - maxValue
+page-type: web-api-instance-property
 browser-compat: api.AudioParam.maxValue
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`maxValue`**

@@ -1,25 +1,11 @@
 ---
-title: RTCInboundRtpStreamStats.sliCount
+title: "RTCInboundRtpStreamStats: sliCount property"
+short-title: sliCount
 slug: Web/API/RTCInboundRtpStreamStats/sliCount
-tags:
-  - API
-  - Corruption
-  - Errors
-  - Property
-  - RTCInboundRtpStreamStats
-  - RTP
-  - Reference
-  - SLI
-  - Slice Loss
-  - Statistics
-  - Stats
-  - Video
-  - WebRTC
-  - WebRTC API
-  - sliCount
-  - stream
+page-type: web-api-instance-property
 browser-compat: api.RTCInboundRtpStreamStats.sliCount
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`sliCount`** property of the

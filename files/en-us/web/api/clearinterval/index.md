@@ -1,15 +1,11 @@
 ---
-title: clearInterval()
+title: clearInterval() global function
+short-title: clearInterval()
 slug: Web/API/clearInterval
-tags:
-  - API
-  - HTML DOM
-  - JavaScript timers
-  - Method
-  - Reference
-  - clearInterval
+page-type: web-api-global-function
 browser-compat: api.clearInterval
 ---
+
 {{APIRef("HTML DOM")}}
 
 The global **`clearInterval()`** method cancels a timed, repeating action which
@@ -19,7 +15,7 @@ this method does nothing.
 
 ## Syntax
 
-```js
+```js-nolint
 clearInterval(intervalID)
 ```
 
@@ -42,8 +38,7 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-See the [`setInterval()`
-examples](/en-US/docs/Web/API/setInterval#Examples).
+See the [`setInterval()` examples](/en-US/docs/Web/API/setInterval#examples).
 
 ## Specifications
 

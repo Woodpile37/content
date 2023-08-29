@@ -1,24 +1,22 @@
 ---
-title: Document.queryCommandSupported()
+title: "Document: queryCommandSupported() method"
+short-title: queryCommandSupported()
 slug: Web/API/Document/queryCommandSupported
-tags:
-  - API
-  - DOM
-  - Document
-  - Method
-  - Reference
-  - editor
-  - Deprecated
+page-type: web-api-instance-method
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Document.queryCommandSupported
 ---
-{{ApiRef("DOM")}}{{deprecated_header}}
+
+{{ApiRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`Document.queryCommandSupported()`** method reports
 whether or not the specified editor command is supported by the browser.
 
 ## Syntax
 
-```js
+```js-nolint
 queryCommandSupported(command)
 ```
 
@@ -41,10 +39,10 @@ the action.
 ## Examples
 
 ```js
-var flg = document.queryCommandSupported("SelectAll");
+const flg = document.queryCommandSupported("SelectAll");
 
-if(flg) {
-  // ...Do something
+if (flg) {
+  // Do something…
 }
 ```
 

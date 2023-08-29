@@ -1,14 +1,11 @@
 ---
-title: KeyboardEvent()
+title: "KeyboardEvent: KeyboardEvent() constructor"
+short-title: KeyboardEvent()
 slug: Web/API/KeyboardEvent/KeyboardEvent
-tags:
-  - API
-  - Constructor
-  - DOM
-  - KeyboardEvent
-  - Reference
+page-type: web-api-constructor
 browser-compat: api.KeyboardEvent.KeyboardEvent
 ---
+
 {{APIRef("UI Events")}}
 
 The **`KeyboardEvent()`** constructor creates a new
@@ -16,7 +13,7 @@ The **`KeyboardEvent()`** constructor creates a new
 
 ## Syntax
 
-```js
+```js-nolint
 new KeyboardEvent(type)
 new KeyboardEvent(type, options)
 ```

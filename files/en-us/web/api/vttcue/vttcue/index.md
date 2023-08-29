@@ -1,19 +1,11 @@
 ---
-title: VTTCue()
+title: "VTTCue: VTTCue() constructor"
+short-title: VTTCue()
 slug: Web/API/VTTCue/VTTCue
-tags:
-  - API
-  - Accessibility
-  - Constructor
-  - Reference
-  - VTTCue
-  - WebVTT
-  - WebVTT API
-  - a11y
-  - captions
-  - vtt
+page-type: web-api-constructor
 browser-compat: api.VTTCue.VTTCue
 ---
+
 {{APIRef("WebVTT")}}
 
 The **`VTTCue()`** constructor creates and returns a new
@@ -21,7 +13,7 @@ The **`VTTCue()`** constructor creates and returns a new
 
 ## Syntax
 
-```js
+```js-nolint
 new VTTCue(startTime, endTime, text)
 ```
 
@@ -51,7 +43,7 @@ the time span given.
 
 ```js
 // Create a cue that is shown from 2 to 3 seconds and uses the given text.
-let cue = new VTTCue(2, 3, 'Cool text to be displayed');
+let cue = new VTTCue(2, 3, "Cool text to be displayed");
 ```
 
 ## Specifications

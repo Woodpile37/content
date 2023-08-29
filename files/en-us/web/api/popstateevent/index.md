@@ -1,13 +1,11 @@
 ---
 title: PopStateEvent
 slug: Web/API/PopStateEvent
-tags:
-  - API
-  - Interface
-  - Reference
+page-type: web-api-interface
 browser-compat: api.PopStateEvent
 ---
-{{APIRef("HTML DOM")}}
+
+{{APIRef("History API")}}
 
 **`PopStateEvent`** is an interface for the [`popstate`](/en-US/docs/Web/API/Window/popstate_event) event.
 
@@ -24,14 +22,14 @@ event's `state` property contains a copy of the history entry's state object.
 - {{domxref("PopStateEvent.PopStateEvent", "PopStateEvent()")}}
   - : Creates a new `PopStateEvent` object.
 
-## Properties
+## Instance properties
 
 _This interface also inherits the properties of its parent, {{domxref("Event")}}._
 
-- {{domxref("PopStateEvent.state")}} {{readonlyInline}}
+- {{domxref("PopStateEvent.state")}} {{ReadOnlyInline}}
   - : Returns a copy of the information that was provided to `pushState()` or `replaceState()`.
 
-## Methods
+## Instance methods
 
 _This interface has no methods of its own, but inherits the methods of its parent, {{domxref("Event")}}._
 

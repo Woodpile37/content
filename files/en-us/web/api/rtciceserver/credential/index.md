@@ -1,17 +1,12 @@
 ---
-title: RTCIceServer.credential
+title: "RTCIceServer: credential property"
+short-title: credential
 slug: Web/API/RTCIceServer/credential
-tags:
-  - Credential
-  - Experimental
-  - Property
-  - RTCIceServer
-  - Reference
-  - TURN
-  - WebRTC
+page-type: web-api-instance-property
 browser-compat: api.RTCIceServer.credential
 ---
-{{APIRef("WebRTC")}}{{SeeCompatTable}}
+
+{{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceServer")}} dictionary's
 **`credential`** property is a string providing the credential
@@ -23,14 +18,14 @@ other secret.
 
 ## Syntax
 
-```js
-var iceServer = {
-                  ...
-                  credential = credential,
-                  ...
-                };
+```js-nolint
+const iceServer = {
+  // ...
+  credential: someCredential,
+  // ...
+};
 
-var credential = iceServer.credential;
+const credential = iceServer.credential;
 
 iceServer.credential = newCredential;
 ```
@@ -46,11 +41,11 @@ password "turnpassword".
 myPeerConnection = new RTCPeerConnection({
   iceServers: [
     {
-      urls: "turn:turnserver.example.org",  // A TURN server
+      urls: "turn:turnserver.example.org", // A TURN server
       username: "webrtc",
-      credential: "turnpassword"
-    }
-  ]
+      credential: "turnpassword",
+    },
+  ],
 });
 ```
 

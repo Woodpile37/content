@@ -1,16 +1,14 @@
 ---
 title: FileSystemSync
 slug: Web/API/FileSystemSync
-tags:
-  - API
-  - File API
-  - File and Directory Entries API
-  - Files
-  - Offline
-  - filesystem
+page-type: web-api-interface
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.FileSystemSync
 ---
-{{APIRef("File and Directory Entries API")}} {{non-standard_header}}
+
+{{APIRef("File and Directory Entries API")}}{{Non-standard_Header}}{{Deprecated_Header}}
 
 In the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_Entries_API/Introduction), a `FileSystemSync` object represents a file system. It has two properties.
 
@@ -21,12 +19,12 @@ In the [File and Directory Entries API](/en-US/docs/Web/API/File_and_Directory_E
 
 The `FileSystemSync` object is your gateway to the entire API and you will use it a lot. So once you have a reference, cache the object in a global variable or class property.
 
-## Attributes
+## Instance properties
 
-| Attribute | Type                      | Description                                                                               |
-| --------- | ------------------------- | ----------------------------------------------------------------------------------------- |
-| `name`    | `readonly DOMString`      | Name of the file system. The name must be unique across the list of exposed file systems. |
-| `root`    | `readonly DirectoryEntry` | The root directory of the file system.                                                    |
+- `name` {{ReadOnlyInline}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : A string that represents the name of the file system. The name must be unique across the list of exposed file systems.
+- `root` {{ReadOnlyInline}} {{Non-standard_Inline}} {{Deprecated_Inline}}
+  - : A `DirectoryEntry` that is the root directory of the file system.
 
 ## Specifications
 

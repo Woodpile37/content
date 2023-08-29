@@ -1,16 +1,13 @@
 ---
-title: Element.scrollLeftMax
+title: "Element: scrollLeftMax property"
+short-title: scrollLeftMax
 slug: Web/API/Element/scrollLeftMax
-tags:
-  - API
-  - CSSOM View
-  - Element
-  - Non-standard
-  - Property
-  - Read-only
-  - Reference
+page-type: web-api-instance-property
+status:
+  - non-standard
 browser-compat: api.Element.scrollLeftMax
 ---
+
 {{APIRef("DOM")}}{{Non-standard_header}}
 
 The **`Element.scrollLeftMax`** read-only property returns a

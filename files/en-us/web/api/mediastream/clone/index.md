@@ -1,16 +1,11 @@
 ---
-title: MediaStream.clone()
+title: "MediaStream: clone() method"
+short-title: clone()
 slug: Web/API/MediaStream/clone
-tags:
-  - API
-  - Media Capture and Streams
-  - Media Stream API
-  - MediaStream
-  - Method
-  - Reference
-  - clone
+page-type: web-api-instance-method
 browser-compat: api.MediaStream.clone
 ---
+
 {{APIRef("Media Capture and Streams")}}
 
 The **`clone()`** method of the {{domxref("MediaStream")}}
@@ -21,7 +16,7 @@ contains clones of every {{domxref("MediaStreamTrack")}} contained by the
 
 ## Syntax
 
-```js
+```js-nolint
 clone()
 ```
 

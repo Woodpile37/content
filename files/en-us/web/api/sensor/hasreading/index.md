@@ -1,17 +1,11 @@
 ---
-title: Sensor.hasReading
+title: "Sensor: hasReading property"
+short-title: hasReading
 slug: Web/API/Sensor/hasReading
-tags:
-  - API
-  - Generic Sensor API
-  - Property
-  - Reference
-  - Sensor
-  - Sensor APIs
-  - Sensors
-  - hasReading
+page-type: web-api-instance-property
 browser-compat: api.Sensor.hasReading
 ---
+
 {{APIRef("Sensor API")}}
 
 The **`hasReading`** read-only

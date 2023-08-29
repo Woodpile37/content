@@ -1,16 +1,13 @@
 ---
-title: Keyboard.lock()
+title: "Keyboard: lock() method"
+short-title: lock()
 slug: Web/API/Keyboard/lock
-tags:
-  - API
-  - Keyboard API
-  - Keyboard Lock
-  - Method
-  - Reference
-  - keyboard
-  - lock()
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.Keyboard.lock
 ---
+
 {{APIRef("Keyboard Map API")}}{{SeeCompatTable}}{{securecontext_header}}
 
 The **`lock()`** method of the
@@ -21,7 +18,7 @@ system.
 
 ## Syntax
 
-```js
+```js-nolint
 lock()
 lock(keyCodes)
 ```
@@ -30,12 +27,15 @@ lock(keyCodes)
 
 - `keyCodes` {{optional_inline}}
   - : An {{jsxref('Array')}} of one or more key codes to lock. If no keycodes are provided
-    all keys will be locked. A list of valid code values is found in the [UI
-    Events KeyboardEvent code Values](https://www.w3.org/TR/uievents-code/#key-alphanumeric-writing-system) spec.
+    all keys will be locked. A list of valid code values is found in the [UI Events KeyboardEvent code Values](https://www.w3.org/TR/uievents-code/#key-alphanumeric-writing-system) spec.
 
 ### Return value
 
 A {{jsxref('Promise')}}.
+
+## Security
+
+[Transient user activation](/en-US/docs/Web/Security/User_activation) is required. The user has to interact with the page or a UI element in order for this feature to work.
 
 ## Examples
 

@@ -1,22 +1,11 @@
 ---
-title: AudioTrackList.getTrackById()
+title: "AudioTrackList: getTrackById() method"
+short-title: getTrackById()
 slug: Web/API/AudioTrackList/getTrackById
-tags:
-  - API
-  - Audio
-  - AudioTrackList
-  - HTML DOM
-  - Media
-  - Method
-  - Reference
-  - Track ID
-  - Track List
-  - Tracks
-  - getTrackById
-  - id
-  - track
+page-type: web-api-instance-method
 browser-compat: api.AudioTrackList.getTrackById
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **{{domxref("AudioTrackList")}}** method
@@ -27,7 +16,7 @@ you know its ID string.
 
 ## Syntax
 
-```js
+```js-nolint
 getTrackById(id)
 ```
 
@@ -54,7 +43,7 @@ other key set pieces within the game. Each movie has one audio track for each ch
 as well as one for the music, sound effects, and so forth. This function allows the game
 to disable a specific character's audio in order to adjust the movie's performance based
 on occurrences within the game; if the character's dialog isn't relevant, it gets left
-out. Obviously that would require some clever graphic design to make work, but... it's a
+out. Obviously, that would require some clever graphic design to make work, but it's a
 hypothetical game.
 
 ```js

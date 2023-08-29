@@ -1,17 +1,14 @@
 ---
-title: Window.status
+title: "Window: status property"
+short-title: status
 slug: Web/API/Window/status
-tags:
-  - API
-  - HTML DOM
-  - NeedsExample
-  - NeedsSpecTable
-  - Property
-  - Reference
-  - Window
+page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.Window.status
 ---
-{{APIRef}} {{Deprecated_Header}}
+
+{{APIRef}}{{Deprecated_Header}}
 
 The **`status`** property of the
 {{domxref("Window")}} interface was originally intended to set the text in the status

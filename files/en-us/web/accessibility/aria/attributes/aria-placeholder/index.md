@@ -1,13 +1,8 @@
 ---
-title: 'aria-placeholder'
+title: aria-placeholder
 slug: Web/Accessibility/ARIA/Attributes/aria-placeholder
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-placeholder
-  - Reference
+page-type: aria-attribute
+spec-urls: https://w3c.github.io/aria/#aria-placeholder
 ---
 
 The `aria-placeholder` attribute defines a short hint (a word or short phrase) intended to help the user with data entry when a form control has no value. The hint can be a sample value or a brief description of the expected format.
@@ -20,7 +15,13 @@ If you are creating a `textbox` using any other element, `placeholder` is not su
 
 ```html
 <span id="date-of-birth">Birthday</span>
-<div contenteditable role="textbox" aria-labelledby="date-of-birth" aria-placeholder="MM-DD-YYYY">MM-DD-YYYY</div>
+<div
+  contenteditable
+  role="textbox"
+  aria-labelledby="date-of-birth"
+  aria-placeholder="MM-DD-YYYY">
+  MM-DD-YYYY
+</div>
 ```
 
 The placeholder hint should be shown to the user whenever the control's value is empty, including when a value is deleted.
@@ -57,9 +58,7 @@ Inherited into roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-placeholder","ARIA: aria-placeholder Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

@@ -1,21 +1,19 @@
 ---
-title: VideoEncoder.encode()
+title: "VideoEncoder: encode() method"
+short-title: encode()
 slug: Web/API/VideoEncoder/encode
-tags:
-  - API
-  - Method
-  - Reference
-  - encode
-  - VideoEncoder
+page-type: web-api-instance-method
 browser-compat: api.VideoEncoder.encode
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
 
-The **`encode()`** method of the {{domxref("VideoEncoder")}} interface enqueues a control message to encode a given {{domxref("VideoFrame")}}.
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}
+
+The **`encode()`** method of the {{domxref("VideoEncoder")}} interface asynchronously encodes a {{domxref("VideoFrame")}}.
+Encoded data ({{domxref("EncodedVideoChunk")}}) or an error will eventually be returned via the callbacks provided to the {{domxref("VideoEncoder")}} constructor.
 
 ## Syntax
 
-```js
+```js-nolint
 encode(frame)
 encode(frame, options)
 ```
@@ -24,14 +22,14 @@ encode(frame, options)
 
 - `frame`
   - : A {{domxref("VideoFrame")}} object.
-- `options`{{Optional_Inline}}
+- `options` {{optional_inline}}
   - : An object containing the following member:
     - `keyFrame`
       - : A {{jsxref("boolean")}}, defaulting to `false` giving the user agent flexibility to decide if this frame should be encoded as a key frame. If `true` this indicates that the given frame must be encoded as a key frame.
 
 ### Return value
 
-{{jsxref("Undefined")}}.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 

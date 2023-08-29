@@ -1,19 +1,14 @@
 ---
 title: InstallEvent
 slug: Web/API/InstallEvent
-tags:
-  - API
-  - InstallEvent
-  - Interface
-  - Offline
-  - Reference
-  - Service Workers
-  - Service worker API
-  - ServiceWorker
-  - Workers
+page-type: web-api-interface
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.InstallEvent
 ---
-{{non-standard_header}}{{deprecated_header}}
+
+{{APIRef("Service Workers API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The parameter passed into the {{domxref("ServiceWorkerGlobalScope.install_event", "oninstall")}} handler, the `InstallEvent` interface represents an install action that is dispatched on the {{domxref("ServiceWorkerGlobalScope")}} of a {{domxref("ServiceWorker")}}. As a child of {{domxref("ExtendableEvent")}}, it ensures that functional events such as {{domxref("FetchEvent")}} are not dispatched during installation.
 
@@ -21,19 +16,18 @@ This interface inherits from the {{domxref("ExtendableEvent")}} interface.
 
 {{InheritanceDiagram}}
 
+> **Note:** Instead of using the deprecated `ServiceWorkerGlobalScope.oninstall()` handler to catch events of this type, instead handle the (non-deprecated) [`install`](/en-US/docs/Web/API/ServiceWorkerGlobalScope/install_event) using a listener added with [`addEventListener()`](/en-US/docs/Web/API/EventTarget/addEventListener).
+
 ## Constructor
 
-- {{domxref("InstallEvent.InstallEvent", "InstallEvent()")}}
+- {{domxref("InstallEvent.InstallEvent", "InstallEvent()")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : Creates a new `InstallEvent` object.
 
-## Properties
+## Instance properties
 
 _Inherits properties from its ancestor, {{domxref("Event")}}_.
 
-- {{domxref("InstallEvent.activeWorker")}} {{readonlyInline}}
-  - : Returns the {{domxref("ServiceWorker")}} that is currently controlling the page.
-
-## Methods
+## Instance methods
 
 _Inherits methods from its parent, {{domxref("ExtendableEvent")}}_.
 
@@ -46,30 +40,40 @@ The code snippet also shows a best practice for versioning caches used by the se
 > **Note:** Logging statements are visible in Google Chrome via the "Inspect" interface for the relevant service worker accessed via chrome://serviceworker-internals.
 
 ```js
-var CACHE_VERSION = 1;
-var CURRENT_CACHES = {
-  prefetch: 'prefetch-cache-v' + CACHE_VERSION
+const CACHE_VERSION = 1;
+const CURRENT_CACHES = {
+  prefetch: `prefetch-cache-v${CACHE_VERSION}`,
 };
 
-self.addEventListener('install', function(event) {
-  var urlsToPrefetch = [
-    './static/pre_fetched.txt',
-    './static/pre_fetched.html',
-    'https://www.chromium.org/_/rsrc/1302286216006/config/customLogo.gif'
+self.addEventListener("install", (event) => {
+  const urlsToPrefetch = [
+    "./static/pre_fetched.txt",
+    "./static/pre_fetched.html",
+    "https://www.chromium.org/_/rsrc/1302286216006/config/customLogo.gif",
   ];
 
-console.log('Handling install event. Resources to pre-fetch:', urlsToPrefetch);
+  console.log(
+    "Handling install event. Resources to pre-fetch:",
+    urlsToPrefetch,
+  );
 
   event.waitUntil(
-    caches.open(CURRENT_CACHES['prefetch']).then(function(cache) {
-      return cache.addAll(urlsToPrefetch.map(function(urlToPrefetch) {
-        return new Request(urlToPrefetch, {mode: 'no-cors'});
-      })).then(function() {
-        console.log('All resources have been fetched and cached.');
-      });
-    }).catch(function(error) {
-      console.error('Pre-fetching failed:', error);
-    })
+    caches
+      .open(CURRENT_CACHES["prefetch"])
+      .then((cache) => {
+        return cache
+          .addAll(
+            urlsToPrefetch.map((urlToPrefetch) => {
+              return new Request(urlToPrefetch, { mode: "no-cors" });
+            }),
+          )
+          .then(() => {
+            console.log("All resources have been fetched and cached.");
+          });
+      })
+      .catch((error) => {
+        console.error("Pre-fetching failed:", error);
+      }),
   );
 });
 ```
@@ -80,6 +84,7 @@ console.log('Handling install event. Resources to pre-fetch:', urlsToPrefetch);
 
 ## See also
 
+- [`install` event](/en-US/docs/Web/API/ServiceWorkerGlobalScope/install_event)
 - {{domxref("NotificationEvent")}}
 - {{jsxref("Promise")}}
 - [Fetch API](/en-US/docs/Web/API/Fetch_API)

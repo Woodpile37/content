@@ -1,18 +1,12 @@
 ---
-title: FontFaceSetLoadEvent()
+title: "FontFaceSetLoadEvent: FontFaceSetLoadEvent() constructor"
+short-title: FontFaceSetLoadEvent()
 slug: Web/API/FontFaceSetLoadEvent/FontFaceSetLoadEvent
-tags:
-  - API
-  - CSSFontLoading
-  - CSSOM
-  - Constructor
-  - Experimental
-  - FontFaceLoadEvent
-  - Fonts
-  - Reference
+page-type: web-api-constructor
 browser-compat: api.FontFaceSetLoadEvent.FontFaceSetLoadEvent
 ---
-{{APIRef("CSS Font Loading API")}}{{SeeCompatTable}}
+
+{{APIRef("CSS Font Loading API")}}
 
 The **`FontFaceSetLoadEvent()`** constructor creates a new
 {{domxref("FontFaceSetLoadEvent")}} object which is fired whenever a
@@ -20,7 +14,7 @@ The **`FontFaceSetLoadEvent()`** constructor creates a new
 
 ## Syntax
 
-```js
+```js-nolint
 new FontFaceSetLoadEvent(type)
 new FontFaceSetLoadEvent(type, options)
 ```

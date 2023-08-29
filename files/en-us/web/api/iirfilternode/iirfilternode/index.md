@@ -1,16 +1,11 @@
 ---
-title: IIRFilterNode()
+title: "IIRFilterNode: IIRFilterNode() constructor"
+short-title: IIRFilterNode()
 slug: Web/API/IIRFilterNode/IIRFilterNode
-tags:
-  - API
-  - Audio
-  - Constructor
-  - IIRFilterNode
-  - Media
-  - Reference
-  - Web Audio API
+page-type: web-api-constructor
 browser-compat: api.IIRFilterNode.IIRFilterNode
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`IIRFilterNode()`** constructor
@@ -20,7 +15,7 @@ which implements a general infinite impulse response filter.
 
 ## Syntax
 
-```js
+```js-nolint
 new IIRFilterNode(context, options)
 ```
 
@@ -37,8 +32,7 @@ new IIRFilterNode(context, options)
     - `feedback`
       - : A sequence of feedback coefficients.
     - `channelCount`
-      - : Represents an integer used to determine how many channels are used when [up-mixing
-        and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) connections to any inputs to the node. (See
+      - : Represents an integer used to determine how many channels are used when [up-mixing and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) connections to any inputs to the node. (See
         {{domxref("AudioNode.channelCount")}} for more information.) Its usage and precise
         definition depend on the value of `channelCountMode`.
     - `channelCountMode`
@@ -47,8 +41,7 @@ new IIRFilterNode(context, options)
         information including default values.)
     - `channelInterpretation`
       - : Represents an enumerated value describing the meaning of the channels. This
-        interpretation will define how audio [up-mixing
-        and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) will happen.
+        interpretation will define how audio [up-mixing and down-mixing](/en-US/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#up-mixing_and_down-mixing) will happen.
         The possible values are `"speakers"` or `"discrete"`. (See
         {{domxref("AudioNode.channelCountMode")}} for more information including default
         values.)
@@ -70,7 +63,10 @@ let feedBackward = [1.0126964558, -1.9991880801, 0.9873035442];
 const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();
 
-const iirFilter = new IIRFilterNode(audioCtx, { feedforward: feedForward, feedback: feedBackward });
+const iirFilter = new IIRFilterNode(audioCtx, {
+  feedforward: feedForward,
+  feedback: feedBackward,
+});
 ```
 
 ## Specifications

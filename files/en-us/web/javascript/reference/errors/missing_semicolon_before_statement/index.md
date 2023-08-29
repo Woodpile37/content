@@ -1,12 +1,9 @@
 ---
-title: 'SyntaxError: missing ; before statement'
+title: "SyntaxError: missing ; before statement"
 slug: Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement
-tags:
-  - Error
-  - Errors
-  - JavaScript
-  - SyntaxError
+page-type: javascript-error
 ---
+
 {{jsSidebar("Errors")}}
 
 The JavaScript exception "missing ; before statement" occurs when there is a semicolon (`;`)
@@ -16,7 +13,7 @@ You need to provide a semicolon, so that JavaScript can parse the source code co
 
 ## Message
 
-```js
+```plain
 SyntaxError: Expected ';' (Edge)
 SyntaxError: missing ; before statement (Firefox)
 ```
@@ -44,39 +41,40 @@ many parenthesis somewhere. Carefully check the syntax when this error is thrown
 This error can occur easily when not escaping strings properly and the JavaScript
 engine is expecting the end of your string already. For example:
 
-```js example-bad
-var foo = 'Tom's bar';
+```js-nolint example-bad
+const foo = 'Tom's bar';
 // SyntaxError: missing ; before statement
 ```
 
 You can use double quotes, or escape the apostrophe:
 
-```js example-good
-var foo = "Tom's bar";
-var foo = 'Tom\'s bar';
+```js-nolint example-good
+const foo = "Tom's bar";
+// OR
+const foo = 'Tom\'s bar';
 ```
 
-### Declaring properties with var
+### Declaring properties with keyword
 
 You **cannot** declare properties of an object or array with a
-`var` declaration.
+`let`, `const`, or `var` declaration.
 
-```js example-bad
-var obj = {};
-var obj.foo = 'hi'; // SyntaxError missing ; before statement
+```js-nolint example-bad
+const obj = {};
+const obj.foo = "hi"; // SyntaxError missing ; before statement
 
-var array = [];
-var array[0] = 'there'; // SyntaxError missing ; before statement
+const array = [];
+const array[0] = "there"; // SyntaxError missing ; before statement
 ```
 
-Instead, omit the `var` keyword:
+Instead, omit the keyword:
 
 ```js example-good
-var obj = {};
-obj.foo = 'hi';
+const obj = {};
+obj.foo = "hi";
 
-var array = [];
-array[0] = 'there';
+const array = [];
+array[0] = "there";
 ```
 
 ### Bad keywords
@@ -84,18 +82,18 @@ array[0] = 'there';
 If you come from another programming language, it is also common to use keywords that
 don't mean the same or have no meaning at all in JavaScript:
 
-```js example-bad
-def print(info){
+```js-nolint example-bad
+def print(info) {
   console.log(info);
-}; // SyntaxError missing ; before statement
+} // SyntaxError missing ; before statement
 ```
 
 Instead, use `function` instead of `def`:
 
 ```js example-good
-function print(info){
+function print(info) {
   console.log(info);
-};
+}
 ```
 
 ## See also

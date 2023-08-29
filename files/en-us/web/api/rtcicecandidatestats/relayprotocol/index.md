@@ -1,23 +1,11 @@
 ---
-title: RTCIceCandidateStats.relayProtocol
+title: "RTCIceCandidateStats: relayProtocol property"
+short-title: relayProtocol
 slug: Web/API/RTCIceCandidateStats/relayProtocol
-tags:
-  - API
-  - Candidate
-  - ICE
-  - Media
-  - Property
-  - Protocol
-  - RTCIceCandidate
-  - RTCIceCandidateStats
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - relayProtocol
-  - rtc
+page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidateStats.relayProtocol
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidateStats")}} dictionary's

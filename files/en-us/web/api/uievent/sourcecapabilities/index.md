@@ -1,14 +1,13 @@
 ---
-title: UIEvent.sourceCapabilities
+title: "UIEvent: sourceCapabilities property"
+short-title: sourceCapabilities
 slug: Web/API/UIEvent/sourceCapabilities
-tags:
-  - API
-  - DOM
-  - Property
-  - Reference
-  - UIEvent
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.UIEvent.sourceCapabilities
 ---
+
 {{APIRef("UI Events")}}{{SeeCompatTable}}
 
 The **`UIEvent.sourceCapabilities`** read-only property returns

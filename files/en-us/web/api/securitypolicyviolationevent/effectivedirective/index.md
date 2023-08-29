@@ -1,17 +1,11 @@
 ---
-title: SecurityPolicyViolationEvent.effectiveDirective
+title: "SecurityPolicyViolationEvent: effectiveDirective property"
+short-title: effectiveDirective
 slug: Web/API/SecurityPolicyViolationEvent/effectiveDirective
-tags:
-  - API
-  - CSP
-  - HTTP
-  - Property
-  - Reference
-  - Security
-  - SecurityPolicyViolationEvent
-  - effectiveDirective
+page-type: web-api-instance-property
 browser-compat: api.SecurityPolicyViolationEvent.effectiveDirective
 ---
+
 {{HTTPSidebar}}
 
 The **`effectiveDirective`** read-only property of the

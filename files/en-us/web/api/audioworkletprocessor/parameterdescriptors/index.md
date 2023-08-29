@@ -1,15 +1,13 @@
 ---
-title: AudioWorkletProcessor.parameterDescriptors (static getter)
+title: "AudioWorkletProcessor: parameterDescriptors property"
+short-title: parameterDescriptors
 slug: Web/API/AudioWorkletProcessor/parameterDescriptors
-tags:
-  - API
-  - AudioWorkletProcessor
-  - Experimental
-  - Property
-  - Reference
-  - parameterDescriptors
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.AudioWorkletProcessor.parameterDescriptors
 ---
+
 {{APIRef("Web Audio API")}}{{SeeCompatTable}}
 
 The read-only **`parameterDescriptors`** property of an {{domxref("AudioWorkletProcessor")}}-derived class is a _static getter_,
@@ -54,5 +52,4 @@ See [`AudioWorkletNode.parameters`](/en-US/docs/Web/API/AudioWorkletNode/paramet
 ## See also
 
 - [Web Audio API](/en-US/docs/Web/API/Web_Audio_API)
-- [Using the Web Audio
-  API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/en-US/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)

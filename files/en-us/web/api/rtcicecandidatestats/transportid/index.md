@@ -1,27 +1,11 @@
 ---
-title: RTCIceCandidateStats.transportId
+title: "RTCIceCandidateStats: transportId property"
+short-title: transportId
 slug: Web/API/RTCIceCandidateStats/transportId
-tags:
-  - API
-  - Candidate
-  - Connection
-  - Connectivity
-  - ICE
-  - Network
-  - Networking
-  - Property
-  - RTCIceCandidateStats
-  - Reference
-  - Statistics
-  - Stats
-  - Transport
-  - WebRTC
-  - WebRTC API
-  - id
-  - rtc
-  - transportID
+page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidateStats.transportId
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidateStats")}} dictionary's

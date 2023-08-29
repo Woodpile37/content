@@ -1,16 +1,10 @@
 ---
 title: WWW-Authenticate
 slug: Web/HTTP/Headers/WWW-Authenticate
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Response Header
-  - Header
-  - WWW-Authenticate
-  - Authentication
+page-type: http-header
 browser-compat: http.headers.WWW-Authenticate
 ---
+
 {{HTTPSidebar}}
 
 The HTTP **`WWW-Authenticate`** response header defines the [HTTP authentication](/en-US/docs/Web/HTTP/Authentication) methods ("challenges") that might be used to gain access to a specific resource.
@@ -82,9 +76,11 @@ WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
 ## Directives
 
 - `<auth-scheme>`
+
   - : The [Authentication scheme](/en-US/docs/Web/HTTP/Authentication#authentication_schemes). Some of the more common types are (case-insensitive): [`Basic`](/en-US/docs/Web/HTTP/Authentication#basic_authentication_scheme), `Digest`, `Negotiate` and `AWS4-HMAC-SHA256`.
 
     > **Note:** For more information/options see [HTTP Authentication > Authentication schemes](/en-US/docs/Web/HTTP/Authentication#authentication_schemes)
+
 - **realm=**\<realm> {{optional_inline}}
   - : A string describing a protected area.
     A realm allows a server to partition up the areas it protects (if supported by a scheme that allows such partitioning), and informs users about which particular username/password are required.
@@ -98,46 +94,56 @@ Generally you will need to check the relevant specifications for these (keys for
 
 ### Basic
 
-- **`<realm>`** {{optional_inline}}
+- `<realm>` {{optional_inline}}
   - : As above.
-- **`charset="UTF-8"`** {{optional_inline}}
+- `charset="UTF-8"` {{optional_inline}}
   - : Tells the client the server's preferred encoding scheme when submitting a username and password.
     The only allowed value is the case-insensitive string "UTF-8".
     This does not relate to the encoding of the realm string.
 
 ### Digest
 
-- **`<realm>`** {{optional_inline}}
+- `<realm>` {{optional_inline}}
   - : String indicating which username/password to use.
     Minimally should include the host name, but might indicate the users or group that have access.
-- **`domain`** {{optional_inline}}
+- `domain` {{optional_inline}}
   - : A quoted, space-separated list of URI prefixes that define all the locations where the authentication information may be used.
     If this key is not specified then the authentication information may be used anywhere on the web root.
-- **`nonce`**
+- `nonce`
   - : A server-specified quoted string that the server can use to control the lifetime in which particular credentials will be considered valid.
     This must be uniquely generated each time a 401 response is made, and may be regenerated more often (for example, allowing a digest to be used only once).
     The specification contains advice on possible algorithms for generating this value.
     The nonce value is opaque to the client.
-- **`opaque`**
+- `opaque`
   - : A server-specified quoted string that should be returned unchanged in the {{HTTPHeader("Authorization")}}.
     This is opaque to the client. The server is recommended to include Base64 or hexadecimal data.
-- **`stale`** {{optional_inline}}
+- `stale` {{optional_inline}}
   - : A case-insensitive flag indicating that the previous request from the client was rejected because the `nonce` used is too old (stale).
     If this is `true` the request can be re-tried using the same username/password encrypted using the new `nonce`.
     If it is any other value then the username/password are invalid and must be re-requested from the user.
-- **`algorithm`**   {{optional_inline}}
+- `algorithm` {{optional_inline}}
   - : Algorithm used to produce the digest.
     Valid non-session values are: `"MD5"` (default if not specified), `"SHA-256"`, `"SHA-512"`.
     Valid session values are: `"MD5-sess"`, `"SHA-256-sess"`, `"SHA-512-sess"`.
-- **`qop`**
+- `qop`
   - : Quoted string indicating the quality of protection supported by the server. This must be supplied, and unrecognized options must be ignored.
     - `"auth"`: Authentication
     - `"auth-int"`: Authentication with integrity protection
-- **`charset="UTF-8"`** {{optional_inline}}
+- `charset="UTF-8"` {{optional_inline}}
   - : Tells the client the server's preferred encoding scheme when submitting a username and password.
     The only allowed value is the case-insensitive string "UTF-8".
-- **`userhash`** {{optional_inline}}
+- `userhash` {{optional_inline}}
   - : A server may specify `"true"` to indicate that it supports username hashing (default is `"false"`)
+
+### HTTP Origin-Bound Authentication (HOBA)
+
+- `<challenge>`
+  - : A set of pairs in the format of '\<len\>:\<value\>' concatenated together to be given to a client.
+    The challenge is made of up a nonce, algorithm, origin, realm, key identifier, and the challenge.
+- `<max-age>`
+  - : The number of seconds from the time the HTTP response is emitted for which responses to this challenge can be accepted.
+- `realm` {{optional_inline}}
+  - : As above in the [directives](#directives) section.
 
 ## Examples
 
@@ -152,7 +158,7 @@ WWW-Authenticate: Basic realm="Access to the staging site", charset="UTF-8"
 A user-agent receiving this header would first prompt the user for their username and password, and then re-request the resource: this time including the (encoded) credentials in the {{HTTPHeader("Authorization")}} header.
 The {{HTTPHeader("Authorization")}} header might look like this:
 
-```https
+```http
 Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 ```
 
@@ -216,6 +222,22 @@ Authorization: Digest username="Mufasa",
     response="753927fa0e85d155564e2e272a28d1802ca10daf449
         6794697cf8db5856cb6c1",
     opaque="FQhe/qaU925kfnzjCev0ciny7QMkPqMAFRtzCUYo5tdS"
+```
+
+### HOBA Authentication
+
+A server that supports HOBA authentication might have a `WWW-Authenticate` response header which looks like this:
+
+```http
+WWW-Authenticate: HOBA max-age="180", challenge="16:MTEyMzEyMzEyMw==1:028:https://www.example.com:80800:3:MTI48:NjgxNDdjOTctNDYxYi00MzEwLWJlOWItNGM3MDcyMzdhYjUz"
+```
+
+The to-be-signed blob challenge is made from these parts: www.example.com using port 8080, the nonce is '1123123123', the algorithm for signing is RSA-SHA256, the key identifier is 123, and finally the challenge is '68147c97-461b-4310-be9b-4c707237ab53'.
+
+A client would receive this header, extract the challenge, sign it with their private key that corresponds to key identifier 123 in our example using RSA-SHA256, and then send the result in the `Authorization` header as a dot-separated key id, challenge, nonce, and signature.
+
+```http
+Authorization: 123.16:MTEyMzEyMzEyMw==1:028:https://www.example.com:80800:3:MTI48:NjgxNDdjOTctNDYxYi00MzEwLWJlOWItNGM3MDcyMzdhYjUz.1123123123.<signature-of-challenge>
 ```
 
 ## Specifications

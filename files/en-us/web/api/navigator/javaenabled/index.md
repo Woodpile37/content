@@ -1,20 +1,20 @@
 ---
-title: Navigator.javaEnabled()
+title: "Navigator: javaEnabled() method"
+short-title: javaEnabled()
 slug: Web/API/Navigator/javaEnabled
-tags:
-  - API
-  - Method
-  - Reference
-  - Navigator
+page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.Navigator.javaEnabled
 ---
-{{ APIRef("HTML DOM") }}
+
+{{APIRef("HTML DOM")}}{{Deprecated_Header}}
 
 This method always returns false.
 
 ## Syntax
 
-```js
+```js-nolint
 javaEnabled()
 ```
 
@@ -30,7 +30,7 @@ The boolean value `false`.
 
 ```js
 if (window.navigator.javaEnabled()) {
-    // code will never be executed; the condition is always false
+  // code will never be executed; the condition is always false
 }
 ```
 

@@ -1,14 +1,11 @@
 ---
-title: Selection.collapseToStart()
+title: "Selection: collapseToStart() method"
+short-title: collapseToStart()
 slug: Web/API/Selection/collapseToStart
-tags:
-  - API
-  - HTML Editing
-  - Method
-  - Reference
-  - Selection
+page-type: web-api-instance-method
 browser-compat: api.Selection.collapseToStart
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Selection.collapseToStart()`** method collapses the
@@ -17,7 +14,7 @@ selection is focused and editable, the caret will blink there.
 
 ## Syntax
 
-```js
+```js-nolint
 collapseToStart()
 ```
 

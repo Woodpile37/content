@@ -1,19 +1,15 @@
 ---
-title: VRDisplay.getPose()
+title: "VRDisplay: getPose() method"
+short-title: getPose()
 slug: Web/API/VRDisplay/getPose
-tags:
-  - API
-  - Deprecated
-  - Method
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - getPose()
+page-type: web-api-instance-method
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplay.getPose
 ---
-{{APIRef("WebVR API")}}{{deprecated_header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`getPose()`** method of the {{domxref("VRDisplay")}} interface returns a {{domxref("VRPose")}} object defining the future predicted pose of the `VRDisplay` as it will be when the current frame is actually presented.
 
@@ -23,7 +19,7 @@ The **`getPose()`** method of the {{domxref("VRDisplay")}} interface returns a {
 
 ## Syntax
 
-```js
+```js-nolint
 getPose()
 ```
 
@@ -40,20 +36,19 @@ A {{domxref("VRPose")}} object.
 Once we have a reference to a {{domxref("VRDisplay")}} object, we can retrieve the {{domxref("VRPose")}} representing the current pose of the display.
 
 ```js
-if(navigator.getVRDisplays) {
-  console.log('WebVR 1.1 supported');
+if (navigator.getVRDisplays) {
+  console.log("WebVR 1.1 supported");
   // Then get the displays attached to the computer
-  navigator.getVRDisplays().then(function(displays) {
+  navigator.getVRDisplays().then((displays) => {
     // If a display is available, use it to present the scene
-    if(displays.length > 0) {
+    if (displays.length > 0) {
       vrDisplay = displays[0];
-      console.log('Display found');
+      console.log("Display found");
 
-          // Return the current VRPose object for the display
-          var pose = vrDisplay.getPose();
+      // Return the current VRPose object for the display
+      const pose = vrDisplay.getPose();
 
-          ...
-
+      // …
     }
   });
 }

@@ -1,15 +1,11 @@
 ---
-title: HTMLAnchorElement.download
+title: "HTMLAnchorElement: download property"
+short-title: download
 slug: Web/API/HTMLAnchorElement/download
-tags:
-  - API
-  - HTML DOM
-  - HTMLAnchorElement
-  - Property
-  - Reference
-  - download
+page-type: web-api-instance-property
 browser-compat: api.HTMLAnchorElement.download
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLAnchorElement.download`** property is a

@@ -1,16 +1,12 @@
 ---
-title: MediaKeyStatusMap.get()
+title: "MediaKeyStatusMap: get() method"
+short-title: get()
 slug: Web/API/MediaKeyStatusMap/get
-tags:
-  - API
-  - EncryptedMediaExtensions
-  - MediaKeyStatusMap
-  - Method
-  - Reference
-  - get()
+page-type: web-api-instance-method
 browser-compat: api.MediaKeyStatusMap.get
 ---
-{{APIRef("MediaKeyStatusMap")}}{{SeeCompatTable}}
+
+{{APIRef("EncryptedMediaExtensions API")}}
 
 The **`get`** property of the
 {{domxref("MediaKeyStatusMap")}} interface returns the value associated with the given
@@ -18,13 +14,13 @@ key, or `undefined` if there is none.
 
 ## Syntax
 
-```js
+```js-nolint
 get(key)
 ```
 
 ### Parameters
 
-- key
+- `key`
   - : The key whose value you want returned.
 
 ### Return value

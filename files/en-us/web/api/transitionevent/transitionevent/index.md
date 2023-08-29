@@ -1,24 +1,18 @@
 ---
-title: TransitionEvent()
+title: "TransitionEvent: TransitionEvent() constructor"
+short-title: TransitionEvent()
 slug: Web/API/TransitionEvent/TransitionEvent
-tags:
-  - API
-  - CSS
-  - CSS3 Transitions
-  - CSSOM
-  - Constructor
-  - Experimental
-  - Reference
-  - TransitionEvent
+page-type: web-api-constructor
 browser-compat: api.TransitionEvent.TransitionEvent
 ---
-{{APIRef("CSSOM")}}{{SeeCompatTable}}
+
+{{APIRef("CSSOM")}}
 
 The **`TransitionEvent()`** constructor returns a new {{domxref("TransitionEvent")}} object, representing an event in relation with a transition.
 
 ## Syntax
 
-```js
+```js-nolint
 new TransitionEvent(type)
 new TransitionEvent(type, options)
 ```
@@ -58,7 +52,7 @@ A new {{domxref("TransitionEvent")}} object.
 
 ## See also
 
-- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [Using CSS transitions](/en-US/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - CSS properties: {{cssxref("transition")}}, {{cssxref("transition-delay")}},
   {{cssxref("transition-duration")}}, {{cssxref("transition-property")}},
   {{cssxref("transition-timing-function")}}.

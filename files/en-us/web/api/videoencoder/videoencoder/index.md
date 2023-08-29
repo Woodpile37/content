@@ -1,35 +1,33 @@
 ---
-title: VideoEncoder.VideoEncoder()
+title: "VideoEncoder: VideoEncoder() constructor"
+short-title: VideoEncoder()
 slug: Web/API/VideoEncoder/VideoEncoder
-tags:
-  - API
-  - Constructor
-  - Reference
-  - VideoEncoder
+page-type: web-api-constructor
 browser-compat: api.VideoEncoder.VideoEncoder
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
 
-The **`VideoEncoder()`** constructor creates a new {{domxref("VideoEncoder")}} object with the provided `init.output` callback assigned as the output callback, the provided `init.error` callback as the error callback, and the {{domxref("VideoEncoder.state")}} set to `"unconfigured"`.
+{{APIRef("WebCodecs API")}}{{SecureContext_Header}}
+
+The **`VideoEncoder()`** constructor creates a new {{domxref("VideoEncoder")}} object with the provided `options.output` callback assigned as the output callback, the provided `options.error` callback as the error callback, and sets the {{domxref("VideoEncoder.state")}} to `"unconfigured"`.
 
 ## Syntax
 
-```js
-new VideoEncoder(init)
+```js-nolint
+new VideoEncoder(options)
 ```
 
 ### Parameters
 
-- `init`
+- `options`
   - : An object containing two required callbacks.
     - `output`
       - : A callback which takes an {{domxref("EncodedVideoChunk")}} object as the first argument, and an optional metadata object as the second. The metadata object has three members:
         - `decoderconfig` {{Optional_Inline}}
           - : An object containing:
             - `codec`
-              - : A {{domxref("DOMString","string")}} containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#video-codec-registry).
+              - : A string containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#video-codec-registry).
             - `description` {{Optional_Inline}}
-              - : A {{domxref("BufferSource")}} containing a sequence of codec-specific bytes, commonly known as "extradata".
+              - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}} containing a sequence of codec-specific bytes, commonly known as "extradata".
             - `codedWidth` {{Optional_Inline}}
               - : An integer representing the width of the {{domxref("VideoFrame")}} in pixels, potentially including non-visible padding, and prior to considering potential ratio adjustments.
             - `codedHeight` {{Optional_Inline}}
@@ -50,7 +48,8 @@ new VideoEncoder(init)
         - `svc` {{Optional_Inline}}
           - : An optional object with only one member: `temporalLayerId`, which is a number that identifies the [temporal layer](https://w3c.github.io/webcodecs/#temporal-layer) for the associated {{domxref("EncodedVideoChunk")}}.
         - `alphaSideData` {{Optional_Inline}}
-          - : A {{domxref("BufferSource")}} that contains the {{domxref("EncodedVideoChunk")}}'s extra alpha channel data.
+          - : An {{jsxref("ArrayBuffer")}}, a {{jsxref("TypedArray")}}, or a {{jsxref("DataView")}}
+            that contains the {{domxref("EncodedVideoChunk")}}'s extra alpha channel data.
     - `error`
       - : A callback which takes an {{jsxref("Error")}} object as its only argument.
 
@@ -60,8 +59,14 @@ In the following example a `VideoEncoder` is created with the two required callb
 
 ```js
 const videoEncoder = new VideoEncoder({
-  output: processVideo,
-  error: onEncoderError,
+  output(chunk, metadata) {
+    console.log(chunk.timestamp);
+    console.log(chunk.byteLength);
+    console.log(JSON.stringify(metadata));
+  },
+  error(error) {
+    console.log(error);
+  },
 });
 ```
 

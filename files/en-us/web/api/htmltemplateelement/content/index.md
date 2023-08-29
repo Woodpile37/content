@@ -1,15 +1,11 @@
 ---
-title: HTMLTemplateElement.content
+title: "HTMLTemplateElement: content property"
+short-title: content
 slug: Web/API/HTMLTemplateElement/content
-tags:
-  - API
-  - HTML DOM
-  - HTMLTemplateElement
-  - Property
-  - Reference
-  - Web Components
+page-type: web-api-instance-property
 browser-compat: api.HTMLTemplateElement.content
 ---
+
 {{APIRef("Web Components")}}
 
 The **`HTMLTemplateElement.content`** property returns a
@@ -23,8 +19,8 @@ A {{domxref("DocumentFragment")}}.
 ## Examples
 
 ```js
-var templateElement = document.querySelector("#foo");
-var documentFragment = templateElement.content.cloneNode(true);
+const templateElement = document.querySelector("#foo");
+const documentFragment = templateElement.content.cloneNode(true);
 ```
 
 ## Specifications

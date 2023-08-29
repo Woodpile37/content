@@ -1,18 +1,14 @@
 ---
-title: DOMImplementation.hasFeature()
+title: "DOMImplementation: hasFeature() method"
+short-title: hasFeature()
 slug: Web/API/DOMImplementation/hasFeature
-tags:
-  - API
-  - DOM
-  - DOMImplementation
-  - Deprecated
-  - Method
-  - Reference
+page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.DOMImplementation.hasFeature
 ---
-{{ApiRef("DOM")}}
 
-{{Deprecated_Header}}
+{{ApiRef("DOM")}}{{Deprecated_Header}}
 
 The
 **`DOMImplementation.hasFeature()`** method returns a
@@ -25,7 +21,7 @@ The latest version of the spec settled to force this method to always return
 
 ## Syntax
 
-```js
+```js-nolint
 hasFeature(feature, version)
 ```
 

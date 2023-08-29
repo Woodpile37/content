@@ -1,19 +1,15 @@
 ---
-title: VRDisplay.isPresenting
+title: "VRDisplay: isPresenting property"
+short-title: isPresenting
 slug: Web/API/VRDisplay/isPresenting
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - isPresenting
+page-type: web-api-instance-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplay.isPresenting
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`isPresenting`** read-only property of the {{domxref("VRDisplay")}} interface returns a boolean value indicating whether the `VRDisplay` is currently having content presented through it.
 
@@ -26,21 +22,23 @@ A boolean value; `true` means the display is presenting; `false` means it isn't.
 ## Examples
 
 ```js
-function onVRExitPresent () {
+function onVRExitPresent() {
   // No sense in exiting presentation if we're not actually presenting.
   // (This may happen if we get an event like vrdisplaydeactivate when
   // we weren't presenting.)
-  if (!vrDisplay.isPresenting)
-    return;
-  vrDisplay.exitPresent().then(function () {
-    // Nothing to do because we're handling things in onVRPresentChange.
-  }, function (err) {
-    var errMsg = "exitPresent failed.";
-    if (err && err.message) {
-      errMsg += "<br/>" + err.message
-    }
-    VRSamplesUtil.addError(errMsg, 2000);
-  });
+  if (!vrDisplay.isPresenting) return;
+  vrDisplay.exitPresent().then(
+    () => {
+      // Nothing to do because we're handling things in onVRPresentChange.
+    },
+    (err) => {
+      let errMsg = "exitPresent failed.";
+      if (err && err.message) {
+        errMsg += `<br/>${err.message}`;
+      }
+      VRSamplesUtil.addError(errMsg, 2000);
+    },
+  );
 }
 ```
 

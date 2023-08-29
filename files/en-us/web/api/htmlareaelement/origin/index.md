@@ -1,14 +1,11 @@
 ---
-title: HTMLAreaElement.origin
+title: "HTMLAreaElement: origin property"
+short-title: origin
 slug: Web/API/HTMLAreaElement/origin
-tags:
-  - API
-  - HTMLAreaElement
-  - Property
-  - Read-only
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.HTMLAreaElement.origin
 ---
+
 {{APIRef("HTML DOM")}}
 
 The

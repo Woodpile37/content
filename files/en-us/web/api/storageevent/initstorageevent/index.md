@@ -1,15 +1,13 @@
 ---
-title: StorageEvent.initStorageEvent()
+title: "StorageEvent: initStorageEvent() method"
+short-title: initStorageEvent()
 slug: Web/API/StorageEvent/initStorageEvent
-tags:
-  - API
-  - Method
-  - Deprecated
-  - Reference
-  - StorageEvent
-  - Web Storage API
+page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.StorageEvent.initStorageEvent
 ---
+
 {{ ApiRef("Web Storage API") }}{{deprecated_header}}
 
 The **`StorageEvent.initStorageEvent()`** method is used to initialize the
@@ -17,7 +15,7 @@ value of a {{ domxref("StorageEvent") }}.
 
 ## Syntax
 
-```js
+```js-nolint
 initStorageEvent(type)
 initStorageEvent(type, canBubble)
 initStorageEvent(type, canBubble, cancelable)

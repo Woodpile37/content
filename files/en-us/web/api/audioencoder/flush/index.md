@@ -1,21 +1,20 @@
 ---
-title: AudioEncoder.flush()
+title: "AudioEncoder: flush() method"
+short-title: flush()
 slug: Web/API/AudioEncoder/flush
-tags:
-  - API
-  - Method
-  - Reference
-  - flush
-  - AudioEncoder
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.AudioEncoder.flush
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`flush()`** method of the {{domxref("AudioEncoder")}} interface returns a Promise that resolves once all pending messages in the queue have been completed.
 
 ## Syntax
 
-```js
+```js-nolint
 flush()
 ```
 

@@ -1,14 +1,11 @@
 ---
-title: WebGL2RenderingContext.waitSync()
+title: "WebGL2RenderingContext: waitSync() method"
+short-title: waitSync()
 slug: Web/API/WebGL2RenderingContext/waitSync
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
+page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.waitSync
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.waitSync()`** method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) returns immediately, but waits on
@@ -19,7 +16,7 @@ multiple GL contexts.
 
 ## Syntax
 
-```js
+```js-nolint
 waitSync(sync, flags, timeout)
 ```
 
@@ -27,10 +24,10 @@ waitSync(sync, flags, timeout)
 
 - `sync`
   - : A {{domxref("WebGLSync")}} object on which to wait on.
-- flags
+- `flags`
   - : A {{domxref("WebGL_API/Types", "GLbitfield")}} specifying a bitwise combination of flags controlling
     the flushing behavior. Must be `0` (exists for extensions only).
-- timeout
+- `timeout`
   - : A {{domxref("WebGL_API/Types", "GLint64")}} specifying a timeout the server should wait before
     continuing. Must be `gl.TIMEOUT_IGNORED`.
 
@@ -41,7 +38,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
+const sync = gl.fenceSync(gl.SYNC_GPU_COMMANDS_COMPLETE, 0);
 gl.waitSync(sync, 0, gl.TIMEOUT_IGNORED);
 ```
 

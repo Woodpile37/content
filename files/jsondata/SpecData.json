@@ -29,6 +29,11 @@
     "url": "https://www.w3.org/TR/wai-aria-1.2/",
     "status": "CR"
   },
+  "ARIA Authoring Practices": {
+    "name": "WAI-ARIA Authoring Practices",
+    "url": "https://w3c.github.io/aria-practices/",
+    "status": "Living"
+  },
   "ARIA Authoring Practices 1.1": {
     "name": "WAI-ARIA Authoring Practices 1.1",
     "url": "https://www.w3.org/TR/wai-aria-practices-1.1/",
@@ -699,6 +704,11 @@
     "url": "https://w3c.github.io/deviceorientation/",
     "status": "ED"
   },
+  "Digest Headers": {
+    "name": "Digest Headers",
+    "url": "https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-digest-headers-05",
+    "status": "Draft"
+  },
   "DOM Parsing": {
     "name": "DOM Parsing and Serialization",
     "url": "https://w3c.github.io/DOM-Parsing/",
@@ -842,6 +852,11 @@
   "EyeDropper": {
     "name": "EyeDropper",
     "url": "https://wicg.github.io/eyedropper-api/",
+    "status": "Draft"
+  },
+  "Expect-CT": {
+    "name": "Expect-CT Extension for HTTP",
+    "url": "https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-expect-ct-08",
     "status": "Draft"
   },
   "Feature Policy": {
@@ -1024,6 +1039,11 @@
     "url": "https://w3c.github.io/IndexedDB/",
     "status": "ED"
   },
+  "Ink API": {
+    "name": "Ink API",
+    "url": "https://wicg.github.io/ink-enhancement/",
+    "status": "Draft"
+  },
   "InputDeviceCapabilities": {
     "name": "InputDeviceCapabilities",
     "url": "https://wicg.github.io/InputDeviceCapabilities/",
@@ -1069,15 +1089,15 @@
     "url": "https://wicg.github.io/largest-contentful-paint/",
     "status": "ED"
   },
-  "Layout Instability": {
-    "name": "Layout Instability API",
-    "url": "https://wicg.github.io/layout-instability/",
-    "status": "ED"
-  },
   "Legacy RegExp features": {
     "name": "Legacy RegExp features in JavaScript",
     "url": "https://github.com/tc39/proposal-regexp-legacy-features/",
     "status": "Draft"
+  },
+  "Linked Data Platform": {
+    "name": "Linked Data Platform",
+    "url": "https://www.w3.org/TR/ldp/",
+    "status": "REC"
   },
   "Local Font Access API": {
     "name": "Local Font Access API",
@@ -1314,11 +1334,6 @@
     "url": "https://w3c.github.io/presentation-api/",
     "status": "CR"
   },
-  "Priority Hints": {
-    "name": "Priority Hints",
-    "url": "https://wicg.github.io/priority-hints/",
-    "status": "Draft"
-  },
   "Promise.any": {
     "name": "Promise.any",
     "url": "https://tc39.es/proposal-promise-any/",
@@ -1439,6 +1454,11 @@
     "url": "https://www.rfc-editor.org/rfc/rfc7168",
     "status": "RFC"
   },
+  "RFC 7486": {
+    "name": "HTTP Origin-Bound Authentication (HOBA)",
+    "url": "https://www.rfc-editor.org/rfc/rfc7486",
+    "status": "RFC"
+  },
   "RFC 8288": {
     "name": "Web Linking",
     "url": "https://www.rfc-editor.org/rfc/rfc8288",
@@ -1508,6 +1528,11 @@
     "name": "Accelerated Shape Detection in Images",
     "url": "https://wicg.github.io/shape-detection-api/",
     "status": "Draft"
+  },
+  "Source Map": {
+    "name": "Source Map",
+    "url": "https://sourcemaps.info/spec.html",
+    "status": "Standard"
   },
   "Static Range": {
     "name": "Static Range",
@@ -1596,7 +1621,7 @@
   },
   "Trusted Types": {
     "name": "Trusted Types",
-    "url": "https://w3c.github.io/webappsec-trusted-types/dist/spec/",
+    "url": "https://w3c.github.io/trusted-types/dist/spec/",
     "status": "ED"
   },
   "UI Events": {

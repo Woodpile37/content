@@ -1,18 +1,12 @@
 ---
-title: CSSUnparsedValue()
+title: "CSSUnparsedValue: CSSUnparsedValue() constructor"
+short-title: CSSUnparsedValue()
 slug: Web/API/CSSUnparsedValue/CSSUnparsedValue
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSUnparsedValue
-  - Constructor
-  - Experimental
-  - Houdini
-  - NeedsExample
-  - Reference
+page-type: web-api-constructor
 browser-compat: api.CSSUnparsedValue.CSSUnparsedValue
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+
+{{APIRef("CSS Typed OM")}}
 
 The **`CSSUnparsedValue()`** constructor
 creates a new {{domxref("CSSUnparsedValue")}} object which represents property values
@@ -20,7 +14,7 @@ that reference custom properties.
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSUnparsedValue(members)
 ```
 
@@ -33,11 +27,11 @@ new CSSUnparsedValue(members)
 ## Examples
 
 ```js
-let value  = new CSSUnparsedValue( ['4deg'] ),
-    values = new CSSUnparsedValue( ['1em', '#445566', '-45px'] );
+const value = new CSSUnparsedValue(["4deg"]);
+const values = new CSSUnparsedValue(["1em", "#445566", "-45px"]);
 
-console.log( value  ); // CSSUnparsedValue {0: "4deg", length: 1}
-console.log( values ); // CSSUnparsedValue {0: "1em", 1: "#445566", 2: "-45px", length: 3}
+console.log(value); // CSSUnparsedValue {0: "4deg", length: 1}
+console.log(values); // CSSUnparsedValue {0: "1em", 1: "#445566", 2: "-45px", length: 3}
 ```
 
 ## Specifications

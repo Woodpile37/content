@@ -1,12 +1,11 @@
 ---
-title: BatteryManager.dischargingTime
+title: "BatteryManager: dischargingTime property"
+short-title: dischargingTime
 slug: Web/API/BatteryManager/dischargingTime
-tags:
-  - API
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.BatteryManager.dischargingTime
 ---
+
 {{APIRef("Battery API")}}
 
 The **`BatteryManager.dischargingTime`** property indicates the amount of time, in seconds, that remains until the battery is fully
@@ -25,23 +24,25 @@ A number.
 
 ## Examples
 
-### HTML Content
+### HTML
 
 ```html
 <div id="dischargingTime">(discharging time unknown)</div>
 ```
 
-### JavaScript Content
+### JavaScript
 
 ```js
-navigator.getBattery().then(battery => {
-    const time = battery.dischargingTime;
+navigator.getBattery().then((battery) => {
+  const time = battery.dischargingTime;
 
-    document.querySelector('#dischargingTime').textContent = battery.dischargingTime;
+  document.querySelector(
+    "#dischargingTime",
+  ).textContent = `Remaining time to fully discharge the battery: ${time}`;
 });
 ```
 
-{{ EmbedLiveSample('Example', '100%', 30) }}
+{{ EmbedLiveSample('Examples', '100%', 30) }}
 
 ## Specifications
 

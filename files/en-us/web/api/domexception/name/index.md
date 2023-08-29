@@ -1,15 +1,11 @@
 ---
-title: DOMException.name
+title: "DOMException: name property"
+short-title: name
 slug: Web/API/DOMException/name
-tags:
-  - API
-  - DOM
-  - DOMException
-  - Property
-  - Reference
-  - name
+page-type: web-api-instance-property
 browser-compat: api.DOMException.name
 ---
+
 {{ APIRef("DOM") }}
 
 The **`name`** read-only property of the

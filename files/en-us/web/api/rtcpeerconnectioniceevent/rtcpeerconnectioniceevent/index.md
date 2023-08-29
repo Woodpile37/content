@@ -1,24 +1,19 @@
 ---
-title: RTCPeerConnectionIceEvent()
+title: "RTCPeerConnectionIceEvent: RTCPeerConnectionIceEvent() constructor"
+short-title: RTCPeerConnectionIceEvent()
 slug: Web/API/RTCPeerConnectionIceEvent/RTCPeerConnectionIceEvent
-tags:
-  - API
-  - Constructor
-  - Experimental
-  - RTCPeerConnectionIceEvent
-  - Reference
-  - WebRTC
+page-type: web-api-constructor
 browser-compat: api.RTCPeerConnectionIceEvent.RTCPeerConnectionIceEvent
 ---
 
-{{APIRef("WebRTC")}}{{SeeCompatTable}}
+{{APIRef("WebRTC")}}
 
 The **`RTCPeerConnectionIceEvent()`** constructor creates a new
 {{domxref("RTCPeerConnectionIceEvent")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new RTCPeerConnectionIceEvent(type, options)
 ```
 

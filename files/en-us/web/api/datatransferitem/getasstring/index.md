@@ -1,17 +1,11 @@
 ---
-title: DataTransferItem.getAsString()
+title: "DataTransferItem: getAsString() method"
+short-title: getAsString()
 slug: Web/API/DataTransferItem/getAsString
-tags:
-  - API
-  - DataTransferItem
-  - HTML DOM
-  - HTML Drag and Drop API
-  - Method
-  - Reference
-  - drag and drop
-  - getAsString
+page-type: web-api-instance-method
 browser-compat: api.DataTransferItem.getAsString
 ---
+
 {{APIRef("HTML Drag and Drop API")}}
 
 The **`DataTransferItem.getAsString()`** method invokes the
@@ -21,15 +15,8 @@ given callback with the drag data item's string data as the argument if the item
 
 ## Syntax
 
-```js
-// Arrow function
-getAsString((data) => { /* ... */ } )
-
-// Callback function
+```js-nolint
 getAsString(callbackFn)
-
-// Inline callback function
-getAsString(function(data) { /* ... */ })
 ```
 
 ### Parameters
@@ -46,35 +33,34 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 This example shows the use of the `getAsString()` method as an _inline
-function_ in a {{event("drop")}} event handler.
+function_ in a {{domxref("HTMLElement/drop_event", "drop")}} event handler.
 
 ```js
 function drop_handler(ev) {
- console.log("Drop");
- ev.preventDefault();
- var data = ev.dataTransfer.items;
- for (var i = 0; i < data.length; i += 1) {
-   if ((data[i].kind == 'string') &&
-       (data[i].type.match('^text/plain'))) {
-     // This item is the target node
-     data[i].getAsString(function (s){
-       ev.target.appendChild(document.getElementById(s));
-     });
-   } else if ((data[i].kind == 'string') &&
-              (data[i].type.match('^text/html'))) {
-     // Drag data item is HTML
-     console.log("... Drop: HTML");
-   } else if ((data[i].kind == 'string') &&
-              (data[i].type.match('^text/uri-list'))) {
-     // Drag data item is URI
-     console.log("... Drop: URI");
-   } else if ((data[i].kind == 'file') &&
-              (data[i].type.match('^image/'))) {
-     // Drag data item is an image file
-     var f = data[i].getAsFile();
-     console.log("... Drop: File ");
-   }
- }
+  console.log("Drop");
+  ev.preventDefault();
+  const data = ev.dataTransfer.items;
+  for (let i = 0; i < data.length; i += 1) {
+    if (data[i].kind === "string" && data[i].type.match("^text/plain")) {
+      // This item is the target node
+      data[i].getAsString((s) => {
+        ev.target.appendChild(document.getElementById(s));
+      });
+    } else if (data[i].kind === "string" && data[i].type.match("^text/html")) {
+      // Drag data item is HTML
+      console.log("… Drop: HTML");
+    } else if (
+      data[i].kind === "string" &&
+      data[i].type.match("^text/uri-list")
+    ) {
+      // Drag data item is URI
+      console.log("… Drop: URI");
+    } else if (data[i].kind === "file" && data[i].type.match("^image/")) {
+      // Drag data item is an image file
+      const f = data[i].getAsFile();
+      console.log("… Drop: File ");
+    }
+  }
 }
 ```
 

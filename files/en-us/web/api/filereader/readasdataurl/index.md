@@ -1,21 +1,18 @@
 ---
-title: FileReader.readAsDataURL()
+title: "FileReader: readAsDataURL() method"
+short-title: readAsDataURL()
 slug: Web/API/FileReader/readAsDataURL
-tags:
-  - API
-  - Base 64
-  - File API
-  - FileReader
-  - Files
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.FileReader.readAsDataURL
 ---
+
+{{APIRef("File API")}}
+
 The `readAsDataURL` method is used to read the contents of the specified
 {{domxref("Blob")}} or {{domxref("File")}}. When the read operation is finished, the
 {{domxref("FileReader.readyState","readyState")}} becomes `DONE`, and the
-{{event("loadend")}} is triggered. At that time, the
-{{domxref("FileReader.result","result")}} attribute contains the data as a [data: URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs) representing the
+{{domxref("FileReader/loadend_event", "loadend")}} is triggered. At that time, the
+{{domxref("FileReader.result","result")}} attribute contains the data as a [data: URL](/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) representing the
 file's data as a base64 encoded string.
 
 > **Note:** The blob's {{domxref("FileReader.result","result")}} cannot be
@@ -25,7 +22,7 @@ file's data as a base64 encoded string.
 
 ## Syntax
 
-```js
+```js-nolint
 readAsDataURL(blob)
 ```
 
@@ -40,25 +37,31 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-### HTML
+### Reading a single file
+
+#### HTML
 
 ```html
-<input type="file" onchange="previewFile()"><br>
-<img src="" height="200" alt="Image preview...">
+<input type="file" onchange="previewFile()" /><br />
+<img src="" height="200" alt="Image preview" />
 ```
 
-### JavaScript
+#### JavaScript
 
 ```js
 function previewFile() {
-  const preview = document.querySelector('img');
-  const file = document.querySelector('input[type=file]').files[0];
+  const preview = document.querySelector("img");
+  const file = document.querySelector("input[type=file]").files[0];
   const reader = new FileReader();
 
-  reader.addEventListener("load", function () {
-    // convert image file to base64 string
-    preview.src = reader.result;
-  }, false);
+  reader.addEventListener(
+    "load",
+    () => {
+      // convert image file to base64 string
+      preview.src = reader.result;
+    },
+    false,
+  );
 
   if (file) {
     reader.readAsDataURL(file);
@@ -66,58 +69,59 @@ function previewFile() {
 }
 ```
 
-### Live Result
+#### Result
 
-{{EmbedLiveSample("Examples", "100%", 240)}}
+{{EmbedLiveSample("Reading a single file", "100%", 240)}}
 
-## Example reading multiple files
+### Reading multiple files
 
-### HTML
+#### HTML
 
 ```html
-<input id="browse" type="file" onchange="previewFiles()" multiple>
+<input id="browse" type="file" multiple />
 <div id="preview"></div>
 ```
 
-### JavaScript
+#### JavaScript
 
 ```js
 function previewFiles() {
-
-  var preview = document.querySelector('#preview');
-  var files   = document.querySelector('input[type=file]').files;
+  const preview = document.querySelector("#preview");
+  const files = document.querySelector("input[type=file]").files;
 
   function readAndPreview(file) {
-
     // Make sure `file.name` matches our extensions criteria
-    if ( /\.(jpe?g|png|gif)$/i.test(file.name) ) {
-      var reader = new FileReader();
+    if (/\.(jpe?g|png|gif)$/i.test(file.name)) {
+      const reader = new FileReader();
 
-      reader.addEventListener("load", function () {
-        var image = new Image();
-        image.height = 100;
-        image.title = file.name;
-        image.src = this.result;
-        preview.appendChild( image );
-      }, false);
+      reader.addEventListener(
+        "load",
+        () => {
+          const image = new Image();
+          image.height = 100;
+          image.title = file.name;
+          image.src = reader.result;
+          preview.appendChild(image);
+        },
+        false,
+      );
 
       reader.readAsDataURL(file);
     }
-
   }
 
   if (files) {
-    [].forEach.call(files, readAndPreview);
+    Array.prototype.forEach.call(files, readAndPreview);
   }
-
 }
+
+const picker = document.querySelector("#browse");
+picker.addEventListener("change", previewFiles);
 ```
 
-> **Note:** The [`FileReader()`](/en-US/docs/Web/API/FileReader) constructor was
-> not supported by Internet Explorer for versions before 10. For a full compatibility code
-> you can see our [crossbrowser possible solution for image
-> preview](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3699/2c8cb1e94f0ee05b22c1c30a3790c70d/crossbrowser_image_preview.html). See also [this more
-> powerful example](https://media.prod.mdn.mozit.cloud/attachments/2012/07/09/3698/391aef19653595a663cc601c42a67116/image_upload_preview.html).
+#### Result
+
+{{EmbedLiveSample("Reading multiple files", "100%", 240)}}
 
 ## Specifications
 
@@ -130,6 +134,4 @@ function previewFiles() {
 ## See also
 
 - {{domxref("FileReader")}}
-- {{domxref("URL.createObjectURL()")}}
-
-{{APIRef("File API")}}
+- {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}

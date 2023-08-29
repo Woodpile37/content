@@ -1,15 +1,11 @@
 ---
-title: HTMLTableElement.deleteTHead()
+title: "HTMLTableElement: deleteTHead() method"
+short-title: deleteTHead()
 slug: Web/API/HTMLTableElement/deleteTHead
-tags:
-  - API
-  - HTML DOM
-  - HTMLTableElement
-  - Method
-  - NeedsSpecTable
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.HTMLTableElement.deleteTHead
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLTableElement.deleteTHead()`** removes the
@@ -17,7 +13,7 @@ The **`HTMLTableElement.deleteTHead()`** removes the
 
 ## Syntax
 
-```js
+```js-nolint
 deleteTHead()
 ```
 
@@ -37,16 +33,25 @@ This example uses JavaScript to delete a table's header.
 
 ```html
 <table>
-  <thead><th>Name</th><th>Occupation</th></thead>
-  <tr><td>Bob</td><td>Plumber</td></tr>
-  <tr><td>Jim</td><td>Roofer</td></tr>
+  <thead>
+    <th>Name</th>
+    <th>Occupation</th>
+  </thead>
+  <tr>
+    <td>Bob</td>
+    <td>Plumber</td>
+  </tr>
+  <tr>
+    <td>Jim</td>
+    <td>Roofer</td>
+  </tr>
 </table>
 ```
 
 ### JavaScript
 
 ```js
-let table = document.querySelector('table');
+let table = document.querySelector("table");
 table.deleteTHead();
 ```
 

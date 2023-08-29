@@ -1,16 +1,11 @@
 ---
-title: IntersectionObserverEntry.boundingClientRect
+title: "IntersectionObserverEntry: boundingClientRect property"
+short-title: boundingClientRect
 slug: Web/API/IntersectionObserverEntry/boundingClientRect
-tags:
-  - API
-  - Intersection Observer
-  - Intersection Observer API
-  - IntersectionObserverEntry
-  - Property
-  - Reference
-  - boundingClientRect
+page-type: web-api-instance-property
 browser-compat: api.IntersectionObserverEntry.boundingClientRect
 ---
+
 {{APIRef("Intersection Observer API")}}
 
 The {{domxref("IntersectionObserverEntry")}} interface's read-only

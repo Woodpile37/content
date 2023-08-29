@@ -1,14 +1,11 @@
 ---
-title: NodeList.item()
+title: "NodeList: item() method"
+short-title: item()
 slug: Web/API/NodeList/item
-tags:
-  - API
-  - DOM
-  - Method
-  - NodeList
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.NodeList.item
 ---
+
 {{APIRef("DOM")}}
 
 Returns a node from a [`NodeList`](/en-US/docs/Web/API/NodeList) by index. This method
@@ -18,7 +15,7 @@ argument is provided.
 
 ## Syntax
 
-```js
+```js-nolint
 item(index)
 ```
 
@@ -26,7 +23,7 @@ JavaScript also offers an array-like bracketed syntax for obtaining an item from
 NodeList by index:
 
 ```js
-nodeItem = nodeList[index]
+nodeItem = nodeList[index];
 ```
 
 ### Parameters
@@ -45,8 +42,8 @@ The `index`th node in the `nodeList` returned by the `item` method.
 ## Examples
 
 ```js
-var tables = document.getElementsByTagName("table");
-var firstTable = tables.item(1); // or tables[1] - returns the second table in the DOM
+const tables = document.getElementsByTagName("table");
+const firstTable = tables.item(1); // or tables[1] - returns the second table in the DOM
 ```
 
 ## Specifications

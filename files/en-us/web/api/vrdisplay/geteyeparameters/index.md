@@ -1,20 +1,15 @@
 ---
-title: VRDisplay.getEyeParameters()
+title: "VRDisplay: getEyeParameters() method"
+short-title: getEyeParameters()
 slug: Web/API/VRDisplay/getEyeParameters
-tags:
-  - API
-  - Deprecated
-  - Deprecated
-  - Method
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - getEyeParameters()
+page-type: web-api-instance-method
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplay.getEyeParameters
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`getEyeParameters()`** method of the {{domxref("VRDisplay")}} interface returns the {{domxref("VREyeParameters")}} object containing the eye parameters for the specified eye.
 
@@ -22,7 +17,7 @@ The **`getEyeParameters()`** method of the {{domxref("VRDisplay")}} interface re
 
 ## Syntax
 
-```js
+```js-nolint
 getEyeParameters(whichEye)
 ```
 

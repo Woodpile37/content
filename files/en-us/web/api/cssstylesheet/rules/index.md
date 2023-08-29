@@ -1,23 +1,13 @@
 ---
-title: CSSStyleSheet.rules
+title: "CSSStyleSheet: rules property"
+short-title: rules
 slug: Web/API/CSSStyleSheet/rules
-tags:
-  - API
-  - CSS
-  - CSSOM
-  - CSSOM API
-  - CSSStyleSheet
-  - Layout
-  - Object Model
-  - Property
-  - Read-only
-  - Reference
-  - Style
-  - StyleSheet
-  - legacy
-  - Deprecated
+page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.CSSStyleSheet.rules
 ---
+
 {{APIRef("CSSOM")}}{{deprecated_header}}
 
 **`rules`** is a _deprecated_
@@ -26,7 +16,7 @@ identical to the preferred {{domxref("CSSStyleSheet.cssRules", "cssRules")}} pro
 it provides access to a live-updating list of the CSS rules comprising the
 stylesheet.
 
-> **Note:** As a legacy property, you not use `rules` and
+> **Note:** As a legacy property, you should not use `rules` and
 > should instead use the preferred {{domxref("CSSStyleSheet.cssRules", "cssRules")}}.
 > While `rules` is unlikely to be removed soon, its availability is not as
 > widespread and using it will result in compatibility problems for your site or app.
@@ -48,5 +38,4 @@ describing one rule making up the stylesheet.
 ## See also
 
 - [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model)
-- [Using
-  dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
+- [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)

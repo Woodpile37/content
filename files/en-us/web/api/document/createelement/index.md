@@ -1,32 +1,31 @@
 ---
-title: Document.createElement()
+title: "Document: createElement() method"
+short-title: createElement()
 slug: Web/API/Document/createElement
-tags:
-  - API
-  - DOM
-  - Document
-  - Method
-  - Reference
-  - createElement
+page-type: web-api-instance-method
 browser-compat: api.Document.createElement
 ---
+
 {{APIRef("DOM")}}
 
 In an [HTML](/en-US/docs/Web/HTML) document, the **`document.createElement()`** method creates the HTML element specified by _tagName_, or an {{domxref("HTMLUnknownElement")}} if _tagName_ isn't recognized.
 
 ## Syntax
 
-```js
+```js-nolint
 createElement(tagName)
 createElement(tagName, options)
 ```
 
 ### Parameters
 
-- _tagName_
+- `tagName`
   - : A string that specifies the type of element to be created. The {{domxref("Node.nodeName", "nodeName")}} of the created element is initialized with the value of _tagName_. Don't use qualified names (like "html:a") with this method. When called on an HTML document, `createElement()` converts _tagName_ to lower case before creating the element. In Firefox, Opera, and Chrome, `createElement(null)` works like `createElement("null")`.
-- _options_ {{optional_inline}}
-  - : An optional `ElementCreationOptions` object, containing a single property named `is`, whose value is the tag name of a custom element previously defined via `customElements.define()`. See [Web component example](#web_component_example) for more details.
+- `options` {{optional_inline}}
+  - : An object with the following properties:
+    - `is`
+      - : The tag name of a custom element previously defined via `customElements.define()`.
+        See [Web component example](#web_component_example) for more details.
 
 ### Return value
 
@@ -43,14 +42,15 @@ This creates a new `<div>` and inserts it before the element with the ID "`div1`
 #### HTML
 
 ```html
-<!DOCTYPE html>
-<html>
-<head>
-  <title>||Working with elements||</title>
-</head>
-<body>
-  <div id="div1">The text above has been created dynamically.</div>
-</body>
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Working with elements</title>
+  </head>
+  <body>
+    <div id="div1">The text above has been created dynamically.</div>
+  </body>
 </html>
 ```
 
@@ -59,7 +59,7 @@ This creates a new `<div>` and inserts it before the element with the ID "`div1`
 ```js
 document.body.onload = addElement;
 
-function addElement () {
+function addElement() {
   // create a new div element
   const newDiv = document.createElement("div");
 
@@ -91,18 +91,18 @@ class ExpandingList extends HTMLUListElement {
     super();
 
     // constructor definition left out for brevity
-    ...
+    // …
   }
 }
 
 // Define the new element
-customElements.define('expanding-list', ExpandingList, { extends: "ul" });
+customElements.define("expanding-list", ExpandingList, { extends: "ul" });
 ```
 
 If we wanted to create an instance of this element programmatically, we'd use a call along the following lines:
 
 ```js
-let expandingList = document.createElement('ul', { is : 'expanding-list' })
+let expandingList = document.createElement("ul", { is: "expanding-list" });
 ```
 
 The new element will be given an [`is`](/en-US/docs/Web/HTML/Global_attributes/is) attribute whose value is the custom element's tag name.

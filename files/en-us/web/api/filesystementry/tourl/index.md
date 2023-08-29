@@ -1,19 +1,15 @@
 ---
-title: FileSystemEntry.toURL()
+title: "FileSystemEntry: toURL() method"
+short-title: toURL()
 slug: Web/API/FileSystemEntry/toURL
-tags:
-  - API
-  - File and Directory Entries API
-  - FileSystemEntry
-  - Files
-  - Method
-  - Non-standard
-  - Reference
-  - toURL
-  - Deprecated
+page-type: web-api-instance-method
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.FileSystemEntry.toURL
 ---
-{{APIRef("File and Directory Entry API")}}{{deprecated_header}}
+
+{{APIRef("File and Directory Entry API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The {{domxref("FileSystemEntry")}} interface's method
 **`toURL()`** creates and
@@ -23,7 +19,7 @@ the value of `src` and `href` attributes.
 
 ## Syntax
 
-```js
+```js-nolint
 toURL()
 toURL(mimeType)
 ```
@@ -45,7 +41,7 @@ the file system implementation doesn't support `toURL()`).
 ## Examples
 
 If you have a {{domxref("FileSystemFileEntry")}} corresponding to an image file in a
-file system available to your Web site or app, you can call `toURL()` to get
+file system available to your website or app, you can call `toURL()` to get
 its URL for use in HTML. If your site is located at
 `http://my-awesome-website.woot`, and you have a temporary file system that
 contains an image file named `awesomesauce.jpg`, the URL returned by
@@ -65,7 +61,8 @@ Assuming the scenario mentioned before the code, the result would be HTML that l
 like this being appended to the end of the document:
 
 ```html
-<img src="filesystem:http://my-awesome-website.woot/temporary/awesomesauce.jpg">
+<img
+  src="filesystem:http://my-awesome-website.woot/temporary/awesomesauce.jpg" />
 ```
 
 ## Browser compatibility

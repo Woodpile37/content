@@ -1,27 +1,19 @@
 ---
-title: MediaKeySystemAccess.createMediaKeys()
+title: "MediaKeySystemAccess: createMediaKeys() method"
+short-title: createMediaKeys()
 slug: Web/API/MediaKeySystemAccess/createMediaKeys
-tags:
-  - API
-  - Audio
-  - EncryptedMediaExtensions
-  - Media
-  - MediaKeySystemAccess
-  - Method
-  - NeedsExample
-  - Reference
-  - Video
-  - createMediaKeys
+page-type: web-api-instance-method
 browser-compat: api.MediaKeySystemAccess.createMediaKeys
 ---
-{{APIRef("EncryptedMediaExtensions")}}{{SeeCompatTable}}
+
+{{APIRef("EncryptedMediaExtensions")}}
 
 The `MediaKeySystemAccess.createMediaKeys()` method returns a
 {{jsxref('Promise')}} that resolves to a new {{domxref('MediaKeys')}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 createMediaKeys()
 ```
 

@@ -1,14 +1,11 @@
 ---
-title: WebGLRenderingContext.getProgramInfoLog()
+title: "WebGLRenderingContext: getProgramInfoLog() method"
+short-title: getProgramInfoLog()
 slug: Web/API/WebGLRenderingContext/getProgramInfoLog
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
+page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.getProgramInfoLog
 ---
+
 {{APIRef("WebGL")}}
 
 The **WebGLRenderingContext.getProgramInfoLog** returns the information
@@ -17,7 +14,7 @@ occurred during failed linking or validation of `WebGLProgram` objects.
 
 ## Syntax
 
-```js
+```js-nolint
 getProgramInfoLog(program)
 ```
 
@@ -38,7 +35,7 @@ string of length 0.
 ### Checking program errors
 
 ```js
-var program = gl.createProgram();
+const program = gl.createProgram();
 
 // Attach pre-existing shaders
 gl.attachShader(program, vertexShader);

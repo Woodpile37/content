@@ -1,15 +1,11 @@
 ---
-title: HTMLMediaElement.currentSrc
+title: "HTMLMediaElement: currentSrc property"
+short-title: currentSrc
 slug: Web/API/HTMLMediaElement/currentSrc
-tags:
-  - API
-  - HTML DOM
-  - HTMLMediaElement
-  - Property
-  - Read-only
-  - Web
+page-type: web-api-instance-property
 browser-compat: api.HTMLMediaElement.currentSrc
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLMediaElement.currentSrc`** property contains the
@@ -28,7 +24,7 @@ if no {{HTMLElement("source")}} element is provided.
 ## Examples
 
 ```js
-var obj = document.createElement('video');
+const obj = document.createElement("video");
 console.log(obj.currentSrc); // ""
 ```
 
@@ -42,4 +38,4 @@ console.log(obj.currentSrc); // ""
 
 ## See also
 
-- The interface defining it, {{domxref("HTMLMediaElement")}}.
+- {{domxref("HTMLMediaElement")}}: Interface used to define the `HTMLMediaElement.currentSrc` property

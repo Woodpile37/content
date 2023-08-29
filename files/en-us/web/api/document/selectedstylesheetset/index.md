@@ -1,17 +1,15 @@
 ---
-title: Document.selectedStyleSheetSet
+title: "Document: selectedStyleSheetSet property"
+short-title: selectedStyleSheetSet
 slug: Web/API/Document/selectedStyleSheetSet
-tags:
-  - API
-  - CSSOM
-  - DOM
-  - Property
-  - Reference
-  - Stylesheets
-  - Deprecated
+page-type: web-api-instance-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.Document.selectedStyleSheetSet
 ---
-{{APIRef("DOM")}}{{deprecated_header}}
+
+{{APIRef("DOM")}}{{deprecated_header}}{{Non-standard_header}}
 
 The **`selectedStyleSheetSet`** property indicates the name of the style sheet set that's currently in use.
 
@@ -31,9 +29,9 @@ Setting the value of this property is equivalent to calling
 ## Examples
 
 ```js
-console.log('Current style sheet set: ' + document.selectedStyleSheetSet);
+console.log(`Current style sheet set: ${document.selectedStyleSheetSet}`);
 
-document.selectedStyleSheetSet = 'Some other style sheet';
+document.selectedStyleSheetSet = "Some other style sheet";
 ```
 
 ## Browser compatibility

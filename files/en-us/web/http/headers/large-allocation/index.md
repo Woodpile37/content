@@ -1,17 +1,14 @@
 ---
 title: Large-Allocation
 slug: Web/HTTP/Headers/Large-Allocation
-tags:
-  - HTTP
-  - HTTP Header
-  - Reference
-  - Response Header
-  - header
-  - Deprecated
-  - Non-standard
+page-type: http-header
+status:
+  - deprecated
+  - non-standard
 browser-compat: http.headers.Large-Allocation
 ---
-{{HTTPSidebar}} {{Deprecated_Header}}
+
+{{HTTPSidebar}}{{Deprecated_Header}}{{Non-standard_header}}
 
 The non-standard **`Large-Allocation`** response header tells the browser that the page being loaded is going to want to perform a large allocation.
 It's not implemented in current versions of any browser, but is harmless to send to any browser.
@@ -38,7 +35,7 @@ a dedicated process for the to-be-loaded document, for example.
 
 ## Syntax
 
-```
+```http
 Large-Allocation: 0
 Large-Allocation: <megabytes>
 ```
@@ -53,7 +50,7 @@ Large-Allocation: <megabytes>
 
 ## Examples
 
-```
+```http
 Large-Allocation: 0
 Large-Allocation: 500
 ```
@@ -61,8 +58,7 @@ Large-Allocation: 500
 ## Troubleshooting errors
 
 The `Large-Allocation` header throws warnings or error messages when used
-incorrectly. You'll encounter them in the [web
-console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html).
+incorrectly. You'll encounter them in the [web console](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html).
 
 - This page was loaded in a new process due to a `Large-Allocation` header.
   - : This message means that the browser saw the `Large-Allocation` header,

@@ -1,14 +1,11 @@
 ---
-title: FileReader.error
+title: "FileReader: error property"
+short-title: error
 slug: Web/API/FileReader/error
-tags:
-  - API
-  - File API
-  - Files
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.FileReader.error
 ---
+
 {{APIRef("File API")}}
 
 The {{domxref("FileReader")}} **`error`** property returns the

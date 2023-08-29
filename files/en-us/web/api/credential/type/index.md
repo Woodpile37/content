@@ -1,16 +1,12 @@
 ---
-title: Credential.type
+title: "Credential: type property"
+short-title: type
 slug: Web/API/Credential/type
-tags:
-  - API
-  - Credential
-  - Credential Management API
-  - Property
-  - Reference
-  - credential management
+page-type: web-api-instance-property
 browser-compat: api.Credential.type
 ---
-{{SeeCompatTable}}{{APIRef("Credential Management API")}}
+
+{{APIRef("Credential Management API")}}
 
 The **`type`** property of the
 {{domxref("Credential")}} interface returns a string containing the

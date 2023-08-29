@@ -1,14 +1,11 @@
 ---
-title: Document.head
+title: "Document: head property"
+short-title: head
 slug: Web/API/Document/head
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.Document.head
 ---
+
 {{APIRef("DOM")}}
 
 The **`head`** read-only property of
@@ -32,15 +29,14 @@ An {{domxref("HTMLHeadElement")}}.
 
   console.log(theHead.id); // "my-document-head";
 
-  console.log( theHead === document.querySelector("head") ); // true
+  console.log(theHead === document.querySelector("head")); // true
 </script>
 ```
 
 ## Notes
 
 `document.head` is read-only. Trying to assign a value to this property will
-fail silently or, in [Strict
-Mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), throws a {{jsxref("TypeError")}} .
+fail silently or, in [Strict Mode](/en-US/docs/Web/JavaScript/Reference/Strict_mode), throws a {{jsxref("TypeError")}} .
 
 ## Specifications
 

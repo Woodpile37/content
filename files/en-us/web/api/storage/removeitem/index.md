@@ -1,14 +1,11 @@
 ---
-title: Storage.removeItem()
+title: "Storage: removeItem() method"
+short-title: removeItem()
 slug: Web/API/Storage/removeItem
-tags:
-  - API
-  - Method
-  - Reference
-  - Storage
-  - Web Storage
+page-type: web-api-instance-method
 browser-compat: api.Storage.removeItem
 ---
+
 {{APIRef("Web Storage API")}}
 
 The **`removeItem()`** method of the {{domxref("Storage")}}
@@ -21,7 +18,7 @@ If there is no item associated with the given key, this method will do nothing.
 
 ## Syntax
 
-```js
+```js-nolint
 removeItem(keyName)
 ```
 
@@ -41,11 +38,11 @@ The following function creates three data items inside local storage, then remov
 
 ```js
 function populateStorage() {
-  localStorage.setItem('bgcolor', 'red');
-  localStorage.setItem('font', 'Helvetica');
-  localStorage.setItem('image', 'myCat.png');
+  localStorage.setItem("bgcolor", "red");
+  localStorage.setItem("font", "Helvetica");
+  localStorage.setItem("image", "myCat.png");
 
-  localStorage.removeItem('image');
+  localStorage.removeItem("image");
 }
 ```
 
@@ -53,15 +50,15 @@ We can do the same for the session storage.
 
 ```js
 function populateStorage() {
-  sessionStorage.setItem('bgcolor', 'red');
-  sessionStorage.setItem('font', 'Helvetica');
-  sessionStorage.setItem('image', 'myCat.png');
+  sessionStorage.setItem("bgcolor", "red");
+  sessionStorage.setItem("font", "Helvetica");
+  sessionStorage.setItem("image", "myCat.png");
 
-  sessionStorage.removeItem('image');
+  sessionStorage.removeItem("image");
 }
 ```
 
-> **Note:** To see this used within a real world example, see our [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
+> **Note:** To see this used within a real-world example, see our [Web Storage Demo](https://mdn.github.io/dom-examples/web-storage/).
 
 ## Specifications
 
@@ -73,5 +70,4 @@ function populateStorage() {
 
 ## See also
 
-[Using the Web
-Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+[Using the Web Storage API](/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)

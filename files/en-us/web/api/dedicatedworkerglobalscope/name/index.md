@@ -1,16 +1,11 @@
 ---
-title: DedicatedWorkerGlobalScope.name
+title: "DedicatedWorkerGlobalScope: name property"
+short-title: name
 slug: Web/API/DedicatedWorkerGlobalScope/name
-tags:
-  - API
-  - DOM
-  - DedicatedWorkerGlobalScope
-  - Property
-  - Reference
-  - Worker
-  - name
+page-type: web-api-instance-property
 browser-compat: api.DedicatedWorkerGlobalScope.name
 ---
+
 {{APIRef("Web Workers API")}}
 
 The **`name`** read-only property of the
@@ -28,14 +23,14 @@ A string.
 If a worker is created using a constructor with a `name` option:
 
 ```js
-var myWorker = new Worker("worker.js", { name : "myWorker" });
+const myWorker = new Worker("worker.js", { name: "myWorker" });
 ```
 
 the {{domxref("DedicatedWorkerGlobalScope")}} will now have a name of "myWorker",
 returnable by running
 
 ```js
-self.name
+self.name;
 ```
 
 from inside the worker.

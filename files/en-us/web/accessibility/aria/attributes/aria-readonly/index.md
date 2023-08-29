@@ -1,13 +1,8 @@
 ---
-title: 'aria-readonly'
+title: aria-readonly
 slug: Web/Accessibility/ARIA/Attributes/aria-readonly
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-readonly
-  - Reference
+page-type: aria-attribute
+spec-urls: https://w3c.github.io/aria/#aria-readonly
 ---
 
 The `aria-readonly` attribute indicates that the element is not editable, but is otherwise operable.
@@ -68,9 +63,7 @@ Inherited into roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-readonly","ARIA: aria-readonly Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 

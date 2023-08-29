@@ -1,15 +1,13 @@
 ---
-title: CompositionEvent.initCompositionEvent()
+title: "CompositionEvent: initCompositionEvent() method"
+short-title: initCompositionEvent()
 slug: Web/API/CompositionEvent/initCompositionEvent
-tags:
-  - API
-  - CompositionEvent
-  - Deprecated
-  - Method
-  - Reference
-  - initCompositionEvent
+page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.CompositionEvent.initCompositionEvent
 ---
+
 {{deprecated_header}}{{APIRef("UI Events")}}
 
 The **`initCompositionEvent()`**
@@ -21,32 +19,32 @@ method of the {{domxref("CompositionEvent")}} interface initializes the attribut
 
 ## Syntax
 
-```js
-initCompositionEvent(typeArg, canBubbleArg, cancelableArg, viewArg, dataArg, localeArg)
+```js-nolint
+initCompositionEvent(type, canBubble, cancelable, view, data, locale)
 ```
 
 ### Parameters
 
-- `typeArg`
+- `type`
   - : A string representing the type of composition event; this will be
     one of `compositionstart`, `compositionupdate`, or
     `compositionend`.
-- `canBubbleArg`
+- `canBubble`
   - : A boolean value specifying whether or not the event can bubble.
-- `cancelableArg`
+- `cancelable`
   - : A boolean value indicating whether or not the event can be canceled.
-- `viewArg`
+- `view`
   - : The {{domxref("Window")}} object from which the event was generated.
-- `dataArg`
+- `data`
   - : A string representing the value of the `data`
     attribute.
-- `localeArg`
+- `locale`
   - : A string representing the value of the `locale`
     attribute.
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

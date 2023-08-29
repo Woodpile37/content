@@ -1,28 +1,21 @@
 ---
-title: CSSSkew()
+title: "CSSSkew: CSSSkew() constructor"
+short-title: CSSSkew()
 slug: Web/API/CSSSkew/CSSSkew
-tags:
-  - API
-  - CSS
-  - CSS Typed Object Model API
-  - CSSSkew
-  - CSSTransformComponent
-  - CSSTransformValue
-  - Constructor
-  - Experimental
-  - Houdini
+page-type: web-api-constructor
 browser-compat: api.CSSSkew.CSSSkew
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+
+{{APIRef("CSS Typed OM")}}
 
 The **`CSSSkew()`** constructor creates a new
 {{domxref("CSSSkew")}} object which represents the
-[`skew()`](</en-US/docs/Web/CSS/transform-function/skew()>) value
+[`skew()`](/en-US/docs/Web/CSS/transform-function/skew) value
 of the individual {{CSSXRef('transform')}} property in CSS.
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSSkew(ax, ay)
 ```
 

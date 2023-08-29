@@ -1,14 +1,11 @@
 ---
-title: Window.print()
+title: "Window: print() method"
+short-title: print()
 slug: Web/API/Window/print
-tags:
-  - API
-  - HTML DOM
-  - Method
-  - Reference
-  - Window
+page-type: web-api-instance-method
 browser-compat: api.Window.print
 ---
+
 {{ ApiRef() }}
 
 Opens the print dialog to print the current document.
@@ -19,7 +16,7 @@ This method will block while the print dialog is open.
 
 ## Syntax
 
-```js
+```js-nolint
 print()
 ```
 

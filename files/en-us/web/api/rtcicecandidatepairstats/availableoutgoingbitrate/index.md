@@ -1,25 +1,11 @@
 ---
-title: RTCIceCandidatePairStats.availableOutgoingBitrate
+title: "RTCIceCandidatePairStats: availableOutgoingBitrate property"
+short-title: availableOutgoingBitrate
 slug: Web/API/RTCIceCandidatePairStats/availableOutgoingBitrate
-tags:
-  - API
-  - Bandwidth
-  - Bit Rate
-  - Bitrate
-  - Candidate
-  - Connection
-  - ICE
-  - Network
-  - Pair
-  - Property
-  - RTCIceCandidatePairStats
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
+page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidatePairStats.availableOutgoingBitrate
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidatePairStats")}} property

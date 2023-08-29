@@ -1,15 +1,13 @@
 ---
-title: Navigator.oscpu
+title: "Navigator: oscpu property"
+short-title: oscpu
 slug: Web/API/Navigator/oscpu
-tags:
-  - API
-  - Deprecated
-  - HTML DOM
-  - Navigator
-  - Property
-  - Reference
+page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.Navigator.oscpu
 ---
+
 {{ ApiRef("HTML DOM") }} {{Deprecated_Header}}
 
 The **`Navigator.oscpu`** property returns a string that identifies the current operating system.

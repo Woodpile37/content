@@ -1,14 +1,11 @@
 ---
-title: WebGL2RenderingContext.texSubImage3D()
+title: "WebGL2RenderingContext: texSubImage3D() method"
+short-title: texSubImage3D()
 slug: Web/API/WebGL2RenderingContext/texSubImage3D
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
+page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.texSubImage3D
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.texSubImage3D()`** method of the
@@ -17,7 +14,7 @@ current texture.
 
 ## Syntax
 
-```js
+```js-nolint
 texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, pixels)
 texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, offset)
 texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, format, type, srcData)
@@ -36,7 +33,7 @@ texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, fo
 
 - `level`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the level of detail. Level 0 is the base image
-    level and level _n_ is the *n*th mipmap reduction level.
+    level and level _n_ is the n-th mipmap reduction level.
 - `xoffset`
   - : A {{domxref("WebGL_API/Types", "GLint")}} specifying the x offset within the texture image.
 - `yoffset`
@@ -108,33 +105,28 @@ texSubImage3D(target, level, xoffset, yoffset, zoffset, width, height, depth, fo
     - `gl.UNSIGNED_INT_5_9_9_9_REV`
     - `gl.UNSIGNED_INT_24_8`
     - `gl.FLOAT_32_UNSIGNED_INT_24_8_REV` (pixels must be
-      {{jsxref("null")}})
+      [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null))
 
 - `pixels`
 
   - : One of the following objects can be used as a pixel source for the texture:
 
-    - {{domxref("ArrayBufferView")}},
-
-      - A {{jsxref("Uint8Array")}} must be used if `type` is
-        `gl.UNSIGNED_BYTE`.
-      - A {{jsxref("Uint16Array")}} must be used if `type` is either
-        `gl.UNSIGNED_SHORT_5_6_5`, `gl.UNSIGNED_SHORT_4_4_4_4`,
-        `gl.UNSIGNED_SHORT_5_5_5_1`, or `ext.HALF_FLOAT_OES`.
-      - A {{jsxref("Float32Array")}} must be used if `type` is
-        `gl.FLOAT`.
-
-    - {{domxref("ImageBitmap")}},
-    - {{domxref("ImageData")}},
-    - {{domxref("HTMLImageElement")}},
-    - {{domxref("HTMLCanvasElement")}},
-    - {{domxref("HTMLVideoElement")}}.
+    - {{jsxref("Uint8Array")}} (must be used if `type` is `gl.UNSIGNED_BYTE`)
+    - {{jsxref("Uint16Array")}} (must be used if `type` is either
+      `gl.UNSIGNED_SHORT_5_6_5`, `gl.UNSIGNED_SHORT_4_4_4_4`,
+      `gl.UNSIGNED_SHORT_5_5_5_1`, or `ext.HALF_FLOAT_OES`)
+    - {{jsxref("Float32Array")}} (must be used if `type` is `gl.FLOAT`)
+    - {{domxref("ImageBitmap")}}
+    - {{domxref("ImageData")}}
+    - {{domxref("HTMLImageElement")}}
+    - {{domxref("HTMLCanvasElement")}}
+    - {{domxref("HTMLVideoElement")}}
 
 - `srcData`
 
-  - : {{domxref("ArrayBufferView")}}
+  - : A {{jsxref("TypedArray")}} or a {{jsxref("DataView")}} object.
 
-- offset
+- `offset`
   - : A {{domxref("WebGL_API/Types", "GLintptr")}} byte offset into the {{domxref("WebGLBuffer")}}'s data
     store. Used to upload data to the currently bound {{domxref("WebGLTexture")}} from the
     `WebGLBuffer` bound to the `PIXEL_UNPACK_BUFFER` target.
@@ -146,7 +138,19 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-gl.texSubImage3D(gl.TEXTURE_3D, 0, 0, 0, 0, image.width, image.height, 1, gl.RGBA, gl.UNSIGNED_BYTE, image);
+gl.texSubImage3D(
+  gl.TEXTURE_3D,
+  0,
+  0,
+  0,
+  0,
+  image.width,
+  image.height,
+  1,
+  gl.RGBA,
+  gl.UNSIGNED_BYTE,
+  image,
+);
 ```
 
 ## Specifications

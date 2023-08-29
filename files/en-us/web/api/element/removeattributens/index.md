@@ -1,15 +1,11 @@
 ---
-title: Element.removeAttributeNS()
+title: "Element: removeAttributeNS() method"
+short-title: removeAttributeNS()
 slug: Web/API/Element/removeAttributeNS
-tags:
-  - API
-  - DOM
-  - Element
-  - Method
-  - NeedsSpecTable
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.Element.removeAttributeNS
 ---
+
 {{ APIRef("DOM") }}
 
 The **`removeAttributeNS()`** method of the
@@ -17,7 +13,7 @@ The **`removeAttributeNS()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 removeAttributeNS(namespace, attrName)
 ```
 

@@ -1,14 +1,13 @@
 ---
 title: Want-Digest
 slug: Web/HTTP/Headers/Want-Digest
-tags:
-  - HTTP
-  - HTTP Header
-  - Request header
-  - Response header
+page-type: http-header
+status:
+  - deprecated
 browser-compat: http.headers.Want-Digest
 ---
-{{HTTPSidebar}}
+
+{{HTTPSidebar}}{{Deprecated_Header}}
 
 The **`Want-Digest`** HTTP header is primarily used in a request, to ask the server to provide a {{Glossary("digest")}} of the requested resource using the {{HTTPHeader("Digest")}} response header.
 
@@ -120,7 +119,7 @@ Want-Digest: sha-256, sha-512
 
 ## Specifications
 
-{{Specifications("http.headers.Want-Digest")}}
+{{Specifications}}
 
 ## Browser compatibility
 

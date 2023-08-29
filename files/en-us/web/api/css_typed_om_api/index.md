@@ -1,12 +1,14 @@
 ---
 title: CSS Typed Object Model API
 slug: Web/API/CSS_Typed_OM_API
-tags:
-  - CSS Typed OM
-  - CSS Typed Object Model API
-  - Houdini
-  - Reference
+page-type: web-api-overview
+browser-compat:
+  - api.CSSStyleValue
+  - api.StylePropertyMap
+  - api.CSSUnparsedValue
+  - api.CSSKeywordValue
 ---
+
 {{DefaultAPISidebar("CSS Typed Object Model API")}}
 
 The CSS Typed Object Model API simplifies CSS property manipulation by exposing CSS values as typed JavaScript objects rather than strings. This not only simplifies CSS manipulation, but also lessens the negative impact on performance as compared to {{domxref('HTMLElement.style')}}.
@@ -21,9 +23,9 @@ CSS Typed OM both allows for the performant manipulation of values assigned to C
 
 The {{domxref('CSSStyleValue')}} interface of the CSS Typed Object Model API is the base class of all CSS values accessible through the Typed OM API. An instance of this class may be used anywhere a string is expected.
 
-- {{domxref('CSSStyleValue.parse()', 'CSSStyleValue.parse(property, cssText)')}}
+- {{domxref('CSSStyleValue/parse_static', 'CSSStyleValue.parse()')}}
   - : The parse() method of the CSSStyleValue interface allows a CSSNumericValue to be constructed from a CSS string. It sets a specific CSS property to the specified values and returns the first value as a CSSStyleValue object.
-- {{domxref('CSSStyleValue.parseAll()')}}
+- {{domxref('CSSStyleValue.parseAll_static', 'CSSStyleValue.parseAll()')}}
   - : The parseAll() method of the CSSStyleValue interface sets all occurrences of a specific CSS property to the specified value and returns an array of CSSStyleValue objects, each containing one of the supplied values.
 
 ### `StylePropertyMap`
@@ -94,7 +96,7 @@ CSSStyleValue is the base class through which all CSS values are expressed. Subc
     - {{domxref('CSSNumericValue.to')}} - Converts `value` into another one with the specified _unit._
     - {{domxref('CSSNumericValue.toSum')}}
     - {{domxref('CSSNumericValue.type')}}
-    - {{domxref('CSSNumericValue.parse')}} - Returns a number parsed from a CSS string
+    - {{domxref('CSSNumericValue/parse_static', 'CSSNumericValue.parse')}} - Returns a number parsed from a CSS string
 
 - {{domxref('CSSPositionValue')}}
   - : Represents values for properties that take a position, for example object-position.
@@ -107,19 +109,14 @@ CSSStyleValue is the base class through which all CSS values are expressed. Subc
 
 ## Specifications
 
-{{Specifications("api.CSSStyleValue")}}
+{{Specifications}}
 
 ## Browser compatibility
 
-See individual interfaces
-
-- [CSSStyleValue](/en-US/docs/Web/API/CSSStyleValue#browser_compatibility)
-- [StylePropertyMap](/en-US/docs/Web/API/StylePropertyMap#browser_compatibility)
-- [CSSUnparsedValue](/en-US/docs/Web/API/CSSUnparsedValue#browser_compatibility)
-- [CSSKeywordValue](/en-US/docs/Web/API/CSSKeywordValue#browser_compatibility)
+{{Compat}}
 
 ## See also
 
 - [CSS Painting API](/en-US/docs/Web/API/CSS_Painting_API)
 - [Using the CSS Typed Object Model](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
-- [CSS Houdini](/en-US/docs/Web/Houdini)
+- [CSS Houdini](/en-US/docs/Web/Guide/Houdini)

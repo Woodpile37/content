@@ -1,17 +1,12 @@
 ---
-title: Navigator.languages
+title: "Navigator: languages property"
+short-title: languages
 slug: Web/API/Navigator/languages
-tags:
-  - API
-  - Experimental
-  - Navigator
-  - Property
-  - Read-only
-  - Reference
-  - languages
+page-type: web-api-instance-property
 browser-compat: api.Navigator.languages
 ---
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+
+{{APIRef("HTML DOM")}}
 
 The **`Navigator.languages`** read-only property
 returns an array of strings representing the user's preferred
@@ -36,8 +31,8 @@ A string.
 ## Examples
 
 ```js
-navigator.language   //"en-US"
-navigator.languages  //["en-US", "zh-CN", "ja-JP"]
+navigator.language; //"en-US"
+navigator.languages; //["en-US", "zh-CN", "ja-JP"]
 ```
 
 ## Specifications

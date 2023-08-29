@@ -1,20 +1,15 @@
 ---
-title: 'aria-multiline'
+title: aria-multiline
 slug: Web/Accessibility/ARIA/Attributes/aria-multiline
-tags:
-  - Accessibility
-  - ARIA
-  - ARIA attribute
-  - ARIA property
-  - aria-multiline
-  - Reference
+page-type: aria-attribute
+spec-urls: https://w3c.github.io/aria/#aria-multiline
 ---
 
 The `aria-multiline` attribute indicates whether a `textbox` accepts multiple lines of input or only a single line.
 
 ## Description
 
-The default behavior of the <kbd>Enter</kbd> or <kbd>Return</kbd> key differs between single-line and multi-line text fields. When user focus is in a single-line `{{htmlelement("input/text", '&lt;input type="text">')}}`, an <kbd>Enter</kbd> or <kbd>Return</kbd> keystroke usually submits the form.
+The default behavior of the <kbd>Enter</kbd> or <kbd>Return</kbd> key differs between single-line and multi-line text fields. When user focus is in a single-line `{{htmlelement("input/text", '&lt;input type="text"&gt;')}}`, an <kbd>Enter</kbd> or <kbd>Return</kbd> keystroke usually submits the form.
 
 When user focus is in a multi-line {{HTMLElement('textarea')}}, the keystroke inserts a line break. Only relevant for elements with the [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role) role set, the `aria-multiline` attribute indicates to assistive technologies whether that text box accepts multiple lines of input or only a single line, setting expectations as to what type of data to enter and what those keystroke will do.
 
@@ -27,6 +22,7 @@ Be aware of focus and keystrokes when designing text boxes. ARIA only modifies t
 ## Values
 
 - `true`
+
   - : The text box accepts multiple lines of input.
 
 - `false`
@@ -51,13 +47,11 @@ Inherits into roles:
 
 ## Specifications
 
-| Specification | Status |
-| ------------- | ------  |
-| {{SpecName("ARIA","#aria-multiline","ARIA: aria-multiline Attribute")}}  | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See Also
 
-- ARIA [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/text_role) role
+- ARIA [`textbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/textbox_role) role
 - ARIA [`searchbox`](/en-US/docs/Web/Accessibility/ARIA/Roles/searchbox_role) role
 
 <section id="Quick_links">

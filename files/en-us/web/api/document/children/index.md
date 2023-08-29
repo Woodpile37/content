@@ -1,15 +1,11 @@
 ---
-title: Document.children
+title: "Document: children property"
+short-title: children
 slug: Web/API/Document/children
-tags:
-  - API
-  - DOM
-  - Element
-  - HTMLCollection
-  - Property
-  - children
+page-type: web-api-instance-property
 browser-compat: api.Document.children
 ---
+
 {{ APIRef("DOM") }}
 
 The read-only **`children`** property returns a live {{domxref("HTMLCollection")}}

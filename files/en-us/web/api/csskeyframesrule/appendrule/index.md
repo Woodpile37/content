@@ -1,22 +1,18 @@
 ---
-title: CSSKeyframesRule.appendRule()
+title: "CSSKeyframesRule: appendRule() method"
+short-title: appendRule()
 slug: Web/API/CSSKeyframesRule/appendRule
-tags:
-  - API
-  - CSSOM
-  - CSSKeyframesRule
-  - CSS Animations
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.CSSKeyframesRule.appendRule
 ---
+
 {{APIRef("CSSOM") }}
 
 The **`appendRule()`** method of the {{domxref("CSSKeyframeRule")}} interface appends a {{domxref("CSSKeyFrameRule")}} to the end of the rules.
 
 ## Syntax
 
-```js
+```js-nolint
 appendRule(rule)
 ```
 
@@ -47,7 +43,7 @@ After appending another rule with `appendRule` the `cssRules` property returns a
 ```js
 let myRules = document.styleSheets[0].cssRules;
 let keyframes = myRules[0]; // a CSSKeyframesRule
-keyframes.appendRule('to {transform: translateX(100%);}');
+keyframes.appendRule("to {transform: translateX(100%);}");
 console.log(keyframes.cssRules); // a CSSRuleList object with two rules
 ```
 

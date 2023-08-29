@@ -1,14 +1,11 @@
 ---
-title: WebGL2RenderingContext.bindTransformFeedback()
+title: "WebGL2RenderingContext: bindTransformFeedback() method"
+short-title: bindTransformFeedback()
 slug: Web/API/WebGL2RenderingContext/bindTransformFeedback
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
+page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.bindTransformFeedback
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.bindTransformFeedback()`** method
@@ -17,7 +14,7 @@ passed {{domxref("WebGLTransformFeedback")}} object to the current GL state.
 
 ## Syntax
 
-```js
+```js-nolint
 bindTransformFeedback(target, transformFeedback)
 ```
 
@@ -36,7 +33,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var transformFeedback = gl.createTransformFeedback();
+const transformFeedback = gl.createTransformFeedback();
 gl.bindTransformFeedback(gl.TRANSFORM_FEEDBACK, transformFeedback);
 ```
 

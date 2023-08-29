@@ -1,13 +1,11 @@
 ---
-title: CloseEvent.wasClean
+title: "CloseEvent: wasClean property"
+short-title: wasClean
 slug: Web/API/CloseEvent/wasClean
-tags:
-  - API
-  - Property
-  - Reference
-  - closeEvent
+page-type: web-api-instance-property
 browser-compat: api.CloseEvent.wasClean
 ---
+
 {{APIRef("Websockets API")}}
 
 The **`wasClean`** read-only property of the {{domxref("CloseEvent")}} interface returns `true` if the connection closed cleanly.
@@ -21,7 +19,7 @@ A boolean value. True if the connection closed cleanly, false otherwise.
 The following example prints the value of `wasClean` to the console.
 
 ```js
-WebSocket.onclose = function(event) {
+WebSocket.onclose = (event) => {
   console.log(event.wasClean);
 };
 ```

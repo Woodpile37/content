@@ -1,14 +1,14 @@
 ---
-title: NDEFRecord.encoding
+title: "NDEFRecord: encoding property"
+short-title: encoding
 slug: Web/API/NDEFRecord/encoding
-tags:
-  - Encoding
-  - NDEF
-  - Reference
-  - Web NFC
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.NDEFRecord.encoding
 ---
-{{securecontext_header}}{{SeeCompatTable}}{{APIRef()}}
+
+{{SecureContext_Header}}{{SeeCompatTable}}{{APIRef("Web NFC API")}}
 
 The **`encoding`**
 property of the {{DOMxRef("NDEFRecord")}} interface returns the encoding of
@@ -16,7 +16,7 @@ a textual payload, or `null` otherwise.
 
 ## Syntax
 
-```js
+```js-nolint
 NDEFRecord.encoding
 ```
 

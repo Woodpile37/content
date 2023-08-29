@@ -1,22 +1,14 @@
 ---
-title: MerchantValidationEvent.validationURL
+title: "MerchantValidationEvent: validationURL property"
+short-title: validationURL
 slug: Web/API/MerchantValidationEvent/validationURL
-tags:
-  - API
-  - Commerce
-  - Merchant
-  - Merchant Validation
-  - MerchantValidationEvent
-  - NeedsExample
-  - Payment Request
-  - Payment Request API
-  - Payments
-  - Property
-  - Reference
-  - validationURL
+page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.MerchantValidationEvent.validationURL
 ---
-{{deprecated_header}}{{non-standard_header}}{{securecontext_header}}
+
+{{APIRef("Payment Request API")}}{{Deprecated_Header}}{{SecureContext_Header}}
 
 The {{domxref("MerchantValidationEvent")}} property
 **`validationURL`** is a read-only string value providing the
@@ -33,8 +25,7 @@ specific data needed to complete the merchant verification process. Once this ha
 loaded, it should be passed into {{domxref("MerchantValidationEvent.complete",
   "complete()")}}, either directly or using a promise.
 
-See {{SectionOnPage("/en-US/docs/Web/API/Payment_Request_API/Concepts", "Merchant
-  validation")}} for more information on the merchant validation process.
+See [Merchant validation](/en-US/docs/Web/API/Payment_Request_API/Concepts#merchant_validation) to learn more about the process.
 
 ## Browser compatibility
 
@@ -43,7 +34,5 @@ See {{SectionOnPage("/en-US/docs/Web/API/Payment_Request_API/Concepts", "Merchan
 ## See also
 
 - [Payment Request API](/en-US/docs/Web/API/Payment_Request_API)
-- [Using
-  the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
-- [Payment processing
-  concepts](/en-US/docs/Web/API/Payment_Request_API/Concepts)
+- [Using the Payment Request API](/en-US/docs/Web/API/Payment_Request_API/Using_the_Payment_Request_API)
+- [Payment processing concepts](/en-US/docs/Web/API/Payment_Request_API/Concepts)

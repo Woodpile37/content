@@ -1,15 +1,12 @@
 ---
-title: Navigator.webdriver
+title: "Navigator: webdriver property"
+short-title: webdriver
 slug: Web/API/Navigator/webdriver
-tags:
-  - API
-  - Navigator
-  - Property
-  - Reference
-  - WebDriver
+page-type: web-api-instance-property
 browser-compat: api.Navigator.webdriver
 ---
-{{SeeCompatTable}}{{APIRef("WebDriver")}}
+
+{{APIRef("WebDriver")}}
 
 The **`webdriver`** read-only property
 of the {{domxref("navigator")}} interface indicates whether the user agent is

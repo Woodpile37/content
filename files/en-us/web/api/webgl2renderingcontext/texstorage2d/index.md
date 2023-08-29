@@ -1,14 +1,11 @@
 ---
-title: WebGL2RenderingContext.texStorage2D()
+title: "WebGL2RenderingContext: texStorage2D() method"
+short-title: texStorage2D()
 slug: Web/API/WebGL2RenderingContext/texStorage2D
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
+page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.texStorage2D
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.texStorage2D()`** method of the
@@ -17,7 +14,7 @@ two-dimensional texture storage.
 
 ## Syntax
 
-```js
+```js-nolint
 texStorage2D(target, levels, internalformat, width, height)
 ```
 
@@ -62,8 +59,7 @@ texStorage2D(target, levels, internalformat, width, height)
     - `gl.RGBA8UI`
 
     Unlike OpenGL 3.0, WebGL 2 **doesn't support** the following ETC2 and
-    EAC compressed texture formats (see [section
-    5.37](https://www.khronos.org/registry/webgl/specs/latest/2.0/#5.37) in the WebGL 2 spec). You might be able to enable them via the
+    EAC compressed texture formats (see [section 5.37](https://www.khronos.org/registry/webgl/specs/latest/2.0/#5.37) in the WebGL 2 spec). You might be able to enable them via the
     {{domxref("WEBGL_compressed_texture_etc")}} extension, though.
 
     - `gl.COMPRESSED_R11_EAC`

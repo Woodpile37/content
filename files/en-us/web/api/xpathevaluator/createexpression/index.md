@@ -1,16 +1,11 @@
 ---
-title: XPathEvaluator.createExpression()
+title: "XPathEvaluator: createExpression() method"
+short-title: createExpression()
 slug: Web/API/XPathEvaluator/createExpression
-tags:
-  - API
-  - DOM
-  - DOM XPath API
-  - Method
-  - Reference
-  - XPath
-  - XPathEvaluator
+page-type: web-api-instance-method
 browser-compat: api.XPathEvaluator.createExpression
 ---
+
 {{APIRef("DOM XPath")}}
 
 This method compiles an {{domxref("XPathExpression")}} which can then be used for
@@ -18,16 +13,16 @@ This method compiles an {{domxref("XPathExpression")}} which can then be used fo
 
 ## Syntax
 
-```js
+```js-nolint
 createExpression(expression)
 createExpression(expression, resolver)
 ```
 
 ### Parameters
 
-- expression
+- `expression`
   - : A string representing the XPath expression to be created.
-- resolver {{optional_inline}}
+- `resolver` {{optional_inline}}
   - : Permits translation of all prefixes, including the `xml` namespace
     prefix, within the XPath expression into appropriate namespace URIs.
 
@@ -64,10 +59,13 @@ The following example shows the use of the `evaluate()` method.
 ### JavaScript
 
 ```js
-var xpath = "//div";
-var evaluator = new XPathEvaluator();
-var expression = evaluator.createExpression(xpath);
-var result = expression.evaluate(document, XPathResult.ORDERED_NODE_SNAPSHOT_TYPE);
+const xpath = "//div";
+const evaluator = new XPathEvaluator();
+const expression = evaluator.createExpression(xpath);
+const result = expression.evaluate(
+  document,
+  XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,
+);
 document.querySelector("output").textContent = result.snapshotLength;
 ```
 

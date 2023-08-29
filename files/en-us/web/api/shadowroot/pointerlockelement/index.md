@@ -1,15 +1,11 @@
 ---
-title: ShadowRoot.pointerLockElement
+title: "ShadowRoot: pointerLockElement property"
+short-title: pointerLockElement
 slug: Web/API/ShadowRoot/pointerLockElement
-tags:
-  - API
-  - DOM
-  - ShadowRoot
-  - Property
-  - Reference
-  - mouse lock
+page-type: web-api-instance-property
 browser-compat: api.ShadowRoot.pointerLockElement
 ---
+
 {{APIRef("DOM")}}
 
 The read-only **`pointerLockElement`** property
@@ -25,7 +21,7 @@ An {{domxref("Element")}} or `null`.
 ## Examples
 
 ```js
-let customElem = document.querySelector('my-shadow-dom-element');
+let customElem = document.querySelector("my-shadow-dom-element");
 let shadow = customElem.shadowRoot;
 let pleElem = shadow.pointerLockElement;
 ```

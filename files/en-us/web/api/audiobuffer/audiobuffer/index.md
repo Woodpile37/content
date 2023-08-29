@@ -1,19 +1,11 @@
 ---
-title: AudioBuffer()
+title: "AudioBuffer: AudioBuffer() constructor"
+short-title: AudioBuffer()
 slug: Web/API/AudioBuffer/AudioBuffer
-tags:
-  - API
-  - Audio
-  - AudioBuffer
-  - Buffer
-  - Constructor
-  - Media
-  - Reference
-  - Web Audio
-  - Web Audio API
-  - sound
+page-type: web-api-constructor
 browser-compat: api.AudioBuffer.AudioBuffer
 ---
+
 {{APIRef("Web Audio API")}}
 
 The **`AudioBuffer`** constructor of
@@ -22,7 +14,7 @@ the [Web Audio API](/en-US/docs/Web/API/Web_Audio_API) creates a new
 
 ## Syntax
 
-```js
+```js-nolint
 new AudioBuffer(options)
 ```
 

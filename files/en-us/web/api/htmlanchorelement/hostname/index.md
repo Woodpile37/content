@@ -1,13 +1,11 @@
 ---
-title: HTMLAnchorElement.hostname
+title: "HTMLAnchorElement: hostname property"
+short-title: hostname
 slug: Web/API/HTMLAnchorElement/hostname
-tags:
-  - API
-  - HTMLAnchorElement
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.HTMLAnchorElement.hostname
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAnchorElement.hostname`** property is a

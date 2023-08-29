@@ -1,21 +1,17 @@
 ---
-title: VRPose.linearVelocity
+title: "VRPose: linearVelocity property"
+short-title: linearVelocity
 slug: Web/API/VRPose/linearVelocity
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRPose
-  - Virtual Reality
-  - WebVR
-  - linearVelocity
+page-type: web-api-instance-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRPose.linearVelocity
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
 
-The **`linearVelocity`** read-only property of the {{domxref("VRPose")}} interface returns an array representing the linear velocity vector of the {{domxref("VRDisplay")}} at the current {{domxref("VRPose.timestamp")}}, in meters per second.
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
+
+The **`linearVelocity`** read-only property of the {{domxref("VRPose")}} interface returns an array representing the linear velocity vector of the {{domxref("VRDisplay")}} at the current timestamp, in meters per second.
 
 > **Note:** This property was part of the old [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/). It has been superseded by the [WebXR Device API](https://immersive-web.github.io/webxr/).
 
@@ -38,14 +34,14 @@ function drawVRScene() {
 
   // Retrieve the linear velocity values for use in rendering
   // curFramePose is a VRPose object
-  var curFramePose = frameData.pose;
-  var linVel = curFramePose.linearVelocity;
-  var lvx = linVel[0];
-  var lvy = linVel[1];
-  var lvz = linVel[2];
+  const curFramePose = frameData.pose;
+  const linVel = curFramePose.linearVelocity;
+  const lvx = linVel[0];
+  const lvy = linVel[1];
+  const lvz = linVel[2];
 
   // render the scene
-  ...
+  // …
 
   // WebVR: submit the rendered frame to the VR display
   vrDisplay.submitFrame();

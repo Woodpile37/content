@@ -1,17 +1,13 @@
 ---
-title: CSSMathProduct()
+title: "CSSMathProduct: CSSMathProduct() constructor"
+short-title: CSSMathProduct()
 slug: Web/API/CSSMathProduct/CSSMathProduct
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSMathProduct
-  - CSSUnparsedValue
-  - Constructor
-  - Experimental
-  - Houdini
-  - Reference
+page-type: web-api-constructor
+status:
+  - experimental
 browser-compat: api.CSSMathProduct.CSSMathProduct
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`CSSMathProduct()`** constructor creates
@@ -20,7 +16,7 @@ a new {{domxref("CSSMathProduct")}} object which creates a new
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSMathProduct(args)
 ```
 

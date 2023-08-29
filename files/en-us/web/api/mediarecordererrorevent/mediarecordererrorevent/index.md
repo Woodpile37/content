@@ -1,21 +1,15 @@
 ---
-title: MediaRecorderErrorEvent()
+title: "MediaRecorderErrorEvent: MediaRecorderErrorEvent() constructor"
+short-title: MediaRecorderErrorEvent()
 slug: Web/API/MediaRecorderErrorEvent/MediaRecorderErrorEvent
-tags:
-  - API
-  - Audio
-  - Constructor
-  - Media
-  - Media Capture
-  - Media Capture and Streams
-  - MediaRecordingErrorEvent
-  - MediaStream Recording
-  - MediaStream Recording API
-  - Recording
-  - Video
+page-type: web-api-constructor
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.MediaRecorderErrorEvent.MediaRecorderErrorEvent
 ---
-{{APIRef("MediaStream Recording")}}
+
+{{APIRef("MediaStream Recording")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The
 **`MediaRecorderErrorEvent()`** constructor creates a new {{domxref("MediaRecorderErrorEvent")}} object
@@ -28,7 +22,7 @@ by the [MediaStream Recording API](/en-US/docs/Web/API/MediaStream_Recording_API
 
 ## Syntax
 
-```js
+```js-nolint
 new MediaRecorderErrorEvent(type, options)
 ```
 

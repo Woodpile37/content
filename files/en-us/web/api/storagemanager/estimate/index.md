@@ -1,19 +1,11 @@
 ---
-title: StorageManager.estimate()
+title: "StorageManager: estimate() method"
+short-title: estimate()
 slug: Web/API/StorageManager/estimate
-tags:
-  - API
-  - Method
-  - Quota
-  - Reference
-  - Secure context
-  - Storage
-  - Storage API
-  - StorageManager
-  - Usage
-  - estimate
+page-type: web-api-instance-method
 browser-compat: api.StorageManager.estimate
 ---
+
 {{securecontext_header}}{{APIRef("Storage")}}
 
 The **`estimate()`** method of the {{domxref("StorageManager")}} interface asks the Storage Manager for how much storage the current [origin](/en-US/docs/Glossary/Same-origin_policy) takes up (`usage`), and how much space is available (`quota`).
@@ -22,7 +14,7 @@ This method operates asynchronously, so it returns a {{jsxref("Promise")}} which
 
 ## Syntax
 
-```js
+```js-nolint
 estimate()
 ```
 
@@ -53,21 +45,25 @@ You may find that the `quota` varies from origin to origin. This variance is bas
 
 In this example, we obtain the usage estimates and present the percentage of storage capacity currently used to the user.
 
-### HTML content
+### HTML
 
 ```html
 <label>
-  You're currently using about <output id="percent">
-  </output>% of your available storage.
+  You're currently using about <output id="percent"> </output>% of your
+  estimated storage quota (<output id="quota"></output>).
 </label>
 ```
 
-### JavaScript content
+### JavaScript
 
 ```js
-navigator.storage.estimate().then(function(estimate) {
-  document.getElementById("percent").value =
-      (estimate.usage / estimate.quota * 100).toFixed(2);
+navigator.storage.estimate().then((estimate) => {
+  document.getElementById("percent").value = (
+    (estimate.usage / estimate.quota) *
+    100
+  ).toFixed(2);
+  document.getElementById("quota").value =
+    (estimate.quota / 1024 / 1024).toFixed(2) + "MB";
 });
 ```
 

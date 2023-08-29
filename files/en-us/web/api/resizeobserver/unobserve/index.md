@@ -1,16 +1,11 @@
 ---
-title: ResizeObserver.unobserve()
+title: "ResizeObserver: unobserve() method"
+short-title: unobserve()
 slug: Web/API/ResizeObserver/unobserve
-tags:
-  - API
-  - Method
-  - Reference
-  - Resize Observer API
-  - ResizeObserver
-  - observers
-  - unobserve()
+page-type: web-api-instance-method
 browser-compat: api.ResizeObserver.unobserve
 ---
+
 {{APIRef("Resize Observer API")}}
 
 The **`unobserve()`** method of the
@@ -19,7 +14,7 @@ The **`unobserve()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 unobserve(target)
 ```
 
@@ -30,7 +25,7 @@ unobserve(target)
 
 ### Return value
 
-Void.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -39,33 +34,47 @@ None.
 ## Examples
 
 The following snippet is taken from the [resize-observer-text.html](https://mdn.github.io/dom-examples/resize-observer/resize-observer-text.html)
-([see
-source](https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-observer-text.html)) example:
+([see source](https://github.com/mdn/dom-examples/blob/main/resize-observer/resize-observer-text.html)) example:
 
 ```js
-const resizeObserver = new ResizeObserver(entries => {
-  for (let entry of entries) {
-    if(entry.contentBoxSize) {
+const resizeObserver = new ResizeObserver((entries) => {
+  for (const entry of entries) {
+    if (entry.contentBoxSize) {
       // Checking for chrome as using a non-standard array
       if (entry.contentBoxSize[0]) {
-        h1Elem.style.fontSize = Math.max(1.5, entry.contentBoxSize[0].inlineSize/200) + 'rem';
-        pElem.style.fontSize = Math.max(1, entry.contentBoxSize[0].inlineSize/600) + 'rem';
+        h1Elem.style.fontSize = `${Math.max(
+          1.5,
+          entry.contentBoxSize[0].inlineSize / 200,
+        )}rem`;
+        pElem.style.fontSize = `${Math.max(
+          1,
+          entry.contentBoxSize[0].inlineSize / 600,
+        )}rem`;
       } else {
-        h1Elem.style.fontSize = Math.max(1.5, entry.contentBoxSize.inlineSize/200) + 'rem';
-        pElem.style.fontSize = Math.max(1, entry.contentBoxSize.inlineSize/600) + 'rem';
+        h1Elem.style.fontSize = `${Math.max(
+          1.5,
+          entry.contentBoxSize.inlineSize / 200,
+        )}rem`;
+        pElem.style.fontSize = `${Math.max(
+          1,
+          entry.contentBoxSize.inlineSize / 600,
+        )}rem`;
       }
     } else {
-      h1Elem.style.fontSize = Math.max(1.5, entry.contentRect.width/200) + 'rem';
-      pElem.style.fontSize = Math.max(1, entry.contentRect.width/600) + 'rem';
+      h1Elem.style.fontSize = `${Math.max(
+        1.5,
+        entry.contentRect.width / 200,
+      )}rem`;
+      pElem.style.fontSize = `${Math.max(1, entry.contentRect.width / 600)}rem`;
     }
   }
-  console.log('Size changed');
+  console.log("Size changed");
 });
 
 resizeObserver.observe(divElem);
 
-checkbox.addEventListener('change', () => {
-  if(checkbox.checked) {
+checkbox.addEventListener("change", () => {
+  if (checkbox.checked) {
     resizeObserver.observe(divElem);
   } else {
     resizeObserver.unobserve(divElem);

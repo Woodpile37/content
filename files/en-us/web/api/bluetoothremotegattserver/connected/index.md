@@ -1,16 +1,13 @@
 ---
-title: BluetoothRemoteGATTServer.connected
+title: "BluetoothRemoteGATTServer: connected property"
+short-title: connected
 slug: Web/API/BluetoothRemoteGATTServer/connected
-tags:
-  - API
-  - Bluetooth
-  - BluetoothRemoteGATTServer
-  - Experimental
-  - Property
-  - Reference
-  - Web Bluetooth API
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.BluetoothRemoteGATTServer.connected
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothRemoteGATTServer.connected`** read-only

@@ -1,19 +1,15 @@
 ---
-title: VRDisplayCapabilities.hasPosition
+title: "VRDisplayCapabilities: hasPosition property"
+short-title: hasPosition
 slug: Web/API/VRDisplayCapabilities/hasPosition
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRDisplayCapabilities
-  - Virtual Reality
-  - WebVR
-  - hasPosition
+page-type: web-api-instance-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplayCapabilities.hasPosition
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`hasPosition`** read-only property of the {{domxref("VRDisplayCapabilities")}} interface returns `true` if the VR display can track and return position information.
 

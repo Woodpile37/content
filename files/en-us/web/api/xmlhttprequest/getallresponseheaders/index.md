@@ -1,20 +1,11 @@
 ---
-title: XMLHttpRequest.getAllResponseHeaders()
+title: "XMLHttpRequest: getAllResponseHeaders() method"
+short-title: getAllResponseHeaders()
 slug: Web/API/XMLHttpRequest/getAllResponseHeaders
-tags:
-  - API
-  - Fetch Headers
-  - Get Headers
-  - HTTP
-  - HTTP Header
-  - Method
-  - Reference
-  - Response Header
-  - XHR
-  - XMLHttpRequest
-  - getAllResponseHeaders
+page-type: web-api-instance-method
 browser-compat: api.XMLHttpRequest.getAllResponseHeaders
 ---
+
 {{APIRef('XMLHttpRequest')}}
 
 The {{domxref("XMLHttpRequest")}} method
@@ -30,7 +21,7 @@ is returned.
 
 ## Syntax
 
-```js
+```js-nolint
 getAllResponseHeaders()
 ```
 
@@ -47,7 +38,7 @@ happened, an empty string is returned.
 
 An example of what a raw header string looks like:
 
-```
+```http
 date: Fri, 08 Dec 2017 21:04:30 GMT\r\n
 content-encoding: gzip\r\n
 x-content-type-options: nosniff\r\n
@@ -73,37 +64,36 @@ This example examines the headers in the request's {{domxref("XMLHttpRequest/rea
 the raw header string, as well as how to convert it into an array of individual headers
 and then how to take that array and create a mapping of header names to their values.
 
-```html
-var request = new XMLHttpRequest();
+```js
+const request = new XMLHttpRequest();
 request.open("GET", "foo.txt", true);
 request.send();
 
-request.onreadystatechange = function() {
-  if(this.readyState == this.HEADERS_RECEIVED) {
-
+request.onreadystatechange = () => {
+  if (request.readyState === this.HEADERS_RECEIVED) {
     // Get the raw header string
-    var headers = request.getAllResponseHeaders();
+    const headers = request.getAllResponseHeaders();
 
     // Convert the header string into an array
     // of individual headers
-    var arr = headers.trim().split(/[\r\n]+/);
+    const arr = headers.trim().split(/[\r\n]+/);
 
     // Create a map of header names to values
-    var headerMap = {};
-    arr.forEach(function (line) {
-      var parts = line.split(': ');
-      var header = parts.shift();
-      var value = parts.join(': ');
+    const headerMap = {};
+    arr.forEach((line) => {
+      const parts = line.split(": ");
+      const header = parts.shift();
+      const value = parts.join(": ");
       headerMap[header] = value;
     });
   }
-}
+};
 ```
 
 Once this is done, you can, for example:
 
 ```js
-var contentType = headerMap["content-type"];
+const contentType = headerMap["content-type"];
 ```
 
 This obtains the value of the {{httpheader("Content-Type")}} header into the variable
@@ -119,7 +109,6 @@ This obtains the value of the {{httpheader("Content-Type")}} header into the var
 
 ## See also
 
-- [Using
-  XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
+- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
 - Setting request headers: {{domxref("XMLHttpRequest.setRequestHeader",
     "setRequestHeader()")}}

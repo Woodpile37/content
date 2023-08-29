@@ -1,14 +1,11 @@
 ---
-title: UIEvent.detail
+title: "UIEvent: detail property"
+short-title: detail
 slug: Web/API/UIEvent/detail
-tags:
-  - API
-  - DOM
-  - Property
-  - Read-only
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.UIEvent.detail
 ---
+
 {{APIRef("UI Events")}}
 
 The **`UIEvent.detail`** read-only property, when non-zero, provides the current (or next, depending on the event) click count.

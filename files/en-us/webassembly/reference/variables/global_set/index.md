@@ -1,12 +1,8 @@
 ---
 title: Global set
 slug: WebAssembly/Reference/Variables/Global_set
-tags:
-  - WebAssembly
-  - wasm
-  - Reference
-  - Variable
 ---
+
 {{WebAssemblySidebar}}
 
 The **`global.set`** instruction sets the values of a global variable.
@@ -25,4 +21,4 @@ global.set $val
 
 | Instruction  | Binary opcode |
 | ------------ | ------------- |
-| `global.set` | `0x21`        |
+| `global.set` | `0x24`        |

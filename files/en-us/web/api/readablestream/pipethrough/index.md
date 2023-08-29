@@ -1,15 +1,11 @@
 ---
-title: ReadableStream.pipeThrough()
+title: "ReadableStream: pipeThrough() method"
+short-title: pipeThrough()
 slug: Web/API/ReadableStream/pipeThrough
-tags:
-  - API
-  - Method
-  - ReadableStream
-  - Reference
-  - Streams
-  - pipeThrough
+page-type: web-api-instance-method
 browser-compat: api.ReadableStream.pipeThrough
 ---
+
 {{APIRef("Streams")}}
 
 The **`pipeThrough()`** method of the {{domxref("ReadableStream")}} interface provides a chainable way of piping the current stream through a transform stream or any other writable/readable pair.
@@ -18,7 +14,7 @@ Piping a stream will generally lock it for the duration of the pipe, preventing 
 
 ## Syntax
 
-```js
+```js-nolint
 pipeThrough(transformStream)
 pipeThrough(transformStream, options)
 ```
@@ -26,6 +22,7 @@ pipeThrough(transformStream, options)
 ### Parameters
 
 - `transformStream`
+
   - : A {{domxref("TransformStream")}} (or an object with the structure
     `{writable, readable}`) consisting of a readable stream and a writable
     stream working together to transform some data from one form to another. Data written
@@ -60,7 +57,6 @@ pipeThrough(transformStream, options)
 
       - : If set to an [`AbortSignal`](/en-US/docs/Web/API/AbortSignal) object, ongoing pipe operations can then be aborted via the corresponding [`AbortController`](/en-US/docs/Web/API/AbortController).
 
-
 ### Return value
 
 The `readable` side of the `transformStream`.
@@ -72,19 +68,19 @@ The `readable` side of the `transformStream`.
 
 ## Examples
 
-In the following example (see [Unpack chunks of a PNG](https://mdn.github.io/dom-examples/streams/png-transform-stream/) for the full code running live, and [png-transform-stream](https://github.com/mdn/dom-examples/tree/master/streams/png-transform-stream) for the source code), an image is fetched and its body retrieved as a {{domxref("ReadableStream")}}.
+In the following example (see [Unpack chunks of a PNG](https://mdn.github.io/dom-examples/streams/png-transform-stream/) for the full code running live, and [png-transform-stream](https://github.com/mdn/dom-examples/tree/main/streams/png-transform-stream) for the source code), an image is fetched and its body retrieved as a {{domxref("ReadableStream")}}.
 
 Next, we log the contents of the readable stream, use `pipeThrough()` to send it to a new function that creates a gray-scaled version of the stream, then log the new stream's contents too.
 
 ```js
 // Fetch the original image
-fetch('png-logo.png')
-// Retrieve its body as ReadableStream
-.then(response => response.body)
-.then(rs => logReadableStream('Fetch Response Stream', rs))
-// Create a gray-scaled PNG stream out of the original
-.then(body => body.pipeThrough(new PNGTransformStream()))
-.then(rs => logReadableStream('PNG Chunk Stream', rs))
+fetch("png-logo.png")
+  // Retrieve its body as ReadableStream
+  .then((response) => response.body)
+  .then((rs) => logReadableStream("Fetch Response Stream", rs))
+  // Create a gray-scaled PNG stream out of the original
+  .then((body) => body.pipeThrough(new PNGTransformStream()))
+  .then((rs) => logReadableStream("PNG Chunk Stream", rs));
 ```
 
 ## Specifications
@@ -94,3 +90,8 @@ fetch('png-logo.png')
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} constructor
+- [Pipe chains](/en-US/docs/Web/API/Streams_API/Using_readable_streams#pipe_chains)

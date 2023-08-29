@@ -1,14 +1,11 @@
 ---
-title: WebGLRenderingContext.createProgram()
+title: "WebGLRenderingContext: createProgram() method"
+short-title: createProgram()
 slug: Web/API/WebGLRenderingContext/createProgram
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
+page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.createProgram
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGLRenderingContext.createProgram()`** method of the
@@ -17,7 +14,7 @@ The **`WebGLRenderingContext.createProgram()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 createProgram()
 ```
 
@@ -36,7 +33,7 @@ written in GLSL). These are then linked into a usable program.
 ### Creating a WebGL program
 
 ```js
-var program = gl.createProgram();
+const program = gl.createProgram();
 
 // Attach pre-existing shaders
 gl.attachShader(program, vertexShader);
@@ -44,9 +41,9 @@ gl.attachShader(program, fragmentShader);
 
 gl.linkProgram(program);
 
-if ( !gl.getProgramParameter( program, gl.LINK_STATUS) ) {
-  var info = gl.getProgramInfoLog(program);
-  throw 'Could not compile WebGL program. \n\n' + info;
+if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+  const info = gl.getProgramInfoLog(program);
+  throw `Could not compile WebGL program. \n\n${info}`;
 }
 ```
 

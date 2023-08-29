@@ -1,25 +1,18 @@
 ---
-title: FetchEvent()
+title: "FetchEvent: FetchEvent() constructor"
+short-title: FetchEvent()
 slug: Web/API/FetchEvent/FetchEvent
-tags:
-  - API
-  - Communication
-  - Constructor
-  - Fetch
-  - FetchEvent
-  - Networking
-  - Reference
-  - Service Workers
-  - ServiceWorker
+page-type: web-api-constructor
 browser-compat: api.FetchEvent.FetchEvent
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`FetchEvent()`** constructor creates a new {{domxref("FetchEvent")}} object.
 
 ## Syntax
 
-```js
+```js-nolint
 new FetchEvent(type, options)
 ```
 
@@ -34,7 +27,7 @@ new FetchEvent(type, options)
       - : The {{domxref("Request")}} object that would have triggered the event handler.
     - `preloadResponse`
       - : A {{jsxref("Promise")}} which returns a previously-loaded response to the client.
-    - `clientId`  {{optional_inline}}
+    - `clientId` {{optional_inline}}
       - : The {{domxref("Client")}} that the current service worker is controlling. It defaults to `""`.
     - `isReload` {{deprecated_inline}} {{optional_inline}}
       - : A boolean value that signifies whether the page was reloaded or not when
@@ -46,6 +39,8 @@ new FetchEvent(type, options)
       - : A string which identifies the client which is being replaced by `resultingClientId`. It defaults to `""`.
     - `resultingClientId` {{optional_inline}}
       - : A string containing the new `clientId` if the client changes as a result of the page load. It defaults to `""`
+    - `handled`
+      - : A _pending_ promise that will be fulfilled once the event has been handled.
 
 ## Return value
 

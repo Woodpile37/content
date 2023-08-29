@@ -1,17 +1,13 @@
 ---
-title: Document.rootElement
+title: "Document: rootElement property"
+short-title: rootElement
 slug: Web/API/Document/rootElement
-tags:
-  - API
-  - DOM
-  - Deprecated
-  - Document
-  - Property
-  - Reference
-  - SVG
-  - root
+page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.Document.rootElement
 ---
+
 {{ApiRef("DOM")}}{{Deprecated_header}}
 
 **`Document.rootElement`** returns the {{domxref("Element")}}

@@ -1,15 +1,11 @@
 ---
-title: CSSImportRule.stylesheet
+title: "CSSImportRule: stylesheet property"
+short-title: stylesheet
 slug: Web/API/CSSImportRule/stylesheet
-tags:
-  - API
-  - CSSOM
-  - Property
-  - Reference
-  - CSSImportRule
-  - Read-only
+page-type: web-api-instance-property
 browser-compat: api.CSSImportRule.styleSheet
 ---
+
 {{APIRef("CSSOM")}}
 
 The read-only **`styleSheet`** property of the

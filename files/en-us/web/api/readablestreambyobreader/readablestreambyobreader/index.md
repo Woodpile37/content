@@ -1,26 +1,21 @@
 ---
-title: ReadableStreamBYOBReader()
+title: "ReadableStreamBYOBReader: ReadableStreamBYOBReader() constructor"
+short-title: ReadableStreamBYOBReader()
 slug: Web/API/ReadableStreamBYOBReader/ReadableStreamBYOBReader
-tags:
-  - API
-  - Constructor
-  - Experimental
-  - ReadableStreamBYOBReader
-  - Reference
-  - Streams
+page-type: web-api-constructor
 browser-compat: api.ReadableStreamBYOBReader.ReadableStreamBYOBReader
 ---
-{{SeeCompatTable}}{{APIRef("Streams")}}
 
-The **`ReadableStreamBYOBReader()`**
-constructor creates and returns a `ReadableStreamBYOBReader` object instance.
+{{APIRef("Streams")}}
 
-> **Note:** You generally wouldn't use this constructor manually; instead,
-> you'd use the {{domxref("ReadableStream.getReader()")}} method.
+The **`ReadableStreamBYOBReader()`** constructor creates and returns a `ReadableStreamBYOBReader` object instance.
+
+> **Note:** You generally wouldn't use this constructor manually;
+> instead, you'd use the {{domxref("ReadableStream.getReader()")}} method with the argument `"byob"`.
 
 ## Syntax
 
-```js
+```js-nolint
 new ReadableStreamBYOBReader(stream)
 ```
 
@@ -36,13 +31,16 @@ An instance of the {{domxref("ReadableStreamBYOBReader")}} object.
 ### Exceptions
 
 - {{jsxref("TypeError")}}
-  - : Thrown if the supplied `stream` parameter is not a {{domxref("ReadableStream")}},
-    or it is already locked for reading by another reader, or its stream controller is not
-    a {{domxref("ReadableByteStreamController")}}.
+  - : Thrown if the supplied `stream` parameter is not a {{domxref("ReadableStream")}}, or it is already locked for reading by another reader, or its stream controller is not a {{domxref("ReadableByteStreamController")}}.
 
 ## Examples
 
-TBD
+The constructor is rarely called directly.
+Instead call {{domxref("ReadableStream.getReader()")}} as shown:
+
+```js
+const reader = stream.getReader({ mode: "byob" });
+```
 
 ## Specifications
 
@@ -51,3 +49,8 @@ TBD
 ## Browser compatibility
 
 {{Compat}}
+
+## See also
+
+- {{domxref("ReadableStreamBYOBReader")}}
+- [Using readable byte stream](/en-US/docs/Web/API/Streams_API/Using_readable_byte_streams)

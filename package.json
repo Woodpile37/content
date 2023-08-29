@@ -38,14 +38,7 @@
     "test:front-matter-linter": "yarn jest tests"
   },
   "dependencies": {
-    "@apideck/better-ajv-errors": "^0.3.6",
-    "@caporal/core": "^2.0.2",
-    "@mdn/yari": "2.29.0",
-    "ajv": "^8.12.0",
-    "ajv-formats": "^2.1.1",
-    "async": "^3.2.4",
-    "caporal": "^1.4.0",
-    "cli-progress": "^3.12.0",
+    "@mdn/yari": "1.10.0",
     "cross-env": "7.0.3",
     "env-cmd": "10.1.0",
     "fdir": "^6.1.0",

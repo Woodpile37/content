@@ -1,14 +1,11 @@
 ---
-title: Document.close()
+title: "Document: close() method"
+short-title: close()
 slug: Web/API/Document/close
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.Document.close
 ---
+
 {{APIRef("DOM")}}
 
 The **`Document.close()`** method finishes writing to a
@@ -16,7 +13,7 @@ document, opened with {{domxref("Document.open()")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 close()
 ```
 

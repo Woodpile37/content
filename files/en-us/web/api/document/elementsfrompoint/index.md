@@ -1,14 +1,11 @@
 ---
-title: Document.elementsFromPoint()
+title: "Document: elementsFromPoint() method"
+short-title: elementsFromPoint()
 slug: Web/API/Document/elementsFromPoint
-tags:
-  - API
-  - Document
-  - Method
-  - Reference
-  - elementsFromPoint
+page-type: web-api-instance-method
 browser-compat: api.Document.elementsFromPoint
 ---
+
 {{APIRef("DOM")}}
 
 The **`elementsFromPoint()`** method
@@ -21,7 +18,7 @@ It operates in a similar way to the {{domxref("Document.elementFromPoint",
 
 ## Syntax
 
-```js
+```js-nolint
 elementsFromPoint(x, y)
 ```
 
@@ -54,16 +51,17 @@ An array of {{domxref('Element')}} objects, ordered from the topmost to the bott
 let output = document.getElementById("output");
 if (document.elementsFromPoint) {
   let elements = document.elementsFromPoint(30, 20);
-  for (var i = 0; i < elements.length; i++) {
-    output.textContent += elements[i].localName;
+  elements.forEach((elt, i) => {
+    output.textContent += elt.localName;
     if (i < elements.length - 1) {
       output.textContent += " < ";
     }
-  }
+  });
 } else {
-  output.innerHTML = "<span style=\"color: red;\">" +
-     "Browser does not support <code>document.elementsFromPoint()</code>" +
-     "</span>";
+  output.innerHTML =
+    '<span style="color: red;">' +
+    "Browser does not support <code>document.elementsFromPoint()</code>" +
+    "</span>";
 }
 ```
 

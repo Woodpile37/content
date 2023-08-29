@@ -1,14 +1,11 @@
 ---
-title: Selection.extend()
+title: "Selection: extend() method"
+short-title: extend()
 slug: Web/API/Selection/extend
-tags:
-  - API
-  - HTML Editing
-  - Method
-  - Reference
-  - Selection
+page-type: web-api-instance-method
 browser-compat: api.Selection.extend
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Selection.extend()`** method moves the focus of the
@@ -17,7 +14,7 @@ will be from the anchor to the new focus, regardless of direction.
 
 ## Syntax
 
-```js
+```js-nolint
 extend(node)
 extend(node, offset)
 ```

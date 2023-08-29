@@ -1,32 +1,25 @@
 ---
-title: ':empty'
+title: ":empty"
 slug: Web/CSS/:empty
-tags:
-  - CSS
-  - Layout
-  - NeedsUpdate
-  - Pseudo-class
-  - Reference
-  - Selector
-  - Web
+page-type: css-pseudo-class
 browser-compat: css.selectors.empty
 ---
+
 {{CSSRef}}
 
 The **`:empty`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) represents any element that has no children. Children can be either element nodes or text (including whitespace). Comments, processing instructions, and CSS {{cssxref("content")}} do not affect whether an element is considered empty.
 
-> **Note:** In {{SpecName("CSS4 Selectors", "#the-empty-pseudo")}} the `:empty` pseudo-class was changed to act like {{CSSxRef(":-moz-only-whitespace")}}, but no browser currently supports this yet.
+{{EmbedInteractiveExample("pages/tabbed/pseudo-class-empty.html", "tabbed-shorter")}}
 
-```css
-/* Selects any <div> that contains no content */
-div:empty {
-  background: lime;
-}
-```
+> **Note:** In [Selectors Level 4](https://drafts.csswg.org/selectors-4/#the-empty-pseudo), the `:empty` pseudo-class was changed to act like {{CSSxRef(":-moz-only-whitespace")}}, but no browser currently supports this yet.
 
 ## Syntax
 
-{{CSSSyntax}}
+```css
+:empty {
+  /* ... */
+}
+```
 
 ## Examples
 
@@ -39,7 +32,9 @@ div:empty {
   <!-- I will be pink in older browsers because of the whitespace around this comment. -->
 </div>
 <div class="box">
-  <p><!-- I will be pink in all browsers because of the non-collapsible whitespace and elements around this comment. --></p>
+  <p>
+    <!-- I will be pink in all browsers because of the non-collapsible whitespace and elements around this comment. -->
+  </p>
 </div>
 ```
 
@@ -89,5 +84,5 @@ The text that provides the interactive control's accessible name can be hidden u
 
 ## See also
 
-- {{CSSxRef(":-moz-only-whitespace")}} {{Non-standard_Inline}} – The {{glossary("prefix", "prefixed")}} implementation of the changes in {{SpecName("CSS4 Selectors", "#the-empty-pseudo")}}
+- {{CSSxRef(":-moz-only-whitespace")}} {{Non-standard_Inline}} – The {{glossary("Vendor_Prefix", "prefixed")}} implementation of the changes in [Selectors Level 4](https://drafts.csswg.org/selectors-4/#the-empty-pseudo)
 - {{CSSxRef(":blank")}} {{Experimental_Inline}}

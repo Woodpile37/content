@@ -1,17 +1,13 @@
 ---
-title: CSSMathSum()
+title: "CSSMathSum: CSSMathSum() constructor"
+short-title: CSSMathSum()
 slug: Web/API/CSSMathSum/CSSMathSum
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSMathSum
-  - CSSUnparsedValue
-  - Constructor
-  - Experimental
-  - Houdini
-  - Reference
+page-type: web-api-constructor
+status:
+  - experimental
 browser-compat: api.CSSMathSum.CSSMathSum
 ---
+
 {{APIRef("CSS Typed Object Model API")}}{{SeeCompatTable}}
 
 The **`CSSMathSum()`** constructor creates a
@@ -22,7 +18,7 @@ or {{domxref('CSSNumericValue.toSum','toSum()')}} on {{domxref('CSSNumericValue'
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSMathSum(values)
 ```
 

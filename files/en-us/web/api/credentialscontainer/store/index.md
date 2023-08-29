@@ -1,17 +1,12 @@
 ---
-title: CredentialsContainer.store()
+title: "CredentialsContainer: store() method"
+short-title: store()
 slug: Web/API/CredentialsContainer/store
-tags:
-  - API
-  - Credential Management API
-  - CredentialsContainer
-  - Method
-  - NeedsExample
-  - Reference
-  - credential management
+page-type: web-api-instance-method
 browser-compat: api.CredentialsContainer.store
 ---
-{{APIRef("Credential Management API")}}{{SeeCompatTable}}
+
+{{APIRef("Credential Management API")}}
 
 The **`store()`** method of the
 {{domxref("CredentialsContainer")}} stores a set of credentials for the user inside a
@@ -22,13 +17,13 @@ The **`store()`** method of the
 
 ## Syntax
 
-```js
-store(Credentials)
+```js-nolint
+store(credentials)
 ```
 
 ### Parameters
 
-- Credentials
+- `credentials`
   - : A valid {{domxref("Credential")}} instance.
 
 ### Return value
@@ -47,15 +42,18 @@ the credential is correct.
 if ("PasswordCredential" in window) {
   let credential = new PasswordCredential({
     id: "example-username",
-    name: "John Doe", // In case of a login, the name comes from the server.
-    password: "correct horse battery staple"
+    name: "Carina Anand", // In case of a login, the name comes from the server.
+    password: "correct horse battery staple",
   });
 
-  navigator.credentials.store(credential).then(() => {
-    console.info("Credential stored in the user agent's credential manager.");
-  }, (err) => {
-    console.error("Error while storing the credential: ", err);
-  });
+  navigator.credentials.store(credential).then(
+    () => {
+      console.info("Credential stored in the user agent's credential manager.");
+    },
+    (err) => {
+      console.error("Error while storing the credential: ", err);
+    },
+  );
 }
 ```
 

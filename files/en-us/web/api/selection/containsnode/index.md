@@ -1,14 +1,11 @@
 ---
-title: Selection.containsNode()
+title: "Selection: containsNode() method"
+short-title: containsNode()
 slug: Web/API/Selection/containsNode
-tags:
-  - API
-  - HTML Editing
-  - Method
-  - Reference
-  - Selection
+page-type: web-api-instance-method
 browser-compat: api.Selection.containsNode
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Selection.containsNode()`** method indicates whether a
@@ -16,7 +13,7 @@ specified node is part of the selection.
 
 ## Syntax
 
-```js
+```js-nolint
 containsNode(node)
 containsNode(node)
 containsNode(node, partialContainment)
@@ -34,7 +31,7 @@ containsNode(node, partialContainment)
 
 ### Return value
 
-None ({{jsxref("undefined")}}).
+Returns `true` if the given node is part of the selection, and `false` otherwise.
 
 ## Examples
 
@@ -56,22 +53,25 @@ In this example, a message appears when you select the secret word. It uses
 
 ```html
 <p>Can you find the secret word?</p>
-<p>Hmm, where <span id="secret" style="color:transparent">SECRET</span> could it be?</p>
+<p>
+  Hmm, where <span id="secret" style="color:transparent">SECRET</span> could it
+  be?
+</p>
 <p id="win" hidden>You found it!</p>
 ```
 
 #### JavaScript
 
 ```js
-const secret = document.getElementById('secret');
-const win = document.getElementById('win');
+const secret = document.getElementById("secret");
+const win = document.getElementById("win");
 
 // Listen for selection changes
-document.addEventListener('selectionchange', () => {
+document.addEventListener("selectionchange", () => {
   const selection = window.getSelection();
   const found = selection.containsNode(secret);
 
-  win.toggleAttribute('hidden', !found);
+  win.toggleAttribute("hidden", !found);
 });
 ```
 

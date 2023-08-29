@@ -1,38 +1,34 @@
 ---
 title: HTMLBodyElement
 slug: Web/API/HTMLBodyElement
-tags:
-  - API
-  - HTML DOM
-  - Interface
-  - NeedsNewLayout
-  - Reference
+page-type: web-api-interface
 browser-compat: api.HTMLBodyElement
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLBodyElement`** interface provides special properties (beyond those inherited from the regular {{ domxref("HTMLElement") }} interface) for manipulating {{HtmlElement("body")}} elements.
 
 {{InheritanceDiagram}}
 
-## Properties
+## Instance properties
 
 _Inherits properties from its parent, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLBodyElement.aLink")}} {{deprecated_inline}}
-  - : A {{ domxref("DOMString") }} that represents the color of active hyperlinks.
+  - : A string that represents the color of active hyperlinks.
 - {{domxref("HTMLBodyElement.background")}} {{deprecated_inline}}
-  - : A {{ domxref("DOMString") }} that represents the description of the location of the background image resource. Note that this is not an URI, though some older version of some browsers do expect it.
+  - : A string that represents the description of the location of the background image resource. Note that this is not an URI, though some older version of some browsers do expect it.
 - {{domxref("HTMLBodyElement.bgColor")}} {{deprecated_inline}}
-  - : A {{ domxref("DOMString") }} that represents the background color for the document.
+  - : A string that represents the background color for the document.
 - {{domxref("HTMLBodyElement.link")}} {{deprecated_inline}}
-  - : A {{ domxref("DOMString") }} that represents the color of unvisited links.
+  - : A string that represents the color of unvisited links.
 - {{domxref("HTMLBodyElement.text")}} {{deprecated_inline}}
-  - : A {{ domxref("DOMString") }} that represents the foreground color of text.
+  - : A string that represents the foreground color of text.
 - {{domxref("HTMLBodyElement.vLink")}} {{deprecated_inline}}
-  - : A {{ domxref("DOMString") }} that represents the color of visited links.
+  - : A string that represents the color of visited links.
 
-## Methods
+## Instance methods
 
 _No specific methods; inherits methods from its parent, {{domxref("HTMLElement")}}._
 

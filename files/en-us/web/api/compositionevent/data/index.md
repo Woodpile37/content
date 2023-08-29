@@ -1,14 +1,11 @@
 ---
-title: CompositionEvent.data
+title: "CompositionEvent: data property"
+short-title: data
 slug: Web/API/CompositionEvent/data
-tags:
-  - API
-  - CompositionEvent
-  - Property
-  - Reference
-  - data
+page-type: web-api-instance-property
 browser-compat: api.CompositionEvent.data
 ---
+
 {{APIRef("UI Events")}}
 
 The **`data`** read-only property of the

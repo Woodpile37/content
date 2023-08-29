@@ -1,17 +1,11 @@
 ---
-title: Animation.cancel()
+title: "Animation: cancel() method"
+short-title: cancel()
 slug: Web/API/Animation/cancel
-tags:
-  - API
-  - Animation
-  - Method
-  - Reference
-  - Web Animations
-  - cancel
-  - waapi
-  - web animations api
+page-type: web-api-instance-method
 browser-compat: api.Animation.cancel
 ---
+
 {{ APIRef("Web Animations") }}
 
 The Web Animations API's **`cancel()`** method of the {{domxref("Animation")}} interface clears all {{domxref("KeyframeEffect")}}s caused by this animation and aborts its playback.
@@ -20,7 +14,7 @@ The Web Animations API's **`cancel()`** method of the {{domxref("Animation")}} i
 
 ## Syntax
 
-```js
+```js-nolint
 cancel()
 ```
 

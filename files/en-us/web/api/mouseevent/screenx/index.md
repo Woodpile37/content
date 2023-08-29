@@ -1,16 +1,11 @@
 ---
-title: MouseEvent.screenX
+title: "MouseEvent: screenX property"
+short-title: screenX
 slug: Web/API/MouseEvent/screenX
-tags:
-  - API
-  - CSSOM View
-  - DOM Events
-  - MouseEvent
-  - Property
-  - Read-only
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.MouseEvent.screenX
 ---
+
 {{APIRef("UI Events")}}
 
 The **`screenX`** read-only property of the {{domxref("MouseEvent")}} interface provides the horizontal coordinate (offset) of the mouse pointer in global (screen) coordinates.
@@ -25,7 +20,7 @@ Early versions of the spec defined this as an integer referring to the number of
 
 ## Examples
 
-This example displays your mouse's coordinates whenever you trigger the {{Event("mousemove")}} event.
+This example displays your mouse's coordinates whenever you trigger the {{domxref("Element/mousemove_event", "mousemove")}} event.
 
 ### HTML
 
@@ -37,8 +32,8 @@ This example displays your mouse's coordinates whenever you trigger the {{Event(
 ### JavaScript
 
 ```js
-let screenLog = document.querySelector('#screen-log');
-document.addEventListener('mousemove', logKey);
+let screenLog = document.querySelector("#screen-log");
+document.addEventListener("mousemove", logKey);
 
 function logKey(e) {
   screenLog.innerText = `
@@ -49,7 +44,7 @@ function logKey(e) {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 ### Routing an event
 

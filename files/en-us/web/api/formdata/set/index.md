@@ -1,32 +1,27 @@
 ---
-title: FormData.set()
+title: "FormData: set() method"
+short-title: set()
 slug: Web/API/FormData/set
-tags:
-  - API
-  - FormData
-  - Method
-  - Reference
-  - XHR
-  - XMLHttpRequest
-  - set
+page-type: web-api-instance-method
 browser-compat: api.FormData.set
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 The **`set()`** method of the {{domxref("FormData")}} interface sets a new value for an existing key inside a `FormData` object, or adds the key/value if it does not already exist.
 
-The difference between `set()` and {{domxref("FormData.append")}} is that if the specified key does already exist, `set()` will overwrite all existing values with the new one, whereas {{domxref("FormData.append")}} will append the new value onto the end of the existing set of values.
+The difference between `set()` and {{domxref("FormData.append", "append()")}} is that if the specified key does already exist, `set()` will overwrite all existing values with the new one, whereas `append()` will append the new value onto the end of the existing set of values.
 
 > **Note:** This method is available in [Web Workers](/en-US/docs/Web/API/Web_Workers_API).
 
 ## Syntax
 
-```js
+```js-nolint
 set(name, value)
 set(name, value, filename)
 ```
 
-#### Parameters
+### Parameters
 
 - `name`
   - : The name of the field whose data is contained in `value`.
@@ -43,24 +38,21 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-The following line creates an empty `FormData` object:
-
 ```js
-var formData = new FormData(); // Currently empty
+formData.set("username", "Chris");
 ```
 
-You can set key/value pairs on this using {{domxref("FormData.set")}}:
+When the value is a {{domxref("Blob")}} (or a {{domxref("File")}}), you can specify its name with the `filename` parameter:
 
 ```js
-formData.set('username', 'Chris');
-formData.set('userpic', myFileInput.files[0], 'chris.jpg');
+formData.set("userpic", myFileInput.files[0], "chris.jpg");
 ```
 
-If the sent value is different than String or Blob it will be automatically converted to String:
+If the value is not a string or a `Blob`, `set()` will convert it to a string automatically:
 
 ```js
-formData.set('name', 72);
-formData.get('name'); // "72"
+formData.set("name", 72);
+formData.get("name"); // "72"
 ```
 
 ## Specifications
@@ -73,7 +65,5 @@ formData.get('name'); // "72"
 
 ## See also
 
-- {{domxref("XMLHTTPRequest")}}
-- [Using XMLHttpRequest](/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest)
 - [Using FormData objects](/en-US/docs/Web/API/FormData/Using_FormData_Objects)
 - {{HTMLElement("Form")}}

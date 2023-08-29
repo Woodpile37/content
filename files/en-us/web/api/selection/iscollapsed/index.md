@@ -1,16 +1,11 @@
 ---
-title: Selection.isCollapsed
+title: "Selection: isCollapsed property"
+short-title: isCollapsed
 slug: Web/API/Selection/isCollapsed
-tags:
-  - API
-  - DOM
-  - HTML Editing
-  - Property
-  - Read-only
-  - Reference
-  - Selection
+page-type: web-api-instance-property
 browser-compat: api.Selection.isCollapsed
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Selection.isCollapsed`** read-only property returns a

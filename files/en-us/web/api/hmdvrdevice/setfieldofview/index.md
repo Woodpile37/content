@@ -1,25 +1,21 @@
 ---
-title: HMDVRDevice.setFieldOfView()
+title: "HMDVRDevice: setFieldOfView() method"
+short-title: setFieldOfView()
 slug: Web/API/HMDVRDevice/setFieldOfView
-tags:
-  - API
-  - Experimental
-  - HMDVRDevice
-  - Method
-  - Reference
-  - VR
-  - Virtual Reality
-  - WebVR
-  - Deprecated
+page-type: web-api-instance-method
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.HMDVRDevice.setFieldOfView
 ---
-{{deprecated_header}}{{APIRef("WebVR API")}}{{SeeCompatTable}}
+
+{{deprecated_header}}{{APIRef("WebVR API")}}{{Non-standard_header}}
 
 The **`setFieldOfView()`** method of the {{domxref("HMDVRDevice")}} interface can be used to set the field of view for one eye, or both eyes simultaneously.
 
 ## Syntax
 
-```js
+```js-nolint
 setFieldOfView(leftFOV, rightFOV, zNear, zFar)
 ```
 
@@ -40,16 +36,16 @@ None ({{jsxref("undefined")}}).
 
 ## Examples
 
-The following simple example shows a function that can be used to set a custom field of view with four specified degree values for up, right, down and left. The {{domxref("VRFieldOfView.VRFieldOfView","VRFieldOfView()")}} constructor is used to create a {{domxref("VRFieldOfView")}} object from the supplied values, which is then fed into the `setFieldOfView()` method (the default `zNear` and `zFar` values are always used, in this case.)
+The following simple example shows a function that can be used to set a custom field of view with four specified degree values for up, right, down and left. The `VRFieldOfView()` constructor is used to create a {{domxref("VRFieldOfView")}} object from the supplied values, which is then fed into the `setFieldOfView()` method (the default `zNear` and `zFar` values are always used, in this case.)
 
 ```js
-function setCustomFOV(up,right,down,left) {
-  var testFOV = new VRFieldOfView(up,right,down,left);
+function setCustomFOV(up, right, down, left) {
+  const testFOV = new VRFieldOfView(up, right, down, left);
 
-  gHMD.setFieldOfView(testFOV,testFOV,0.01,10000.0);
+  gHMD.setFieldOfView(testFOV, testFOV, 0.01, 10000.0);
 
-  var lEye = gHMD.getEyeParameters('left');
-  var rEye = gHMD.getEyeParameters('right');
+  const lEye = gHMD.getEyeParameters("left");
+  const rEye = gHMD.getEyeParameters("right");
   console.log(lEye.currentFieldOfView);
   console.log(rEye.currentFieldOfView);
 }

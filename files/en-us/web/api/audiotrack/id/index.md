@@ -1,21 +1,11 @@
 ---
-title: AudioTrack.id
+title: "AudioTrack: id property"
+short-title: id
 slug: Web/API/AudioTrack/id
-tags:
-  - API
-  - Audio
-  - Audio Track
-  - AudioTrack
-  - HTML DOM
-  - Interface
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - id
-  - track
+page-type: web-api-instance-property
 browser-compat: api.AudioTrack.id
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`id`** property contains a

@@ -1,23 +1,18 @@
 ---
-title: console.clear()
+title: "console: clear() method"
+short-title: clear()
 slug: Web/API/console/clear
-tags:
-  - API
-  - Debugging
-  - Method
-  - Reference
-  - console
-  - web console
+page-type: web-api-instance-method
 browser-compat: api.console.clear
 ---
+
 {{APIRef("Console API")}}
 
-The **`console.clear()`** method clears the console if the
-environment allows it.
+The **`console.clear()`** method clears the console if the console allows it. A graphical console, like those running on browsers, will allow it; a console displaying on the terminal, like the one running on Node, will not support it, and will have no effect (and no error).
 
 ## Syntax
 
-```js
+```js-nolint
 clear()
 ```
 

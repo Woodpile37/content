@@ -1,17 +1,11 @@
 ---
-title: IDBIndex.openKeyCursor()
+title: "IDBIndex: openKeyCursor() method"
+short-title: openKeyCursor()
 slug: Web/API/IDBIndex/openKeyCursor
-tags:
-  - API
-  - Database
-  - IDBIndex
-  - IndexedDB
-  - Method
-  - Reference
-  - Storage
-  - openKeyCursor
+page-type: web-api-instance-method
 browser-compat: api.IDBIndex.openKeyCursor
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`openKeyCursor()`** method of the
@@ -32,7 +26,7 @@ If the key range is not specified or is null, then the range includes all the ke
 
 ## Syntax
 
-```js
+```js-nolint
 openKeyCursor()
 openKeyCursor(range)
 openKeyCursor(range, direction)
@@ -40,18 +34,22 @@ openKeyCursor(range, direction)
 
 ### Parameters
 
-- range {{optional_inline}}
+- `range` {{optional_inline}}
   - : A key or {{domxref("IDBKeyRange")}} to use as the cursor's range. If nothing is
     passed, this will default to a key range that selects all the records in this object
     store.
-- direction {{optional_inline}}
+- `direction` {{optional_inline}}
   - : The cursor's [direction](/en-US/docs/Web/API/IDBCursor#constants). See [IDBCursor Constants](/en-US/docs/Web/API/IDBCursor#constants) for possible
     values.
 
 ### Return value
 
-An {{domxref("IDBRequest")}} object on which subsequent events related to this
-operation are fired.
+An {{domxref("IDBRequest")}} object on which subsequent events related to this operation are fired.
+
+If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is:
+
+- an {{domxref("IDBCursor")}} object pointing at the first record matching the given query
+- `null` if no matching records were found.
 
 ### Exceptions
 
@@ -80,26 +78,26 @@ corresponding primary key of the referenced record into an HTML table.
 
 ```js
 function displayDataByIndex() {
-  tableEntry.innerHTML = '';
-  var transaction = db.transaction(['contactsList'], 'readonly');
-  var objectStore = transaction.objectStore('contactsList');
+  tableEntry.innerHTML = "";
+  const transaction = db.transaction(["contactsList"], "readonly");
+  const objectStore = transaction.objectStore("contactsList");
 
-  var myIndex = objectStore.index('lName');
+  const myIndex = objectStore.index("lName");
 
-  myIndex.openKeyCursor().onsuccess = function(event) {
-    var cursor = event.target.result;
-    if(cursor) {
-      var tableRow = document.createElement('tr');
-      tableRow.innerHTML =   '<td>' + cursor.key + '</td>'
-                           + '<td>' + cursor.primaryKey + '</td>';
+  myIndex.openKeyCursor().onsuccess = (event) => {
+    const cursor = event.target.result;
+    if (cursor) {
+      const tableRow = document.createElement("tr");
+      tableRow.innerHTML =
+        `<td>${cursor.key}</td>` + `<td>${cursor.primaryKey}</td>`;
       tableEntry.appendChild(tableRow);
 
       cursor.continue();
     } else {
-      console.log('All last names displayed.');
+      console.log("All last names displayed.");
     }
   };
-};
+}
 ```
 
 ## Specifications
@@ -118,5 +116,4 @@ function displayDataByIndex() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

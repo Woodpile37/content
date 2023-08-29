@@ -1,20 +1,11 @@
 ---
-title: AudioTrack.kind
+title: "AudioTrack: kind property"
+short-title: kind
 slug: Web/API/AudioTrack/kind
-tags:
-  - API
-  - Audio
-  - Audio Track
-  - AudioTrack
-  - HTML DOM
-  - Media
-  - Property
-  - Read-only
-  - Reference
-  - id
-  - track
+page-type: web-api-instance-property
 browser-compat: api.AudioTrack.kind
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`kind`** property contains a

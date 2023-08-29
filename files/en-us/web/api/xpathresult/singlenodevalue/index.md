@@ -1,15 +1,11 @@
 ---
-title: XPathResult.singleNodeValue
+title: "XPathResult: singleNodeValue property"
+short-title: singleNodeValue
 slug: Web/API/XPathResult/singleNodeValue
-tags:
-  - API
-  - DOM XPath API
-  - Property
-  - Reference
-  - XPath
-  - XPathResult
+page-type: web-api-instance-property
 browser-compat: api.XPathResult.singleNodeValue
 ---
+
 {{APIRef("DOM XPath")}}
 
 The read-only **`singleNodeValue`** property of the
@@ -39,20 +35,29 @@ The following example shows the use of the `singleNodeValue` property.
 
 ```html
 <div>XPath example</div>
-<div>Tag name of the element having the text content 'XPath example': <output></output></div>
+<div>
+  Tag name of the element having the text content 'XPath example':
+  <output></output>
+</div>
 ```
 
 ### JavaScript
 
 ```js
-var xpath = "//*[text()='XPath example']";
-var result = document.evaluate(xpath, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null);
+const xpath = "//*[text()='XPath example']";
+const result = document.evaluate(
+  xpath,
+  document,
+  null,
+  XPathResult.FIRST_ORDERED_NODE_TYPE,
+  null,
+);
 document.querySelector("output").textContent = result.singleNodeValue.localName;
 ```
 
 ### Result
 
-{{EmbedLiveSample('Example', 400, 70)}}
+{{EmbedLiveSample('Examples', 400, 70)}}
 
 ## Specifications
 

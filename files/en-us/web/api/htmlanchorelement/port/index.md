@@ -1,13 +1,11 @@
 ---
-title: HTMLAnchorElement.port
+title: "HTMLAnchorElement: port property"
+short-title: port
 slug: Web/API/HTMLAnchorElement/port
-tags:
-  - API
-  - HTMLAnchorElement
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.HTMLAnchorElement.port
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAnchorElement.port`** property is a

@@ -1,17 +1,12 @@
 ---
-title: ElementInternals.ariaSelected
+title: "ElementInternals: ariaSelected property"
+short-title: ariaSelected
 slug: Web/API/ElementInternals/ariaSelected
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaSelected
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
+page-type: web-api-instance-property
 browser-compat: api.ElementInternals.ariaSelected
 ---
-{{DefaultAPISidebar("DOM")}}
+
+{{APIRef("DOM")}}
 
 The **`ariaSelected`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-selected`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-selected) attribute, which indicates the current "selected" state of elements that have a selected state.
 
@@ -46,4 +41,4 @@ this.internals_.ariaSelected = "true";
 
 ## See also
 
-- [ARIA: tab role](/en-US/docs/Web/Accessibility/ARIA/Roles/Tab_Role)
+- [ARIA: tab role](/en-US/docs/Web/Accessibility/ARIA/Roles/tab_role)

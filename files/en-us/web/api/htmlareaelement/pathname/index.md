@@ -1,13 +1,11 @@
 ---
-title: HTMLAreaElement.pathname
+title: "HTMLAreaElement: pathname property"
+short-title: pathname
 slug: Web/API/HTMLAreaElement/pathname
-tags:
-  - API
-  - HTMLAreaElement
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.HTMLAreaElement.pathname
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAreaElement.pathname`** property is a

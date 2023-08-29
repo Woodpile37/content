@@ -1,15 +1,13 @@
 ---
-title: DOMException.code
+title: "DOMException: code property"
+short-title: code
 slug: Web/API/DOMException/code
-tags:
-  - API
-  - Code
-  - DOMException
-  - Property
-  - Reference
+page-type: web-api-instance-property
+status:
   - deprecated
 browser-compat: api.DOMException.code
 ---
+
 {{ APIRef("DOM") }} {{deprecated_header}}
 
 The **`code`** read-only property of the {{domxref("DOMException")}} interface returns one of the legacy [error code constants](/en-US/docs/Web/API/DOMException#error_names), or `0` if none match.

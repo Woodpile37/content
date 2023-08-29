@@ -1,33 +1,22 @@
 ---
 title: RTCRtpStreamStats
 slug: Web/API/RTCRtpStreamStats
-tags:
-  - API
-  - Dictionary
-  - Interface
-  - RTCRtpStreamStats
-  - RTP
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - rtc
+page-type: web-api-interface
 browser-compat: api.RTCRtpStreamStats
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRtpStreamStats")}} dictionary is returned by the {{domxref("RTCPeerConnection.getStats()")}}, {{domxref("RTCRtpSender.getStats()")}}, and {{domxref("RTCRtpReceiver.getStats()")}} methods to provide detailed statistics about WebRTC connectivity.
 
 While the dictionary has a base set of properties that are present in each of these cases, there are also additional properties added depending on which interface the method is called on.
 
-`RTCRtpStreamStats` is the base class for all RTP-related statistics reports. It's based on [RTCStats](#rtcstats) and adds the following additional fields.
+`RTCRtpStreamStats` is the base class for all RTP-related statistics reports.
 
-> **Note:** This interface was called `RTCRTPStreamStats` until a specification update in the spring of 2017. Check the [Browser compatibility](#browser_compatibility) table to know if and when the name change was implemented in specific browsers.
+> **Note:** This interface was called `RTCRTPStreamStats` until a specification update in the spring of 2017.
+> Check the [Browser compatibility](#browser_compatibility) table to know if and when the name change was implemented in specific browsers.
 
-## Properties
-
-_The `RTCRtpStreamStats` dictionary is based on {{domxref("RTCStats")}}, and inherits its properties. In addition, some or all of the following properties are available._
+## Instance properties
 
 ### Standard fields included for all media types
 
@@ -42,10 +31,18 @@ _The `RTCRtpStreamStats` dictionary is based on {{domxref("RTCStats")}}, and inh
 - {{domxref("RTCRtpStreamStats.transportId", "transportId")}}
   - : A string uniquely identifying the object which was inspected to produce the {{domxref("RTCTransportStats")}} object associated with this RTP stream.
 
-#### Obsolete fields
+### Common instance properties
 
-- {{domxref("RTCRtpStreamStats.kind", "mediaType")}}
-  - : Renamed to {{domxref("RTCRtpStreamStats.kind", "kind")}} in the specification in February 2018. See {{SectionOnPage("/en-US/docs/Web/API/RTCRtpStreamStats/kind", "Browser compatibility", "code")}} to determine when browsers made the transition.
+The following properties are common to all WebRTC statistics objects.
+
+<!-- RTCStats -->
+
+- `id
+  - : A string that uniquely identifies the object that is being monitored to produce this set of statistics.
+- `timestamp`
+  - : A {{domxref("DOMHighResTimeStamp")}} object indicating the time at which the sample was taken for this statistics object.
+- `type`
+  - : A string that indicates the type of statistics that the object contains.
 
 ### Local-only measurements
 
@@ -59,8 +56,6 @@ These properties are computed locally, and are only available to the device rece
   - : The number of times the receiving end of the stream sent a Picture Loss Indication (PLI) packet to the sender, indicating that it has lost some amount of encoded video data for one or more frames. Only the receiver has this value, and it's only valid for video tracks.
 - {{domxref("RTCRtpStreamStats.qpSum", "qpSum")}}
   - : The sum of the Quantization Parameter (QP) values associated with every frame received to date on the video track described by this `RTCRtpStreamStats` object. In general, the higher this number is, the more heavily compressed the video track was. Combined with {{domxref("RTCReceivedRtpStreamStats.framesDecoded")}} or {{domxref("RTCSentRtpStreamStats.framesEncoded")}}, you can approximate the average QP over those frames, keeping in mind that codecs often vary the quantizer values even within frames. Also keep in mind that the values of QP can vary from codec to codec, so this value is only potentially useful when compared against the same codec.
-- {{domxref("RTCRtpStreamStats.sliCount", "sliCount")}}
-  - : The number of times the receiver notified the sender that one or more consecutive (in scan order) encoded video macroblocks have been lost or corrupted; this notification is sent by the receiver to the sender using a Slice Loss Indication (SLI) packet. This is a fairly technical part of how codecs work and while the higher this value is, the more errors occurred in the stream, generally most of the time this value is only interesting to very intensively hardcore media developers.
 
 ## Specifications
 

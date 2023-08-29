@@ -1,22 +1,11 @@
 ---
-title: Crypto.getRandomValues()
+title: "Crypto: getRandomValues() method"
+short-title: getRandomValues()
 slug: Web/API/Crypto/getRandomValues
-tags:
-  - API
-  - Crypto
-  - Cryptography
-  - Encryption
-  - Integers
-  - Method
-  - Numbers
-  - Pseudorandom
-  - Pseudorandom Numbers
-  - Random Numbers
-  - Reference
-  - Web Crypto API
-  - getRandomValues
+page-type: web-api-instance-method
 browser-compat: api.Crypto.getRandomValues
 ---
+
 {{APIRef("Web Crypto API")}}
 
 The **`Crypto.getRandomValues()`** method lets you get cryptographically strong random values.
@@ -29,7 +18,7 @@ The pseudo-random number generator algorithm (PRNG) may vary across {{Glossary("
 
 ## Syntax
 
-```js
+```js-nolint
 getRandomValues(typedArray)
 ```
 

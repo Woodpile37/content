@@ -1,14 +1,11 @@
 ---
-title: Selection.getRangeAt()
+title: "Selection: getRangeAt() method"
+short-title: getRangeAt()
 slug: Web/API/Selection/getRangeAt
-tags:
-  - API
-  - HTML Editing
-  - Method
-  - Reference
-  - Selection
+page-type: web-api-instance-method
 browser-compat: api.Selection.getRangeAt
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Selection.getRangeAt()`** method returns a range object
@@ -16,7 +13,7 @@ representing one of the ranges currently selected.
 
 ## Syntax
 
-```js
+```js-nolint
 getRangeAt(index)
 ```
 
@@ -37,8 +34,8 @@ let ranges = [];
 
 sel = window.getSelection();
 
-for(let i = 0; i < sel.rangeCount; i++) {
- ranges[i] = sel.getRangeAt(i);
+for (let i = 0; i < sel.rangeCount; i++) {
+  ranges[i] = sel.getRangeAt(i);
 }
 /* Each item in the ranges array is now
  * a range object representing one of the

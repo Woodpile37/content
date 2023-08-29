@@ -1,14 +1,11 @@
 ---
-title: WebGL2RenderingContext.bindBufferBase()
+title: "WebGL2RenderingContext: bindBufferBase() method"
+short-title: bindBufferBase()
 slug: Web/API/WebGL2RenderingContext/bindBufferBase
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
+page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.bindBufferBase
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.bindBufferBase()`** method of the
@@ -18,7 +15,7 @@ The **`WebGL2RenderingContext.bindBufferBase()`** method of the
 
 ## Syntax
 
-```js
+```js-nolint
 bindBufferBase(target, index, buffer)
 ```
 

@@ -1,13 +1,11 @@
 ---
-title: RTCDataChannelEvent()
+title: "RTCDataChannelEvent: RTCDataChannelEvent() constructor"
+short-title: RTCDataChannelEvent()
 slug: Web/API/RTCDataChannelEvent/RTCDataChannelEvent
-tags:
-  - Constructor
-  - RTCDataChannelEvent
-  - Reference
-  - WebRTC
+page-type: web-api-constructor
 browser-compat: api.RTCDataChannelEvent.RTCDataChannelEvent
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`RTCDataChannelEvent()`** constructor
@@ -18,8 +16,8 @@ creates a new {{domxref("RTCDataChannelEvent")}} object.
 
 ## Syntax
 
-```js
-new RTCDataChannelEvent(type, options);
+```js-nolint
+new RTCDataChannelEvent(type, options)
 ```
 
 ### Parameters
@@ -42,7 +40,7 @@ In this example, a new {{DOMxRef("RTCPeerConnection.datachannel_event", "datacha
 data channel which already exists.
 
 ```js
-var event = new RTCDataChannelEvent("datachannel", {"channel": dc});
+const event = new RTCDataChannelEvent("datachannel", { channel: dc });
 ```
 
 ## Specifications

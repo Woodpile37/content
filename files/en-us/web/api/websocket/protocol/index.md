@@ -1,14 +1,11 @@
 ---
-title: WebSocket.protocol
+title: "WebSocket: protocol property"
+short-title: protocol
 slug: Web/API/WebSocket/protocol
-tags:
-  - API
-  - Property
-  - Reference
-  - Web API
-  - WebSocket
+page-type: web-api-instance-property
 browser-compat: api.WebSocket.protocol
 ---
+
 {{APIRef("Web Sockets API")}}
 
 The **`WebSocket.protocol`** read-only property returns the
@@ -18,7 +15,7 @@ object, or the empty string if no connection is established.
 
 ## Value
 
-A [`DOMString`](/en-US/docs/Web/API/DOMString).
+A string.
 
 ## Specifications
 

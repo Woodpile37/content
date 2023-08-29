@@ -1,18 +1,11 @@
 ---
-title: RTCRtpContributingSource.audioLevel
+title: "RTCRtpContributingSource: audioLevel property"
+short-title: audioLevel
 slug: Web/API/RTCRtpContributingSource/audioLevel
-tags:
-  - API
-  - Media
-  - MediaStreamTrack
-  - Property
-  - RTCRtpContributingSource
-  - RTP
-  - Reference
-  - WebRTC
-  - audioLevel
+page-type: web-api-instance-property
 browser-compat: api.RTCRtpContributingSource.audioLevel
 ---
+
 {{APIRef("WebRTC API")}}
 
 The read-only **`audioLevel`**
@@ -36,7 +29,7 @@ volume), a value of 0.0 represents silence, and a value of 0.5 represents approx
 dBov.
 
 For both `RTCRtpContributingSource` and
-{{domxref("RTCRtpSynchronizationSource")}}, the audio level is converted to this form
+`RTCRtpSynchronizationSource`, the audio level is converted to this form
 from the values defined in the specifications corresponding to each type of source.
 
 > **Note:** `audioLevel` may be absent from `RTCRtpContributingSource`

@@ -1,17 +1,13 @@
 ---
-title: BluetoothRemoteGATTService.device
+title: "BluetoothRemoteGATTService: device property"
+short-title: device
 slug: Web/API/BluetoothRemoteGATTService/device
-tags:
-  - API
-  - Bluetooth
-  - BluetoothRemoteGATTService
-  - Device
-  - Experimental
-  - Property
-  - Reference
-  - Web Bluetooth API
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.BluetoothRemoteGATTService.device
 ---
+
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothGATTService.device`** read-only property

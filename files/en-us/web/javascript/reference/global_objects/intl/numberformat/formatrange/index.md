@@ -1,26 +1,17 @@
 ---
 title: Intl.NumberFormat.prototype.formatRange()
 slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatRange
-tags:
-  - Internationalization
-  - Intl
-  - JavaScript
-  - Localization
-  - Method
-  - NumberFormat
-  - Prototype
-  - Reference
+page-type: javascript-instance-method
 browser-compat: javascript.builtins.Intl.NumberFormat.formatRange
 ---
+
 {{JSRef}}
 
-The **`Intl.NumberFormat.prototype.formatRange()`** method formats a range of
-numbers according to the locale and formatting options of the
-{{jsxref("Intl.NumberFormat")}} object from which the method is called.
+The **`formatRange()`** method of {{jsxref("Intl.NumberFormat")}} instances formats a range of numbers according to the locale and formatting options of this `Intl.NumberFormat` object.
 
 ## Syntax
 
-```js
+```js-nolint
 formatRange(startRange, endRange)
 ```
 
@@ -28,14 +19,23 @@ formatRange(startRange, endRange)
 
 - `startRange`
   - : A {{jsxref("Number")}} or {{jsxref("BigInt")}}.
-
 - `endRange`
   - : A {{jsxref("Number")}} or {{jsxref("BigInt")}}.
 
+### Return value
+
+A string representing the given range of numbers formatted according to the locale and formatting options of this {{jsxref("Intl.NumberFormat")}} object.
+
+### Exceptions
+
+- {{jsxref("RangeError")}}
+  - : Thrown if `startRange` is less than `endRange`, or either value is `NaN`.
+- {{jsxref("TypeError")}}
+  - : Thrown if either `startRange` or `endRange` is undefined.
+
 ## Description
 
-The `formatRange` getter function formats a range of numbers into a string according to the
-locale and formatting options of this {{jsxref("Intl.NumberFormat")}} object from which it is called.
+The `formatRange` getter function formats a range of numbers into a string according to the locale and formatting options of this {{jsxref("Intl.NumberFormat")}} object from which it is called.
 
 ## Examples
 
@@ -50,8 +50,11 @@ const nf = new Intl.NumberFormat("en-US", {
   maximumFractionDigits: 0,
 });
 
-console.log(nf.formatRange(3, 5)); // → "€3 – €5"
-console.log(nf.formatRange(2.9, 3.1)); // → "~€3"
+console.log(nf.formatRange(3, 5)); // "$3 – $5"
+
+// Note: the "approximately equals" symbol is added if
+// startRange and endRange round to the same values.
+console.log(nf.formatRange(2.9, 3.1)); // "~$3"
 ```
 
 ```js
@@ -61,8 +64,8 @@ const nf = new Intl.NumberFormat("es-ES", {
   maximumFractionDigits: 0,
 });
 
-console.log(nf.formatRange(3, 5); // → "3-5 €"
-console.log(nf.formatRange(2.9, 3.1); // → "~3 €"
+console.log(nf.formatRange(3, 5)); // "3-5 €"
+console.log(nf.formatRange(2.9, 3.1)); // "~3 €"
 ```
 
 ## Specifications

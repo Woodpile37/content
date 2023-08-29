@@ -1,23 +1,11 @@
 ---
-title: RTCRtpStreamStats.kind
+title: "RTCRtpStreamStats: kind property"
+short-title: kind
 slug: Web/API/RTCRtpStreamStats/kind
-tags:
-  - API
-  - Audio
-  - Media
-  - Property
-  - RTCRtpStreamStats
-  - RTP
-  - Reference
-  - Statistics
-  - Stats
-  - Video
-  - WebRTC
-  - WebRTC API
-  - kind
-  - rtc
+page-type: web-api-instance-property
 browser-compat: api.RTCRtpStreamStats.kind
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`kind`** property of the

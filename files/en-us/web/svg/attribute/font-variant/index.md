@@ -1,11 +1,10 @@
 ---
 title: font-variant
 slug: Web/SVG/Attribute/font-variant
-tags:
-  - SVG
-  - SVG Attribute
+page-type: svg-attribute
 browser-compat: svg.attributes.presentation.font-variant
 ---
+
 {{SVGRef}}
 
 The **`font-variant`** attribute indicates whether the text is to be rendered using variations of the font's {{Glossary("glyph", "glyphs")}}.
@@ -14,7 +13,6 @@ The **`font-variant`** attribute indicates whether the text is to be rendered us
 
 You can use this attribute with the following SVG elements:
 
-- {{SVGElement("altGlyph")}}
 - {{SVGElement("text")}}
 - {{SVGElement("textPath")}}
 - {{SVGElement("tref")}}
@@ -23,7 +21,9 @@ You can use this attribute with the following SVG elements:
 ## Example
 
 ```css hidden
-html, body, svg {
+html,
+body,
+svg {
   height: 100%;
 }
 ```
@@ -80,7 +80,7 @@ html, body, svg {
   </tbody>
 </table>
 
-For a description of the values, please refer to the [CSS `font-variant`](/en-US/docs/Web/CSS/font-variant#Values) property.
+For a description of the values, please refer to the [CSS `font-variant`](/en-US/docs/Web/CSS/font-variant#values) property.
 
 ## Specifications
 

@@ -1,13 +1,11 @@
 ---
-title: location.origin
+title: "location: origin property"
+short-title: origin
 slug: Web/API/Location/origin
-tags:
-  - API
-  - Location
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.Location.origin
 ---
+
 {{APIRef("Location")}}
 
 The **`origin`** read-only property of
@@ -27,17 +25,15 @@ That is:
 
 {{AvailableInWorkers}}
 
-## Syntax
+## Value
 
-```js
-string = object.origin;
-```
+A string.
 
 ## Examples
 
 ```js
 // On this page, returns the origin
-var result = window.location.origin; // Returns:'https://developer.mozilla.org'
+const result = window.location.origin; // Returns:'https://developer.mozilla.org'
 ```
 
 ## Specifications

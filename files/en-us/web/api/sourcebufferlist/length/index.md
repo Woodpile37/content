@@ -1,19 +1,12 @@
 ---
-title: SourceBufferList.length
+title: "SourceBufferList: length property"
+short-title: length
 slug: Web/API/SourceBufferList/length
-tags:
-  - API
-  - Audio
-  - MSE
-  - Media Source Extensions
-  - Property
-  - Reference
-  - SourceBufferList
-  - Video
-  - length
+page-type: web-api-instance-property
 browser-compat: api.SourceBufferList.length
 ---
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+
+{{APIRef("Media Source Extensions")}}
 
 The **`length`** read-only property of the
 {{domxref("SourceBufferList")}} interface returns the number of

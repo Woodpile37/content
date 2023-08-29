@@ -1,21 +1,20 @@
 ---
-title: AudioEncoder.configure()
+title: "AudioEncoder: configure() method"
+short-title: configure()
 slug: Web/API/AudioEncoder/configure
-tags:
-  - API
-  - Method
-  - Reference
-  - configure
-  - AudioEncoder
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.AudioEncoder.configure
 ---
-{{securecontext_header}}{{DefaultAPISidebar("WebCodecs API")}}
+
+{{securecontext_header}}{{APIRef("WebCodecs API")}}{{SeeCompatTable}}
 
 The **`configure()`** method of the {{domxref("AudioEncoder")}} interface enqueues a control message to configure the audio encoder for encoding chunks.
 
 ## Syntax
 
-```js
+```js-nolint
 configure(config)
 ```
 
@@ -24,12 +23,12 @@ configure(config)
 - `config`
   - : A dictionary object containing the following members:
     - `codec`
-      - : A {{domxref("DOMString","string")}} containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry).
-    - `sampleRate`{{Optional_Inline}}
+      - : A string containing a [valid codec string](https://www.w3.org/TR/webcodecs-codec-registry/#audio-codec-registry). See ["codecs" parameter](/en-US/docs/Web/Media/Formats/codecs_parameter#codec_options_by_container) for details on codec string construction.
+    - `sampleRate`
       - : An integer representing the number of frame samples per second.
-    - `numberOfChannels`{{Optional_Inline}}
+    - `numberOfChannels`
       - : An integer representing the number of audio channels.
-    - `bitrate`{{Optional_Inline}}
+    - `bitrate` {{optional_inline}}
       - : An integer representing the bitrate.
 
 ### Return value
@@ -54,12 +53,14 @@ const init = {
   output: handleOutput,
   error: (e) => {
     console.log(e.message);
-  }
+  },
 };
 
 let config = {
-  codec: 'vp8',
-  bitrate: 2_000_000, // 2 Mbps
+  codec: "opus",
+  sampleRate: 44100,
+  numberOfChannels: 2,
+  bitrate: 128_000, // 128 kbps
 };
 
 let encoder = new AudioEncoder(init);

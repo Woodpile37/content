@@ -1,13 +1,11 @@
 ---
-title: ProgressEvent.loaded
+title: "ProgressEvent: loaded property"
+short-title: loaded
 slug: Web/API/ProgressEvent/loaded
-tags:
-  - API
-  - Progress Event
-  - ProgressEvent
-  - Property
+page-type: web-api-instance-property
 browser-compat: api.ProgressEvent.loaded
 ---
+
 {{APIRef("XMLHttpRequest")}}
 
 The **`ProgressEvent.loaded`** read-only property is an integer

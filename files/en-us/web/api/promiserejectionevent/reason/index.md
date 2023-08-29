@@ -1,18 +1,11 @@
 ---
-title: PromiseRejectionEvent.reason
+title: "PromiseRejectionEvent: reason property"
+short-title: reason
 slug: Web/API/PromiseRejectionEvent/reason
-tags:
-  - API
-  - HTML DOM
-  - JavaScript
-  - PromiseRejectionEvent
-  - Promises
-  - Property
-  - Reference
-  - events
-  - reason
+page-type: web-api-instance-property
 browser-compat: api.PromiseRejectionEvent.reason
 ---
+
 {{APIRef("HTML DOM")}}
 
 The {{domxref("PromiseRejectionEvent")}} **`reason`** read-only
@@ -29,9 +22,9 @@ and whatever else you might wish to include.
 ## Examples
 
 ```js
-window.onunhandledrejection = function(e) {
+window.onunhandledrejection = (e) => {
   console.log(e.reason);
-}
+};
 ```
 
 ## Specifications

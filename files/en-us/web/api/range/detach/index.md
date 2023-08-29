@@ -1,13 +1,11 @@
 ---
-title: Range.detach()
+title: "Range: detach() method"
+short-title: detach()
 slug: Web/API/Range/detach
-tags:
-  - API
-  - DOM
-  - Method
-  - Range
+page-type: web-api-instance-method
 browser-compat: api.Range.detach
 ---
+
 {{ApiRef("DOM")}}
 
 The **`Range.detach()`** method does nothing. It used to
@@ -16,7 +14,7 @@ resources. The method has been kept for compatibility.
 
 ## Syntax
 
-```js
+```js-nolint
 detach()
 ```
 
@@ -31,7 +29,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var range = document.createRange();
+const range = document.createRange();
 
 range.selectNode(document.getElementsByTagName("div").item(0));
 range.detach();

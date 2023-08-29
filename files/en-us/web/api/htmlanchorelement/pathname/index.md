@@ -1,13 +1,11 @@
 ---
-title: HTMLAnchorElement.pathname
+title: "HTMLAnchorElement: pathname property"
+short-title: pathname
 slug: Web/API/HTMLAnchorElement/pathname
-tags:
-  - API
-  - HTMLAnchorElement
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.HTMLAnchorElement.pathname
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAnchorElement.pathname`** property is a

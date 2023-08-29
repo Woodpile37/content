@@ -1,24 +1,13 @@
 ---
-title: CSSStyleSheet.addRule()
+title: "CSSStyleSheet: addRule() method"
+short-title: addRule()
 slug: Web/API/CSSStyleSheet/addRule
-tags:
-  - API
-  - CSS
-  - CSSOM
-  - CSSOM API
-  - CSSStyleSheet
-  - Layout
-  - Method
-  - Object Model
-  - Reference
-  - Style
-  - StyleSheet
-  - addRule
-  - legacy
-  - rules
-  - Deprecated
+page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.CSSStyleSheet.addRule
 ---
+
 {{APIRef("CSSOM")}}{{deprecated_header}}
 
 The obsolete {{domxref("CSSStyleSheet")}} interface's
@@ -28,7 +17,7 @@ stylesheet. You should avoid using this method, and should instead use the more 
 
 ## Syntax
 
-```js
+```js-nolint
 addRule(selector, styleBlock, index)
 ```
 
@@ -83,5 +72,4 @@ cssStyleSheet.insertRule(`${selector} {${styles}}`, 0);
 ## See also
 
 - [CSS Object Model](/en-US/docs/Web/API/CSS_Object_Model)
-- [Using
-  dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)
+- [Using dynamic styling information](/en-US/docs/Web/API/CSS_Object_Model/Using_dynamic_styling_information)

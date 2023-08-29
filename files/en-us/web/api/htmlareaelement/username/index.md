@@ -1,13 +1,11 @@
 ---
-title: HTMLAreaElement.username
+title: "HTMLAreaElement: username property"
+short-title: username
 slug: Web/API/HTMLAreaElement/username
-tags:
-  - API
-  - HTMLAreaElement
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.HTMLAreaElement.username
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAreaElement.username`** property is a

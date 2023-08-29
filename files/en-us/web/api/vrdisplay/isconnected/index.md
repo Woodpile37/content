@@ -1,19 +1,15 @@
 ---
-title: VRDisplay.isConnected
+title: "VRDisplay: isConnected property"
+short-title: isConnected
 slug: Web/API/VRDisplay/isConnected
-tags:
-  - API
-  - Deprecated
-  - Property
-  - Reference
-  - VR
-  - VRDisplay
-  - Virtual Reality
-  - WebVR
-  - isConnected
+page-type: web-api-instance-property
+status:
+  - deprecated
+  - non-standard
 browser-compat: api.VRDisplay.isConnected
 ---
-{{APIRef("WebVR API")}}{{Deprecated_Header}}
+
+{{APIRef("WebVR API")}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 The **`isConnected`** read-only property of the {{domxref("VRDisplay")}} interface returns a boolean value indicating whether the `VRDisplay` is connected to the computer.
 
@@ -26,20 +22,20 @@ A boolean value; `true` means the display is connected; `false` means it isn't.
 ## Examples
 
 ```js
-navigator.getVRDisplays().then(function(displays) {
+navigator.getVRDisplays().then((displays) => {
   // If a display is available, use it to present the scene
-  if(displays.length > 0) {
+  if (displays.length > 0) {
     vrDisplay = displays[0];
 
     // Starting the presentation when the button is clicked: It can only be called in response to a user gesture
-    btn.addEventListener('click', function() {
+    btn.addEventListener("click", () => {
       // Only request presentation if the display is still connected.
-      if(vrDisplay.isConnected) {
-        vrDisplay.requestPresent([{ source: canvas }]).then(function() {
+      if (vrDisplay.isConnected) {
+        vrDisplay.requestPresent([{ source: canvas }]).then(() => {
           // start rendering the app, etc.
         });
       } else {
-        console.log('Connection to display lost');
+        console.log("Connection to display lost");
       }
     });
   }

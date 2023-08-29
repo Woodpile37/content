@@ -1,16 +1,11 @@
 ---
-title: SecurityPolicyViolationEvent.blockedURI
+title: "SecurityPolicyViolationEvent: blockedURI property"
+short-title: blockedURI
 slug: Web/API/SecurityPolicyViolationEvent/blockedURI
-tags:
-  - API
-  - CSP
-  - HTTP
-  - Property
-  - Reference
-  - Security
-  - SecurityPolicyViolationEvent
+page-type: web-api-instance-property
 browser-compat: api.SecurityPolicyViolationEvent.blockedURI
 ---
+
 {{HTTPSidebar}}
 
 The **`blockedURI`** read-only property of the

@@ -1,15 +1,14 @@
 ---
-title: BackgroundFetchRegistration.uploaded
+title: "BackgroundFetchRegistration: uploaded property"
+short-title: uploaded
 slug: Web/API/BackgroundFetchRegistration/uploaded
-tags:
-  - API
-  - Property
-  - Reference
-  - uploaded
-  - BackgroundFetchRegistration
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.BackgroundFetchRegistration.uploaded
 ---
-{{APIRef("Background Fetch API")}}
+
+{{APIRef("Background Fetch API")}}{{SeeCompatTable}}
 
 The **`uploaded`** read-only property of the {{domxref("BackgroundFetchRegistration")}} interface returns the size in bytes successfully sent, initially `0`.
 

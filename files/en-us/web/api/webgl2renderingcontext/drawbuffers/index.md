@@ -1,14 +1,11 @@
 ---
-title: WebGL2RenderingContext.drawBuffers()
+title: "WebGL2RenderingContext: drawBuffers() method"
+short-title: drawBuffers()
 slug: Web/API/WebGL2RenderingContext/drawBuffers
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
+page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.drawBuffers
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.drawBuffers()`** method of the [WebGL 2 API](/en-US/docs/Web/API/WebGL_API) defines draw buffers to which
@@ -17,7 +14,7 @@ currently bound framebuffer or the drawingbuffer if no framebuffer is bound.
 
 ## Syntax
 
-```js
+```js-nolint
 drawBuffers(buffers)
 ```
 
@@ -28,12 +25,15 @@ drawBuffers(buffers)
   - : An {{jsxref("Array")}} of {{domxref("WebGL_API/Types", "GLenum")}} specifying the buffers into which
     fragment colors will be written. Possible values are:
 
-    - `gl.NONE`: Fragment shader output is not written into any color
-      buffer.
-    - `gl.BACK`: Fragment shader output is written into the back color
-      buffer.
-    - `gl.COLOR_ATTACHMENT{0-15}`: Fragment shader output is written in the
-      nth color attachment of the current framebuffer.
+    - `gl.NONE`
+      - : Fragment shader output is not written into any color
+        buffer.
+    - `gl.BACK`
+      - : Fragment shader output is written into the back color
+        buffer.
+    - `gl.COLOR_ATTACHMENT{0-15}`
+      - : Fragment shader output is written in the
+        nth color attachment of the current framebuffer.
 
 ### Return value
 

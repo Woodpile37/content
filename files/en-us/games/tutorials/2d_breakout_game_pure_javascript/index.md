@@ -1,19 +1,14 @@
 ---
 title: 2D breakout game using pure JavaScript
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript
-tags:
-  - 2D
-  - Beginner
-  - Canvas
-  - Games
-  - JavaScript
-  - Tutorial
+page-type: guide
 ---
+
 {{GamesSidebar}}
 
 {{Next("Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it")}}
 
-In this step-by-step tutorial we create a simple **MDN Breakout** game written entirely in pure JavaScript and rendered on HTML5 {{htmlelement("canvas")}}.
+In this step-by-step tutorial we create a simple **MDN Breakout** game written entirely in pure JavaScript and rendered on HTML {{htmlelement("canvas")}}.
 
 Every step has editable, live samples available to play with so you can see what the intermediate stages should look like. You will learn the basics of using the {{htmlelement("canvas")}} element to implement fundamental game mechanics like rendering and moving images, collision detection, control mechanisms, and winning and losing states.
 

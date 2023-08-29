@@ -1,17 +1,11 @@
 ---
-title: PaymentMethodChangeEvent
+title: "PaymentMethodChangeEvent: PaymentMethodChangeEvent() constructor"
+short-title: PaymentMethodChangeEvent()
 slug: Web/API/PaymentMethodChangeEvent/PaymentMethodChangeEvent
-tags:
-  - API
-  - Commerce
-  - Interface
-  - Payment Method
-  - Payment Request API
-  - PaymentMethodChangeEvent
-  - Reference
-  - payment
+page-type: web-api-constructor
 browser-compat: api.PaymentMethodChangeEvent.PaymentMethodChangeEvent
 ---
+
 {{securecontext_header}}{{APIRef("Payment Request API")}}
 
 The **`PaymentMethodChangeEvent()`**
@@ -20,7 +14,7 @@ details about a {{domxref("PaymentRequest.paymentmethodchange_event", "paymentme
 
 ## Syntax
 
-```js
+```js-nolint
 new PaymentMethodChangeEvent(type)
 new PaymentMethodChangeEvent(type, options)
 ```

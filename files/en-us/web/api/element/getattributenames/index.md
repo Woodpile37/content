@@ -1,15 +1,11 @@
 ---
-title: Element.getAttributeNames()
+title: "Element: getAttributeNames() method"
+short-title: getAttributeNames()
 slug: Web/API/Element/getAttributeNames
-tags:
-  - API
-  - Attribute
-  - DOM
-  - Element
-  - Method
-  - getAttributeNames
+page-type: web-api-instance-method
 browser-compat: api.Element.getAttributeNames
 ---
+
 {{APIRef("DOM")}}
 
 The **`getAttributeNames()`** method of the
@@ -25,7 +21,7 @@ The names returned by **`getAttributeNames()`** are _qualified_ attribute names,
 
 ## Syntax
 
-```js
+```js-nolint
 getAttributeNames()
 ```
 
@@ -52,18 +48,22 @@ It's important to understand that:
 The example below includes such a "namespaced but without a namespace prefix" case.
 
 ```js
-const element = document.createElement('a')
+const element = document.createElement("a");
 
 // set "href" attribute with no namespace and no namespace prefix
-element.setAttribute('href', 'https://example.com')
+element.setAttribute("href", "https://example.com");
 // set "href" attribute with namespace and also "xlink" namespace prefix
-element.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', 'https://example.com')
+element.setAttributeNS(
+  "http://www.w3.org/1999/xlink",
+  "xlink:href",
+  "https://example.com",
+);
 // set "show" attribute with namespace but no namespace prefix
-element.setAttributeNS('http://www.w3.org/1999/xlink', 'show', 'new')
+element.setAttributeNS("http://www.w3.org/1999/xlink", "show", "new");
 
 // Iterate over element's attributes
-for (let name of element.getAttributeNames()) {
-  let value = element.getAttribute(name);
+for (const name of element.getAttributeNames()) {
+  const value = element.getAttribute(name);
   console.log(name, value);
 }
 
@@ -71,22 +71,6 @@ for (let name of element.getAttributeNames()) {
 // href https://example.com
 // xlink:href https://example.com
 // show new
-```
-
-## Polyfill
-
-```js
-if (Element.prototype.getAttributeNames == undefined) {
-  Element.prototype.getAttributeNames = function () {
-    var attributes = this.attributes;
-    var length = attributes.length;
-    var result = new Array(length);
-    for (var i = 0; i < length; i++) {
-      result[i] = attributes[i].name;
-    }
-    return result;
-  };
-}
 ```
 
 ## Specifications

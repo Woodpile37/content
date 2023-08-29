@@ -1,13 +1,11 @@
 ---
-title: HTMLAreaElement.search
+title: "HTMLAreaElement: search property"
+short-title: search
 slug: Web/API/HTMLAreaElement/search
-tags:
-  - API
-  - HTMLAreaElement
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.HTMLAreaElement.search
 ---
+
 {{ApiRef("HTML DOM")}}
 
 The **`HTMLAreaElement.search`** property is a search
@@ -40,7 +38,7 @@ Alternatively, [`URLSearchParams`](/en-US/docs/Web/API/URLSearchParams/get#examp
 
 ```js
 let params = new URLSearchParams(queryString);
-let q = parseInt(params.get("q"); // returns the number 123
+let q = parseInt(params.get("q")); // returns the number 123
 ```
 
 ## Specifications

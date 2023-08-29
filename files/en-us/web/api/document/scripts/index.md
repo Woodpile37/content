@@ -1,14 +1,11 @@
 ---
-title: Document.scripts
+title: "Document: scripts property"
+short-title: scripts
 slug: Web/API/Document/scripts
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.Document.scripts
 ---
+
 {{APIRef("DOM")}}
 
 The **`scripts`** property of the {{domxref("Document")}}
@@ -29,7 +26,7 @@ This example looks to see if the page has any {{HTMLElement("script")}} elements
 let scripts = document.scripts;
 
 if (scripts.length) {
-  alert('This page has scripts!');
+  alert("This page has scripts!");
 }
 ```
 

@@ -1,17 +1,12 @@
 ---
-title: ElementInternals.ariaValueMax
+title: "ElementInternals: ariaValueMax property"
+short-title: ariaValueMax
 slug: Web/API/ElementInternals/ariaValueMax
-tags:
-  - API
-  - Property
-  - Reference
-  - ariaValueMax
-  - AriaAttributes
-  - AriaMixin
-  - ElementInternals
+page-type: web-api-instance-property
 browser-compat: api.ElementInternals.ariaValueMax
 ---
-{{DefaultAPISidebar("DOM")}}
+
+{{APIRef("DOM")}}
 
 The **`ariaValueMax`** property of the {{domxref("ElementInternals")}} interface reflects the value of the [`aria-valuemax`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) attribute, which defines the maximum allowed value for a range widget.
 

@@ -1,19 +1,11 @@
 ---
-title: RTCRtpReceiver.track
+title: "RTCRtpReceiver: track property"
+short-title: track
 slug: Web/API/RTCRtpReceiver/track
-tags:
-  - API
-  - Audio
-  - Media
-  - Property
-  - RTCRtpReceiver
-  - Reference
-  - Video
-  - WebRTC
-  - WebRTC API
-  - track
+page-type: web-api-instance-property
 browser-compat: api.RTCRtpReceiver.track
 ---
+
 {{APIRef("WebRTC API")}}
 
 The **`track`** read-only property of the

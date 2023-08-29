@@ -1,14 +1,11 @@
 ---
-title: IDBIndex.getAllKeys()
+title: "IDBIndex: getAllKeys() method"
+short-title: getAllKeys()
 slug: Web/API/IDBIndex/getAllKeys
-tags:
-  - API
-  - IDBIndex
-  - IndexedDB
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.IDBIndex.getAllKeys
 ---
+
 {{ APIRef("IndexedDB") }}
 
 The **`getAllKeys()`** method of the {{domxref("IDBIndex")}}
@@ -17,7 +14,7 @@ setting them as the `result` of the request object.
 
 ## Syntax
 
-```js
+```js-nolint
 getAllKeys()
 getAllKeys(query)
 getAllKeys(query, count)
@@ -25,10 +22,10 @@ getAllKeys(query, count)
 
 ### Parameters
 
-- *query* {{optional_inline}}
+- `query` {{optional_inline}}
   - : A key or an {{domxref("IDBKeyRange")}} identifying the keys to retrieve. If this
     value is null or missing, the browser will use an unbound key range.
-- _count_ {{optional_inline}}
+- `count` {{optional_inline}}
   - : The number records to return. If this value exceeds the number of records in the
     query, the browser will only retrieve the first item. If it is lower than
     `0` or greater than `2^32 - 1` a {{jsxref("TypeError")}}
@@ -36,8 +33,9 @@ getAllKeys(query, count)
 
 ### Return value
 
-An {{domxref("IDBRequest")}} object on which subsequent events related to this
-operation are fired.
+An {{domxref("IDBRequest")}} object on which subsequent events related to this operation are fired.
+
+If the operation is successful, the value of the request's {{domxref("IDBRequest.result", "result")}} property is an {{jsxref("Array")}} of the keys for all records matching the given query, up to the value of `count`, if `count` was supplied.
 
 ### Exceptions
 
@@ -54,11 +52,11 @@ not between `0` and `2^32 - 1` included.
 ## Examples
 
 ```js
-var myIndex = objectStore.index('index');
-var getAllKeysRequest = myIndex.getAllKeys();
-getAllKeysRequest.onsuccess = function() {
+const myIndex = objectStore.index("index");
+const getAllKeysRequest = myIndex.getAllKeys();
+getAllKeysRequest.onsuccess = () => {
   console.log(getAllKeysRequest.result);
-}
+};
 ```
 
 ## Specifications
@@ -77,6 +75,4 @@ getAllKeysRequest.onsuccess = function() {
 - Setting a range of keys: {{domxref("IDBKeyRange")}}
 - Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
 - Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do
-  Notifications](https://github.com/mdn/to-do-notifications/tree/gh-pages) ([view example
-  live](https://mdn.github.io/to-do-notifications/).)
+- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([View the example live](https://mdn.github.io/dom-examples/to-do-notifications/)).

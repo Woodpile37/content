@@ -1,15 +1,11 @@
 ---
-title: Document.images
+title: "Document: images property"
+short-title: images
 slug: Web/API/Document/images
-tags:
-  - API
-  - Document
-  - HTML DOM
-  - Images
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.Document.images
 ---
+
 {{APIRef("DOM")}}
 
 The **`images`** read-only property of
@@ -39,12 +35,10 @@ This example looks through the list of images and finds one whose name is
 `"banner.gif"`.
 
 ```js
-var ilist = document.images;
-
-for(var i = 0; i < ilist.length; i++) {
-    if(ilist[i].src == 'banner.gif') {
-        // found the banner
-    }
+for (const image of document.images) {
+  if (image.src === "banner.gif") {
+    console.log("Found the banner");
+  }
 }
 ```
 

@@ -1,15 +1,11 @@
 ---
-title: WheelEvent.deltaMode
+title: "WheelEvent: deltaMode property"
+short-title: deltaMode
 slug: Web/API/WheelEvent/deltaMode
-tags:
-  - API
-  - DOM
-  - Property
-  - Read-only
-  - Reference
-  - WheelEvent
+page-type: web-api-instance-property
 browser-compat: api.WheelEvent.deltaMode
 ---
+
 {{APIRef("UI Events")}}
 
 The **`WheelEvent.deltaMode`** read-only property returns an
@@ -29,7 +25,10 @@ An `unsigned long`.
 ## Examples
 
 ```js
-var syntheticEvent = new WheelEvent("syntheticWheel", {"deltaX": 4, "deltaMode": 0});
+const syntheticEvent = new WheelEvent("syntheticWheel", {
+  deltaX: 4,
+  deltaMode: 0,
+});
 
 console.log(syntheticEvent.deltaMode);
 ```
@@ -44,5 +43,5 @@ console.log(syntheticEvent.deltaMode);
 
 ## See also
 
-- {{ event("wheel") }}
+- {{domxref("Element/wheel_event","wheel")}}
 - {{domxref("WheelEvent")}}

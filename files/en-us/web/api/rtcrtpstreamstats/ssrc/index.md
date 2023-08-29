@@ -1,21 +1,11 @@
 ---
-title: RTCRtpStreamStats.ssrc
+title: "RTCRtpStreamStats: ssrc property"
+short-title: ssrc
 slug: Web/API/RTCRtpStreamStats/ssrc
-tags:
-  - API
-  - Property
-  - RTCRtpStreamStats
-  - RTP
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - rtc
-  - source
-  - ssrc
+page-type: web-api-instance-property
 browser-compat: api.RTCRtpStreamStats.ssrc
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCRtpStreamStats")}} dictionary's

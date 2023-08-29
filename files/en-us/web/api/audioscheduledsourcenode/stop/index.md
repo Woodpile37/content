@@ -1,18 +1,11 @@
 ---
-title: AudioScheduledSourceNode.stop()
+title: "AudioScheduledSourceNode: stop() method"
+short-title: stop()
 slug: Web/API/AudioScheduledSourceNode/stop
-tags:
-  - API
-  - Audio
-  - AudioScheduledSourceNode
-  - Media
-  - Method
-  - Reference
-  - Web Audio API
-  - sound
-  - stop
+page-type: web-api-instance-method
 browser-compat: api.AudioScheduledSourceNode.stop
 ---
+
 {{ APIRef("Web Audio API") }}
 
 The `stop()` method on {{domxref("AudioScheduledSourceNode")}} schedules a
@@ -28,7 +21,7 @@ stopped, this method has no effect.
 
 ## Syntax
 
-```js
+```js-nolint
 stop()
 stop(when)
 ```

@@ -1,17 +1,13 @@
 ---
-title: SyncEvent.tag
+title: "SyncEvent: tag property"
+short-title: tag
 slug: Web/API/SyncEvent/tag
-tags:
-  - API
-  - Background Sync
-  - Experimental
-  - Property
-  - Reference
-  - ServiceWorker
-  - SyncEvent
-  - tag
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.SyncEvent.tag
 ---
+
 {{SeeCompatTable}}{{APIRef("")}}
 
 The **`SyncEvent.tag`** read-only property of the

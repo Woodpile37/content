@@ -1,15 +1,11 @@
 ---
-title: HTMLElement.lang
+title: "HTMLElement: lang property"
+short-title: lang
 slug: Web/API/HTMLElement/lang
-tags:
-  - API
-  - HTML DOM
-  - HTMLElement
-  - NeedsUpdate
-  - Property
-  - Reference
+page-type: web-api-instance-property
 browser-compat: api.HTMLElement.lang
 ---
+
 {{ APIRef("HTML DOM") }}
 
 The **`HTMLElement.lang`** property gets or sets the base

@@ -1,20 +1,11 @@
 ---
-title: RTCIceCandidatePairStats.nominated
+title: "RTCIceCandidatePairStats: nominated property"
+short-title: nominated
 slug: Web/API/RTCIceCandidatePairStats/nominated
-tags:
-  - API
-  - Flag
-  - ICE
-  - Negotiation
-  - Networking
-  - Property
-  - RTCIceCandidatePairStats
-  - Reference
-  - WebRTC
-  - WebRTC API
-  - nominated
+page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidatePairStats.nominated
 ---
+
 {{APIRef("WebRTC")}}
 
 The {{domxref("RTCIceCandidatePairStats")}} property

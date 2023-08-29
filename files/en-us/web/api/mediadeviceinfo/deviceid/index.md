@@ -1,16 +1,12 @@
 ---
-title: MediaDeviceInfo.deviceId
+title: "MediaDeviceInfo: deviceId property"
+short-title: deviceId
 slug: Web/API/MediaDeviceInfo/deviceId
-tags:
-  - API
-  - Experimental
-  - Media
-  - MediaDevicesInfo
-  - Property
-  - deviceId
+page-type: web-api-instance-property
 browser-compat: api.MediaDeviceInfo.deviceId
 ---
-{{SeeCompatTable}}{{APIRef("Media Capture")}}
+
+{{APIRef("Media Capture")}}
 
 The **`deviceId`** readonly property
 of the {{domxref("MediaDeviceInfo")}} interface returns a string

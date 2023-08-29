@@ -1,24 +1,17 @@
 ---
 title: AudioTrack
 slug: Web/API/AudioTrack
-tags:
-  - Audio
-  - AudioTrack
-  - HTML
-  - HTML DOM
-  - Interface
-  - Media
-  - Reference
-  - track
+page-type: web-api-interface
 browser-compat: api.AudioTrack
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`AudioTrack`** interface represents a single audio track from one of the HTML media elements, {{HTMLElement("audio")}} or {{HTMLElement("video")}}.
 
 The most common use for accessing an `AudioTrack` object is to toggle its {{domxref("AudioTrack.enabled", "enabled")}} property in order to mute and unmute the track.
 
-## Properties
+## Instance properties
 
 - {{domxref("AudioTrack.enabled", "enabled")}}
   - : A Boolean value which controls whether or not the audio track's sound is enabled. Setting this value to `false` mutes the track's audio.
@@ -38,8 +31,8 @@ The most common use for accessing an `AudioTrack` object is to toggle its {{domx
 To get an `AudioTrack` for a given media element, use the element's {{domxref("HTMLMediaElement.audioTracks", "audioTracks")}} property, which returns an {{domxref("AudioTrackList")}} object from which you can get the individual tracks contained in the media:
 
 ```js
-var el = document.querySelector("video");
-var tracks = el.audioTracks;
+const el = document.querySelector("video");
+const tracks = el.audioTracks;
 ```
 
 You can then access the media's individual tracks using either array syntax or functions such as {{jsxref("Array.forEach", "forEach()")}}.
@@ -47,18 +40,14 @@ You can then access the media's individual tracks using either array syntax or f
 This first example gets the first audio track on the media:
 
 ```js
-var firstTrack = tracks[0];
+const firstTrack = tracks[0];
 ```
 
 The next example scans through all of the media's audio tracks, enabling any that are in the user's preferred language (taken from a variable `userLanguage`) and disabling any others.
 
 ```js
-tracks.forEach(function(track) {
-  if (track.language === userLanguage) {
-    track.enabled = true;
-  } else {
-    track.enabled = false;
-  }
+tracks.forEach((track) => {
+  track.enabled = track.language === userLanguage;
 });
 ```
 
@@ -66,7 +55,7 @@ The {{domxref("AudioTrack.language", "language")}} is in standard ({{RFC(5646)}}
 
 ## Example
 
-See [`AudioTrack.label`](/en-US/docs/Web/API/AudioTrack/label#example) for a simple example that shows how to get a array of track kinds and labels for a specified media element, filtered by kind.
+See [`AudioTrack.label`](/en-US/docs/Web/API/AudioTrack/label#examples) for a simple example that shows how to get an array of track kinds and labels for a specified media element, filtered by kind.
 
 ## Specifications
 

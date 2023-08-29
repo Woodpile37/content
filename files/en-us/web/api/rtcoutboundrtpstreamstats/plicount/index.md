@@ -1,22 +1,11 @@
 ---
-title: RTCOutboundRtpStreamStats.pliCount
+title: "RTCOutboundRtpStreamStats: pliCount property"
+short-title: pliCount
 slug: Web/API/RTCOutboundRtpStreamStats/pliCount
-tags:
-  - API
-  - Media
-  - PLI
-  - Property
-  - RTCOutboundRtpStreamStats
-  - Reference
-  - Statistics
-  - Stats
-  - Video
-  - WebRTC
-  - WebRTC API
-  - pliCount
-  - stream
+page-type: web-api-instance-property
 browser-compat: api.RTCOutboundRtpStreamStats.pliCount
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`pliCount`** property of the

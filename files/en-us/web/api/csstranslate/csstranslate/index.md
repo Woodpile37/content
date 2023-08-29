@@ -1,26 +1,20 @@
 ---
-title: CSSTranslate()
+title: "CSSTranslate: CSSTranslate() constructor"
+short-title: CSSTranslate()
 slug: Web/API/CSSTranslate/CSSTranslate
-tags:
-  - API
-  - CSS Typed Object Model API
-  - CSSTransformComponent
-  - CSSTransformValue
-  - CSSTranslate
-  - Constructor
-  - Experimental
-  - Houdini
+page-type: web-api-constructor
 browser-compat: api.CSSTranslate.CSSTranslate
 ---
-{{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
+
+{{APIRef("CSS Typed OM")}}
 
 The **`CSSTranslate()`** constructor creates a
-new {{domxref("CSSTranslate")}} object representing the [translate()](</en-US/docs/Web/CSS/transform-function/translate()>) value of the
+new {{domxref("CSSTranslate")}} object representing the [translate()](/en-US/docs/Web/CSS/transform-function/translate) value of the
 individual {{CSSXref('transform')}} property in CSS.
 
 ## Syntax
 
-```js
+```js-nolint
 new CSSTranslate(x, y)
 new CSSTranslate(x, y, z)
 ```

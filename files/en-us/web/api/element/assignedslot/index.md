@@ -1,16 +1,11 @@
 ---
-title: Element.assignedSlot
+title: "Element: assignedSlot property"
+short-title: assignedSlot
 slug: Web/API/Element/assignedSlot
-tags:
-  - API
-  - Property
-  - Reference
-  - Slottable
-  - Web Components
-  - assignedSlot
-  - shadow DOM
+page-type: web-api-instance-property
 browser-compat: api.Element.assignedSlot
 ---
+
 {{APIRef("Shadow DOM")}}
 
 The **`assignedSlot`** read-only
@@ -27,9 +22,7 @@ assigned to a slot, or if the associated shadow root was attached with its
 
 ## Examples
 
-In our [simple-template
-example](https://github.com/mdn/web-components-examples/tree/main/simple-template) ([see it
-live](https://mdn.github.io/web-components-examples/simple-template/)), we create a trivial custom element example called
+In our [simple-template example](https://github.com/mdn/web-components-examples/tree/main/simple-template) ([see it live](https://mdn.github.io/web-components-examples/simple-template/)), we create a trivial custom element example called
 `<my-paragraph>` in which a shadow root is attached and then populated
 using the contents of a template that contains a slot named `my-text`.
 
@@ -49,7 +42,7 @@ then log a reference to the original `<slot>` element the
 `<span>` was inserted in.
 
 ```js
-let slottedSpan = document.querySelector('my-paragraph span')
+let slottedSpan = document.querySelector("my-paragraph span");
 console.log(slottedSpan.assignedSlot); // logs '<slot name="my-text">'
 ```
 

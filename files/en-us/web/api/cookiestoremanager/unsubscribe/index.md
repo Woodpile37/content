@@ -1,27 +1,26 @@
 ---
-title: CookieStoreManager.unsubscribe()
+title: "CookieStoreManager: unsubscribe() method"
+short-title: unsubscribe()
 slug: Web/API/CookieStoreManager/unsubscribe
-tags:
-  - API
-  - Method
-  - Reference
-  - unsubscribe
-  - CookieStoreManager
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.CookieStoreManager.unsubscribe
 ---
-{{securecontext_header}}{{DefaultAPISidebar("Cookie Store")}}
+
+{{securecontext_header}}{{APIRef("Cookie Store")}}{{SeeCompatTable}}
 
 The **`unsubscribe()`** method of the {{domxref("CookieStoreManager")}} interface stops the {{domxref("ServiceWorkerRegistration")}} from receiving previously subscribed events.
 
 ## Syntax
 
-```js
+```js-nolint
 unsubscribe(subscriptions)
 ```
 
 ### Parameters
 
-- subscriptions
+- `subscriptions`
 
   - : An object containing:
 
@@ -32,7 +31,7 @@ unsubscribe(subscriptions)
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with {{jsxref("Undefined")}} when the subscription completes.
+A {{jsxref("Promise")}} that resolves with {{jsxref("undefined")}} when the subscription completes.
 
 ### Exceptions
 
@@ -44,7 +43,7 @@ A {{jsxref("Promise")}} that resolves with {{jsxref("Undefined")}} when the subs
 In this example the {{domxref("ServiceWorkerRegistration")}} represented by `registration` is unsubscribing from change events on the cookie named `"cookie1"` with a scope of `"/path1"`.
 
 ```js
-const subscriptions = [{ name: 'cookie1', url: `/path1` }];
+const subscriptions = [{ name: "cookie1", url: `/path1` }];
 await registration.cookies.unsubscribe(subscriptions);
 ```
 

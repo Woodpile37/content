@@ -1,14 +1,11 @@
 ---
-title: WebGL2RenderingContext.transformFeedbackVaryings()
+title: "WebGL2RenderingContext: transformFeedbackVaryings() method"
+short-title: transformFeedbackVaryings()
 slug: Web/API/WebGL2RenderingContext/transformFeedbackVaryings
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
+page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.transformFeedbackVaryings
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.transformFeedbackVaryings()`**
@@ -17,15 +14,15 @@ to record in {{domxref("WebGLTransformFeedback")}} buffers.
 
 ## Syntax
 
-```js
+```js-nolint
 transformFeedbackVaryings(program, varyings, bufferMode)
 ```
 
 ### Parameters
 
-- program
+- `program`
   - : A {{domxref("WebGLProgram")}}.
-- varyings
+- `varyings`
   - : An {{jsxref("Array")}} of string specifying the names of the
     varying variables to use.
 - `bufferMode`
@@ -40,12 +37,15 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var transformFeedback = gl.createTransformFeedback();
+const transformFeedback = gl.createTransformFeedback();
 gl.bindTransformFeedback(gl.TRANSFORM_FEEDBACK, transformFeedback);
-var transformFeedbackOutputs = ['gl_Position', 'anotherOutput'];
+const transformFeedbackOutputs = ["gl_Position", "anotherOutput"];
 
-gl.transformFeedbackVaryings(shaderProg, transformFeedbackOutputs,
-                             gl.INTERLEAVED_ATTRIBS);
+gl.transformFeedbackVaryings(
+  shaderProg,
+  transformFeedbackOutputs,
+  gl.INTERLEAVED_ATTRIBS,
+);
 gl.linkProgram(shaderProg);
 ```
 

@@ -1,16 +1,11 @@
 ---
-title: HTMLFormElement.reset()
+title: "HTMLFormElement: reset() method"
+short-title: reset()
 slug: Web/API/HTMLFormElement/reset
-tags:
-  - API
-  - HTML DOM
-  - HTMLFormElement
-  - Method
-  - NeedsMarkupWork
-  - NeedsSpecTable
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.HTMLFormElement.reset
 ---
+
 {{APIRef("HTML DOM")}}
 
 The **`HTMLFormElement.reset()`** method restores a form
@@ -28,7 +23,7 @@ whatever value the {{domxref("Element.setAttribute", "setAttribute()")}} call se
 
 ## Syntax
 
-```js
+```js-nolint
 reset()
 ```
 
@@ -43,7 +38,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-document.getElementById('myform').reset();
+document.getElementById("myform").reset();
 ```
 
 ## Specifications

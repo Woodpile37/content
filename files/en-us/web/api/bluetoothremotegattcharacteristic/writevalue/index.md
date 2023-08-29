@@ -1,17 +1,13 @@
 ---
-title: BluetoothRemoteGATTCharacteristic.writeValue()
+title: "BluetoothRemoteGATTCharacteristic: writeValue() method"
+short-title: writeValue()
 slug: Web/API/BluetoothRemoteGATTCharacteristic/writeValue
-tags:
-  - API
-  - Bluetooth
-  - BluetoothRemoteGATTCharacteristic
-  - Experimental
-  - Method
-  - Reference
-  - Web Bluetooth API
-  - writeValue
+page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.BluetoothRemoteGATTCharacteristic.writeValue
 ---
+
 {{APIRef("Bluetooth API")}}{{Deprecated_header}}
 
 Use {{DOMxRef("BluetoothRemoteGATTCharacteristic.writeValueWithResponse()")}} and {{DOMxRef("BluetoothRemoteGATTCharacteristic.writeValueWithoutResponse()")}} instead.
@@ -20,7 +16,7 @@ The **`BluetoothRemoteGATTCharacteristic.writeValue()`** method sets a {{domxref
 
 ## Syntax
 
-```js
+```js-nolint
 writeValue(value)
 ```
 

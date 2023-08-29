@@ -1,17 +1,11 @@
 ---
-title: SpeechSynthesis.pause()
+title: "SpeechSynthesis: pause() method"
+short-title: pause()
 slug: Web/API/SpeechSynthesis/pause
-tags:
-  - API
-  - Method
-  - Reference
-  - SpeechSynthesis
-  - Web Speech API
-  - pause
-  - speech
-  - synthesis
+page-type: web-api-instance-method
 browser-compat: api.SpeechSynthesis.pause
 ---
+
 {{APIRef("Web Speech API")}}
 
 The **`pause()`** method of the {{domxref("SpeechSynthesis")}}
@@ -19,7 +13,7 @@ interface puts the `SpeechSynthesis` object into a paused state.
 
 ## Syntax
 
-```js
+```js-nolint
 pause()
 ```
 
@@ -34,10 +28,14 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var synth = window.speechSynthesis;
+const synth = window.speechSynthesis;
 
-var utterance1 = new SpeechSynthesisUtterance('How about we say this now? This is quite a long sentence to say.');
-var utterance2 = new SpeechSynthesisUtterance('We should say another sentence too, just to be on the safe side.');
+const utterance1 = new SpeechSynthesisUtterance(
+  "How about we say this now? This is quite a long sentence to say.",
+);
+const utterance2 = new SpeechSynthesisUtterance(
+  "We should say another sentence too, just to be on the safe side.",
+);
 
 synth.speak(utterance1);
 synth.speak(utterance2);

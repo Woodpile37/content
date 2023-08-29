@@ -1,14 +1,11 @@
 ---
-title: WebGL2RenderingContext.createVertexArray()
+title: "WebGL2RenderingContext: createVertexArray() method"
+short-title: createVertexArray()
 slug: Web/API/WebGL2RenderingContext/createVertexArray
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGL2
+page-type: web-api-instance-method
 browser-compat: api.WebGL2RenderingContext.createVertexArray
 ---
+
 {{APIRef("WebGL")}}
 
 The **`WebGL2RenderingContext.createVertexArray()`** method of
@@ -19,7 +16,7 @@ data.
 
 ## Syntax
 
-```js
+```js-nolint
 createVertexArray()
 ```
 
@@ -35,13 +32,15 @@ points to vertex array data.
 ## Examples
 
 ```js
-var vao = gl.createVertexArray();
+const vao = gl.createVertexArray();
 gl.bindVertexArray(vao);
 
-// ...
+// …
+
 // calls to bindBuffer or vertexAttribPointer
 // which will be "recorded" in the VAO
-// ...
+
+// …
 ```
 
 ## Specifications

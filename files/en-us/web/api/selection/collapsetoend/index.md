@@ -1,14 +1,11 @@
 ---
-title: Selection.collapseToEnd()
+title: "Selection: collapseToEnd() method"
+short-title: collapseToEnd()
 slug: Web/API/Selection/collapseToEnd
-tags:
-  - API
-  - HTML Editing
-  - Method
-  - Reference
-  - Selection
+page-type: web-api-instance-method
 browser-compat: api.Selection.collapseToEnd
 ---
+
 {{ ApiRef("DOM") }}
 
 The **`Selection.collapseToEnd()`** method collapses the
@@ -17,7 +14,7 @@ is focused and editable, the caret will blink there.
 
 ## Syntax
 
-```js
+```js-nolint
 collapseToEnd()
 ```
 

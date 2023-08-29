@@ -1,20 +1,14 @@
 ---
-title: BluetoothCharacteristicProperties.reliableWrite
+title: "BluetoothCharacteristicProperties: reliableWrite property"
+short-title: reliableWrite
 slug: Web/API/BluetoothCharacteristicProperties/reliableWrite
-tags:
-  - API
-  - Bluetooth
-  - BluetoothCharacteristicProperties
-  - Experimental
-  - Interface
-  - NeedsExample
-  - Property
-  - Reference
-  - Web Bluetooth API
-  - reliableWrite
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.BluetoothCharacteristicProperties.reliableWrite
 ---
-{{securecontext_header}}{{APIRef("Bluetooth API")}}
+
+{{securecontext_header}}{{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`reliableWrite`** read-only property of
 the {{domxref("BluetoothCharacteristicProperties")}} interface returns a
@@ -23,7 +17,7 @@ is permitted.
 
 ## Value
 
-A boolean value
+A boolean value.
 
 ## Specifications
 

@@ -1,20 +1,8 @@
 ---
-title: 'AudioTrackList: removetrack event'
+title: "AudioTrackList: removetrack event"
+short-title: removetrack
 slug: Web/API/AudioTrackList/removetrack_event
-tags:
-  - API
-  - Audio
-  - AudioTrackList
-  - Event
-  - HTML DOM
-  - Media
-  - Property
-  - Reference
-  - Removing Audio Tracks
-  - Removing Tracks
-  - remove
-  - removetrack
-  - track
+page-type: web-api-event
 browser-compat: api.AudioTrackList.removetrack_event
 ---
 
@@ -26,15 +14,15 @@ The `removetrack` event is fired when a track is removed from an [`AudioTrackLis
 
 Use the event name in methods like {{domxref("EventTarget.addEventListener", "addEventListener()")}}, or set an event handler property.
 
-```js
-addEventListener('removetrack', event => { })
+```js-nolint
+addEventListener("removetrack", (event) => { })
 
-onremovetrack = event => { }
+onremovetrack = (event) => { }
 ```
 
 ## Event type
 
-An {{domxref("TrackEvent")}}. Inherits from {{domxref("Event")}}.
+A {{domxref("TrackEvent")}}. Inherits from {{domxref("Event")}}.
 
 {{InheritanceDiagram("TrackEvent")}}
 
@@ -49,7 +37,7 @@ _`TrackEvent` is based on {{domxref("Event")}}, so properties of `Event` are als
 
 ### Trigger
 
-The {{event("removetrack")}} event is called whenever a track is removed from the media
+The {{domxref("AudioTrackList/removetrack_event", "removetrack")}} event is called whenever a track is removed from the media
 element whose audio tracks are represented by the `AudioTrackList` object.
 
 This event is not cancelable and does not bubble.
@@ -93,5 +81,5 @@ videoElement.audioTracks.onremovetrack = (event) => {
 - Related events: [`addtrack`](/en-US/docs/Web/API/AudioTrackList/addtrack_event), [`change`](/en-US/docs/Web/API/AudioTrackList/change_event)
 - This event on [`VideoTrackList`](/en-US/docs/Web/API/VideoTrackList) targets: [`removetrack`](/en-US/docs/Web/API/VideoTrackList/removetrack_event)
 - This event on [`MediaStream`](/en-US/docs/Web/API/MediaStream) targets: [`removetrack`](/en-US/docs/Web/API/MediaStream/removetrack_event)
-- [Media Streams API](/en-US/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/en-US/docs/Web/API/Media_Capture_and_Streams_API)
 - [WebRTC](/en-US/docs/Web/API/WebRTC_API)

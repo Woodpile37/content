@@ -1,19 +1,17 @@
 ---
-title: CSSPrimitiveValue.getCounterValue()
+title: "CSSPrimitiveValue: getCounterValue() method"
+short-title: getCounterValue()
 slug: Web/API/CSSPrimitiveValue/getCounterValue
-tags:
-  - API
-  - CSSPrimitiveValue
-  - Method
-  - NeedsExample
-  - getCounterValue
-  - Deprecated
+page-type: web-api-instance-method
+status:
+  - deprecated
 browser-compat: api.CSSPrimitiveValue.getCounterValue
 ---
+
 {{APIRef("CSSOM")}}{{deprecated_header}}
 
 The **`getCounterValue()`** method of the
-{{domxref("CSSPrimitiveValue")}} interface is used to get the [counter](/en-US/docs/Web/CSS/CSS_Counter_Styles/Using_CSS_counters)
+{{domxref("CSSPrimitiveValue")}} interface is used to get the [counter](/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
 value. If this CSS value doesn't contain a counter value, a {{domxref("DOMException")}}
 is raised. Modification to the corresponding style property can be achieved using the
 {{domxref("Counter")}} interface.
@@ -28,7 +26,7 @@ is raised. Modification to the corresponding style property can be achieved usin
 
 ## Syntax
 
-```js
+```js-nolint
 getCounterValue()
 ```
 

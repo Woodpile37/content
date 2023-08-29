@@ -1,16 +1,12 @@
 ---
-title: MediaKeyStatusMap.forEach()
+title: "MediaKeyStatusMap: forEach() method"
+short-title: forEach()
 slug: Web/API/MediaKeyStatusMap/forEach
-tags:
-  - API
-  - EncryptedMediaExtensions
-  - MediaKeyStatusMap
-  - Method
-  - Reference
-  - forEach()
+page-type: web-api-instance-method
 browser-compat: api.MediaKeyStatusMap.forEach
 ---
-{{APIRef("EncryptedMediaExtensions API")}}{{SeeCompatTable}}
+
+{{APIRef("EncryptedMediaExtensions API")}}
 
 The **`forEach`** property of the
 {{domxref("MediaKeyStatusMap")}} interface calls callback once for each key-value pair
@@ -19,21 +15,9 @@ the callback.
 
 ## Syntax
 
-```js
-// Arrow function
-forEach((currentValue) => { /* ... */ } )
-forEach((currentValue, index) => { /* ... */ } )
-forEach((currentValue, index, array) => { /* ... */ } )
-
-// Callback function
+```js-nolint
 forEach(callbackFn)
 forEach(callbackFn, thisArg)
-
-// Inline callback function
-forEach(function(currentValue) { /* ... */ })
-forEach(function(currentValue, index) { /* ... */ })
-forEach(function(currentValue, index, array){ /* ... */ })
-forEach(function(currentValue, index, array) { /* ... */ }, thisArg)
 ```
 
 ### Parameters

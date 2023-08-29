@@ -1,17 +1,11 @@
 ---
-title: SecurityPolicyViolationEvent.sample
+title: "SecurityPolicyViolationEvent: sample property"
+short-title: sample
 slug: Web/API/SecurityPolicyViolationEvent/sample
-tags:
-  - API
-  - CSP
-  - HTTP
-  - Property
-  - Reference
-  - Sample
-  - Security
-  - SecurityPolicyViolationEvent
+page-type: web-api-instance-property
 browser-compat: api.SecurityPolicyViolationEvent.sample
 ---
+
 {{HTTPSidebar}}
 
 The **`sample`** read-only property of the

@@ -1,21 +1,20 @@
 ---
-title: CustomStateSet.clear()
+title: "CustomStateSet: clear() method"
+short-title: clear()
 slug: Web/API/CustomStateSet/clear
-tags:
-  - API
-  - Method
-  - Reference
-  - clear
-  - CustomStateSet
+page-type: web-api-instance-method
+status:
+  - experimental
 browser-compat: api.CustomStateSet.clear
 ---
-{{DefaultAPISidebar("DOM")}}
+
+{{APIRef("DOM")}}{{SeeCompatTable}}
 
 The **`clear()`** method of the {{domxref("CustomStateSet")}} interface removes all elements from the `CustomStateSet` object.
 
 ## Syntax
 
-```js
+```js-nolint
 clear()
 ```
 

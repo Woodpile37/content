@@ -1,14 +1,11 @@
 ---
-title: WebGLRenderingContext.compileShader()
+title: "WebGLRenderingContext: compileShader() method"
+short-title: compileShader()
 slug: Web/API/WebGLRenderingContext/compileShader
-tags:
-  - API
-  - Method
-  - Reference
-  - WebGL
-  - WebGLRenderingContext
+page-type: web-api-instance-method
 browser-compat: api.WebGLRenderingContext.compileShader
 ---
+
 {{APIRef("WebGL")}}
 
 The **WebGLRenderingContext.compileShader()** method of the [WebGL API](/en-US/docs/Web/API/WebGL_API) compiles a GLSL shader into binary
@@ -16,7 +13,7 @@ data so that it can be used by a {{domxref("WebGLProgram")}}.
 
 ## Syntax
 
-```js
+```js-nolint
 compileShader(shader)
 ```
 
@@ -32,7 +29,7 @@ None ({{jsxref("undefined")}}).
 ## Examples
 
 ```js
-var shader = gl.createShader(gl.VERTEX_SHADER);
+const shader = gl.createShader(gl.VERTEX_SHADER);
 gl.shaderSource(shader, shaderSource);
 gl.compileShader(shader);
 ```

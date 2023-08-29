@@ -1,17 +1,13 @@
 ---
-title: USBDevice.manufacturerName
+title: "USBDevice: manufacturerName property"
+short-title: manufacturerName
 slug: Web/API/USBDevice/manufacturerName
-tags:
-  - API
-  - Property
-  - Reference
-  - USB
-  - USBDevice
-  - WebUSB
-  - WebUSB API
-  - manufacturerName
+page-type: web-api-instance-property
+status:
+  - experimental
 browser-compat: api.USBDevice.manufacturerName
 ---
+
 {{SeeCompatTable}}{{APIRef("WebUSB API")}}
 
 The **`manufacturerName`** read only property of the
@@ -20,7 +16,7 @@ device.
 
 ## Value
 
-A {{jsxref("DOMString")}}.
+A string.
 
 ## Specifications
 

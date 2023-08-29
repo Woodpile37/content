@@ -1,18 +1,13 @@
 ---
-title: RTCRtpTransceiver.stopped
+title: "RTCRtpTransceiver: stopped property"
+short-title: stopped
 slug: Web/API/RTCRtpTransceiver/stopped
-tags:
-  - API
-  - Deprecated
-  - Media
-  - Property
-  - RTCRtpTransceiver
-  - RTP
-  - Reference
-  - WebRTC
-  - stopped
+page-type: web-api-instance-property
+status:
+  - deprecated
 browser-compat: api.RTCRtpTransceiver.stopped
 ---
+
 {{APIRef("WebRTC")}}{{deprecated_header}}
 
 The read-only **`stopped`** property
@@ -47,5 +42,4 @@ This feature is not part of any current specification. It is no longer on track 
 ## See also
 
 - [WebRTC API](/en-US/docs/Web/API/WebRTC_API)
-- [Introduction to the Real-time
-  Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)
+- [Introduction to the Real-time Transport Protocol (RTP)](/en-US/docs/Web/API/WebRTC_API/Intro_to_RTP)

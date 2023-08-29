@@ -1,16 +1,11 @@
 ---
-title: CanvasRenderingContext2D.createConicGradient()
+title: "CanvasRenderingContext2D: createConicGradient() method"
+short-title: createConicGradient()
 slug: Web/API/CanvasRenderingContext2D/createConicGradient
-tags:
-  - API
-  - Canvas
-  - CanvasRenderingContext2D
-  - Gradients
-  - Conic
-  - Method
-  - Reference
+page-type: web-api-instance-method
 browser-compat: api.CanvasRenderingContext2D.createConicGradient
 ---
+
 {{APIRef}}
 
 The **`CanvasRenderingContext2D.createConicGradient()`** method of the Canvas 2D API creates a gradient around a point with given coordinates.
@@ -21,14 +16,14 @@ This method returns a conic {{domxref("CanvasGradient")}}. To be applied to a sh
 
 ## Syntax
 
-```js
+```js-nolint
 createConicGradient(startAngle, x, y)
 ```
 
 ### Parameters
 
 - `startAngle`
-  - : The angle at which to begin the gradient, in radians. Angle measurements start vertically above the center and move around clockwise.
+  - : The angle at which to begin the gradient, in radians. The angle starts from a line going horizontally right from the center, and proceeds clockwise.
 - `x`
   - : The x-axis coordinate of the center of the gradient.
 - `y`
@@ -48,19 +43,19 @@ This example initializes a conic gradient using the `createConicGradient()` meth
 #### HTML
 
 ```html
-<canvas id="canvas"></canvas>
+<canvas id="canvas" width="240" height="240"></canvas>
 ```
 
 #### JavaScript
 
 ```js
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
 
 // Create a conic gradient
 // The start angle is 0
 // The center position is 100, 100
-var gradient = ctx.createConicGradient(0, 100, 100);
+const gradient = ctx.createConicGradient(0, 100, 100);
 
 // Add five color stops
 gradient.addColorStop(0, "red");
@@ -76,7 +71,7 @@ ctx.fillRect(20, 20, 200, 200);
 
 #### Rectangle result
 
-{{ EmbedLiveSample('Filling_a_rectangle_with_a_conic_gradient', 700, 200) }}
+{{ EmbedLiveSample('Filling_a_rectangle_with_a_conic_gradient', 240, 240) }}
 
 ## Specifications
 

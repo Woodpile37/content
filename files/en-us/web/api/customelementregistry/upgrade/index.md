@@ -1,16 +1,11 @@
 ---
-title: CustomElementRegistry.upgrade()
+title: "CustomElementRegistry: upgrade() method"
+short-title: upgrade()
 slug: Web/API/CustomElementRegistry/upgrade
-tags:
-  - API
-  - CustomElementRegistry
-  - Method
-  - Reference
-  - Upgrade
-  - Web Components
-  - custom elements
+page-type: web-api-instance-method
 browser-compat: api.CustomElementRegistry.upgrade
 ---
+
 {{APIRef("CustomElementRegistry")}}
 
 The **`upgrade()`** method of the
@@ -20,7 +15,7 @@ document.
 
 ## Syntax
 
-```js
+```js-nolint
 upgrade(root)
 ```
 
@@ -47,7 +42,7 @@ customElements.define("spider-man", SpiderMan);
 console.assert(!(el instanceof SpiderMan)); // not yet upgraded
 
 customElements.upgrade(el);
-console.assert(el instanceof SpiderMan);    // upgraded!
+console.assert(el instanceof SpiderMan); // upgraded!
 ```
 
 ## Specifications

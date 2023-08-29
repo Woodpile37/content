@@ -1,25 +1,11 @@
 ---
-title: RTCOutboundRtpStreamStats.sliCount
+title: "RTCOutboundRtpStreamStats: sliCount property"
+short-title: sliCount
 slug: Web/API/RTCOutboundRtpStreamStats/sliCount
-tags:
-  - API
-  - Corruption
-  - Errors
-  - Property
-  - RTCOutboundRtpStreamStats
-  - RTP
-  - Reference
-  - SLI
-  - Slice Loss
-  - Statistics
-  - Stats
-  - Video
-  - WebRTC
-  - WebRTC API
-  - sliCount
-  - stream
+page-type: web-api-instance-property
 browser-compat: api.RTCOutboundRtpStreamStats.sliCount
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`sliCount`** property of the
@@ -30,7 +16,7 @@ the RTP stream described by this object.
 
 An SLI packet is used by a decoder to let the encoder (the sender) know that it's
 detected corruption of one or more consecutive macroblocks, in scan order, in the
-received media.In general, what's usually of interest is that the higher this number is,
+received media. In general, what's usually of interest is that the higher this number is,
 the more the stream data is becoming corrupted between the sender and the receiver,
 causing the receiver to request retransmits or to drop frames entirely.
 

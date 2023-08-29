@@ -1,18 +1,16 @@
 ---
 title: regexp:test()
 slug: Web/EXSLT/regexp/test
-tags:
-  - EXSLT
-  - NeedsSpecTable
-  - Reference
+page-type: exslt-function
 ---
+
 {{XSLTRef}}{{QuickLinksWithSubpages("/en-US/docs/Web/EXSLT")}}
 
 `regexp:test()` tests to see whether a string matches a specified regular expression.
 
 ## Syntax
 
-```js
+```js-nolint
 regexp:test(testString, regExpString[, flagsString])
 ```
 
@@ -22,7 +20,7 @@ regexp:test(testString, regExpString[, flagsString])
   - : The string to test.
 - `regExpString`
   - : The JavaScript style regular expression to evaluate.
-- `flagsString`{{Optional_Inline}}
+- `flagsString` {{optional_inline}}
   - : An optional string containing character flags.
 
 The character flags are:
@@ -38,4 +36,4 @@ The character flags are:
 
 ## Specifications
 
-[EXSLT - REGEXP:TEST](http://exslt.org/regexp/functions/test/index.html)
+[EXSLT - REGEXP:TEST](https://exslt.github.io/regexp/functions/test/index.html)

@@ -1,7 +1,11 @@
 ---
 title: Resources
 slug: Web/API/XSLTProcessor/Resources
+page-type: guide
 ---
+
+{{APIRef("XSLT")}}
+
 ## Resources
 
 - [What kind of language is XSLT?](https://developer.ibm.com/technologies/web-development/) at [IBM developer](https://developer.ibm.com/)

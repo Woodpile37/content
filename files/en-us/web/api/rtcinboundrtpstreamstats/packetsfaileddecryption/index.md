@@ -1,22 +1,11 @@
 ---
-title: RTCInboundRtpStreamStats.packetsFailedDecryption
+title: "RTCInboundRtpStreamStats: packetsFailedDecryption property"
+short-title: packetsFailedDecryption
 slug: Web/API/RTCInboundRtpStreamStats/packetsFailedDecryption
-tags:
-  - API
-  - Decryption
-  - Packets
-  - Property
-  - RTCInboundRtpStreamStats
-  - RTP
-  - Reference
-  - Statistics
-  - Stats
-  - WebRTC
-  - WebRTC API
-  - packetsFailedDecryption
-  - stream
+page-type: web-api-instance-property
 browser-compat: api.RTCInboundRtpStreamStats.packetsFailedDecryption
 ---
+
 {{APIRef("WebRTC")}}
 
 The **`packetsFailedDecryption`**

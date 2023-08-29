@@ -1,16 +1,11 @@
 ---
-title: XPathNSResolver.lookupNamespaceURI()
+title: "XPathNSResolver: lookupNamespaceURI() method"
+short-title: lookupNamespaceURI()
 slug: Web/API/XPathNSResolver/lookupNamespaceURI
-tags:
-  - API
-  - DOM
-  - DOM XPath API
-  - Method
-  - Reference
-  - XPath
-  - XPathNSResolver
+page-type: web-api-instance-method
 browser-compat: api.XPathNSResolver.lookupNamespaceURI
 ---
+
 {{APIRef("DOM XPath")}}
 
 The `lookupNamespaceURI` method looks up the namespace URI associated to the
@@ -19,13 +14,13 @@ given namespace prefix within an {{Glossary("XPath")}} expression evaluated by t
 
 ## Syntax
 
-```js
+```js-nolint
 lookupNamespaceURI(prefix)
 ```
 
 ### Parameters
 
-- prefix
+- `prefix`
   - : A string representing the prefix to look for.
 
 ### Return value

@@ -1,22 +1,11 @@
 ---
-title: RTCIceCandidate.sdpMLineIndex
+title: "RTCIceCandidate: sdpMLineIndex property"
+short-title: sdpMLineIndex
 slug: Web/API/RTCIceCandidate/sdpMLineIndex
-tags:
-  - API
-  - Candidate
-  - Media Description
-  - NeedsExample
-  - Property
-  - RTCIceCandidate
-  - Read-only
-  - Reference
-  - SDP
-  - WebRTC
-  - WebRTC API
-  - m-line
-  - sdpMLineIndex
+page-type: web-api-instance-property
 browser-compat: api.RTCIceCandidate.sdpMLineIndex
 ---
+
 {{APIRef("WebRTC")}}
 
 The read-only **`sdpMLineIndex`** property on the {{domxref("RTCIceCandidate")}} interface
@@ -34,10 +23,6 @@ indicating which media source is associated with the candidate, or `null` if no 
 > {{domxref("RTCPeerConnection.addIceCandidate", "addIceCandidate()")}}) that has a
 > value of `null` for either `sdpMid` or
 > `sdpMLineIndex` will throw a {{jsxref("TypeError")}} exception.
-
-## Examples
-
-...
 
 ## Specifications
 

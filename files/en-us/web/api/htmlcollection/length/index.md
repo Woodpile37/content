@@ -1,14 +1,11 @@
 ---
-title: HTMLCollection.length
+title: "HTMLCollection: length property"
+short-title: length
 slug: Web/API/HTMLCollection/length
-tags:
-  - API
-  - HTML DOM
-  - HTMLCollection
-  - Reference
-  - Property
+page-type: web-api-instance-property
 browser-compat: api.HTMLCollection.length
 ---
+
 {{APIRef("DOM")}}
 
 The **`HTMLCollection.length`** property returns the number of
@@ -26,12 +23,12 @@ iterator in a `for` loop, as in this example.
 
 ```js
 // All the elements with the class ".test" in the document
-var items = document.getElementsByClassName("test");
+const items = document.getElementsByClassName("test");
 
 // For each test item in the list,
 // append the entire element as a string of HTML
-var gross = "";
-for (var i = 0; i < items.length; i++) {
+let gross = "";
+for (let i = 0; i < items.length; i++) {
   gross += items[i].innerHTML;
 }
 

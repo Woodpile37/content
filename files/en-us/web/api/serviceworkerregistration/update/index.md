@@ -1,15 +1,11 @@
 ---
-title: ServiceWorkerRegistration.update()
+title: "ServiceWorkerRegistration: update() method"
+short-title: update()
 slug: Web/API/ServiceWorkerRegistration/update
-tags:
-  - API
-  - Method
-  - Reference
-  - Service Workers
-  - ServiceWorkerRegistration
-  - Update
+page-type: web-api-instance-method
 browser-compat: api.ServiceWorkerRegistration.update
 ---
+
 {{APIRef("Service Workers API")}}
 
 The **`update()`** method of the
@@ -22,7 +18,7 @@ bypasses any browser caches if the previous fetch occurred over 24 hours ago.
 
 ## Syntax
 
-```js
+```js-nolint
 update()
 ```
 
@@ -41,18 +37,21 @@ The following simple example registers a service worker example then adds an eve
 handler to a button so you can explicitly update the service worker whenever desired:
 
 ```js
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw-test/sw.js', {scope: 'sw-test'}).then(function(registration) {
-    // registration worked
-    console.log('Registration succeeded.');
-    button.onclick = function() {
-      registration.update();
-    }
-  }).catch(function(error) {
-    // registration failed
-    console.log('Registration failed with ' + error);
-  });
-};
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("/sw.js", { scope: "/" })
+    .then((registration) => {
+      // registration worked
+      console.log("Registration succeeded.");
+      button.onclick = () => {
+        registration.update();
+      };
+    })
+    .catch((error) => {
+      // registration failed
+      console.error(`Registration failed with ${error}`);
+    });
+}
 ```
 
 ## Specifications
@@ -65,11 +64,8 @@ if ('serviceWorker' in navigator) {
 
 ## See also
 
-- [Using Service
-  Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Service workers basic code example](https://github.com/mdn/sw-test)
-- [Is ServiceWorker
-  ready?](https://jakearchibald.github.io/isserviceworkerready/)
+- [Using Service Workers](/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers)
+- [Service workers basic code example](https://github.com/mdn/dom-examples/tree/main/service-worker/simple-service-worker)
+- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
 - {{jsxref("Promise")}}
-- [Using web
-  workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
+- [Using web workers](/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
